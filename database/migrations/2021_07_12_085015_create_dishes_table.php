@@ -19,9 +19,9 @@ class CreateDishesTable extends Migration
             $table->text('description')->nullable();
             $table->float('price');
             $table->boolean('visibility');
-            //$table->unsignedBigInteger('user_id');
-            //$table->foreign('user_id')->references('id')->on('users');
-            //$table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            //$table->unsignedBigInteger('category_id')->nullable();
             //$table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
@@ -34,10 +34,10 @@ class CreateDishesTable extends Migration
      */
     public function down()
     {
-        /*Schema::table('dishes', function (Blueprint $table) {
+        Schema::table('dishes', function (Blueprint $table) {
             $table->dropForeign('dishes_user_id_foreign');
-            $table->dropForeign('dishes_category_id_foreign');
-        });*/
+            //$table->dropForeign('dishes_category_id_foreign');
+        });
         
 
         Schema::dropIfExists('dishes');
