@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dish extends Model
 {
     protected $fillable = [
+        'category_id',
         'name',
         'description', 
         'price',
@@ -17,7 +18,7 @@ class Dish extends Model
         return $this->belongsToMany(Order::class);
     }
 
-    public function categories() {
-        return $this->hasMany(Category::class);
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 }
