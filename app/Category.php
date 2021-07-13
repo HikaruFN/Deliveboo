@@ -13,6 +13,6 @@ class Category extends Model
     ];
 
     public function dishes() {
-        return $this->belongsTo(Dish::class);
+        return $this->hasMany(Dish::class);
     }
 }
