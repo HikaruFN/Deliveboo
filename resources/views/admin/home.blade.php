@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <h1>HOMEPAGE ristoratori loggati</h1>
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
@@ -13,11 +14,33 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
                 </div>
+
+                <a href="{{ route('admin.posts.show') }}" class="btn btn-primary">Go to post</a>
+                <a href="{{ route('admin.posts.edit') }}" class="btn btn-warning">Edit post</a>
             </div>
         </div>
     </div>
+
+    {{-- <div class="row">
+        @foreach($posts as $post)
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $post->title }}</h5>
+                        <a href="{{ route('admin.posts.show', ['post' => $post->id]) }}" class="btn btn-primary">Go to post</a>
+                        <a href="{{ route('admin.posts.edit', ['post' => $post->id]) }}" class="btn btn-warning">Edit post</a>
+                        
+                        <form action="{{ route('admin.posts.destroy', ['post' => $post->id]) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+
+                            <input type="submit" class="btn btn-danger" value="Delete post">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div> --}}
 </div>
 @endsection
