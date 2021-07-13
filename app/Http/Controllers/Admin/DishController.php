@@ -36,7 +36,7 @@ class DishController extends Controller
         
         $data = [
             'categories' => $categories,
-            'user_id' => auth()->id
+            
             
         ]; 
 
@@ -57,6 +57,7 @@ class DishController extends Controller
         
         $new_dish = new Dish();
 
+        // Serve per validare user_id
         $new_dish->user_id=auth()->id();
 
         $new_dish->fill($new_dish_data);
@@ -126,7 +127,7 @@ class DishController extends Controller
         $validation_rules = [
             'name' => 'required|max:255',
             'description' => 'required|max:60000',
-            'price' => 'required|max:8',
+            'price' => 'required|numeric',
             'visibility' => 'required|boolean',
             'category_id' => 'nullable|exists:categories,id',
             'user_id' => 'exists:user,id'
