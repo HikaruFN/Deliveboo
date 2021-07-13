@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Dish;
 use App\Type;
 use App\Category;
+use App\User;
 
 
 class RestaurantController extends Controller
@@ -18,7 +19,11 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
+        $restaurants = User::all();
+        $data = [
+            'restaurants' => $restaurants
+        ];
+        return view('admin.restaurants.index', $data);
     }
 
     /**
@@ -50,7 +55,12 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        //
+        $restaurant = User::findOrFail($id);
+        $data = [
+            'restaurant' => $restaurant/* ,
+            'restaurant_category' => $restaurant->category */
+        ];
+        return view('admin.restaurants.show', ['restaurant' => $restaurant->id]);
     }
 
     /**

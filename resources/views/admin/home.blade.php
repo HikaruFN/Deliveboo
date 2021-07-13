@@ -16,8 +16,7 @@
                     @endif
                 </div>
 
-                <a href="{{ route('admin.posts.show') }}" class="btn btn-primary">Go to post</a>
-                <a href="{{ route('admin.posts.edit') }}" class="btn btn-warning">Edit post</a>
+                <a href="{{ route('admin.restaurants.index') }}" class="btn btn-primary">Vai al tuo ristorante</a>
             </div>
         </div>
     </div>
