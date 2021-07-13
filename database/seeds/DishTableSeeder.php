@@ -33,7 +33,7 @@ class DishTableSeeder extends Seeder
 
             [
                 'name' => 'Diavola',
-                'description' => 'Base margherita con salame piccante, ma piccante assai proprio',
+                'description' => 'Base margherita con salame piccante, ma piccante assai proprioup',
                 'price' => 7 ,
                 'visibility' => true,
                 'category_id' => 2,
