@@ -64,8 +64,6 @@ class DishController extends Controller
 
         $new_dish->save();
 
-        
-
         return redirect()->route('admin.dishes.show', ['dish' => $new_dish->id]);
     }
 
@@ -146,7 +144,7 @@ class DishController extends Controller
     private function getValidationRules() {
         $validation_rules = [
             'name' => 'required|max:255',
-            'description' => 'required|max:60000',
+            'description' => 'nullable|max:60000',
             'price' => 'required|numeric',
             'visibility' => 'required|boolean',
             'category_id' => 'nullable|exists:categories,id',
