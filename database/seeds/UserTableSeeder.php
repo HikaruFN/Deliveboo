@@ -13,11 +13,13 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $users = [
-            'name' => 'Gennaro Gennari',
-            'email' => 'gennarogennari@mail.com',
-            'address' => 'Via Gennaro Gennari',
-            'net_number' => 12345678901,
-            'password' => 'gennarogennaro',
+            [
+                'name' => 'Gennaro Gennari',
+                'email' => 'gennarogennari@mail.com',
+                'address' => 'Via Gennaro Gennari',
+                'net_number' => 12345678901,
+                'password' => 'gennarogennaro'
+            ]
         ];
 
         foreach($users as $user) {
