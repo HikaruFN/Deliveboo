@@ -18,8 +18,8 @@ class UserTableSeeder extends Seeder
                 'email' => 'gennarogennari@mail.com',
                 'address' => 'Via Gennaro Gennari',
                 'net_number' => 12345678901,
-                'password' => 'gennarogennaro',
-            ],
+                'password' => 'gennarogennaro'
+            ]
         ];
 
         foreach($users as $user) {
