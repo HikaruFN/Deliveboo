@@ -8,6 +8,7 @@ use App\Dish;
 use App\Type;
 use App\Category;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class RestaurantController extends Controller
@@ -19,7 +20,7 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurant = User::all();
+        $restaurant = Auth::user();
         $data = [
             'restaurant' => $restaurant,
         ];
@@ -44,7 +45,7 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      //
     }
 
     /**
@@ -55,14 +56,15 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        $post = User::findOrFail($id);
+        $restaurant = User::findOrFail($id);
+        $types = Type::all();
 
         $data = [
             'restaurant' => $restaurant,
-            'id' => $restaurant->id
+            'id' => $restaurant->id,
+            'type' => $types,
         ];
-
-        return view('admin.restaurants.show', $data);
+        return view('admin.restaurants.show', $data);     
     }
 
     /**
@@ -72,8 +74,16 @@ class RestaurantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    { 
+        $restaurant = User::findOrFail($id);
+        $types = Type::all();
+    
+        $data = [
+            'restaurant' => $restaurant,
+            'types' => $types,
+        ];
+    
+         return view('admin.restaurants.edit', $data);
     }
 
     /**
@@ -85,7 +95,10 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $modified_data = $request->all();
+        $restaurant = User::findOrFail($id);
+        $restaurant->update($modified_data);
+        return redirect()->route('admin.restaurants.show', ['restaurant' => $restaurant->id]);
     }
 
     /**
