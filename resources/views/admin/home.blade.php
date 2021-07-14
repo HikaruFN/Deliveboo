@@ -16,7 +16,7 @@
                     @endif
                 </div>
 
-                <a href="{{ route('admin.restaurants.index') }}" class="btn btn-primary">Vai al tuo ristorante</a>
+                <a href="{{ route('admin.restaurants.index')}}" class="btn btn-primary">Vai al tuo ristorante</a>
             </div>
         </div>
     </div>

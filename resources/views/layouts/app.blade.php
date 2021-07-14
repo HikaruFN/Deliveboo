@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!--PlaceHolder CDN Vue e Ajax-->
+    @yield('header-script')
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -75,6 +78,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+
     </div>
+    <!--Javascript Link Placeholder-->
+    @yield('js-script')
 </body>
 </html>

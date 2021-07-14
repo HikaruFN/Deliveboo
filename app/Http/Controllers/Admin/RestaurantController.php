@@ -19,9 +19,9 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurants = User::all();
+        $restaurant = User::all();
         $data = [
-            'restaurants' => $restaurants
+            'restaurant' => $restaurant,
         ];
         return view('admin.restaurants.index', $data);
     }
@@ -55,12 +55,14 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        $restaurant = User::findOrFail($id);
+        $post = User::findOrFail($id);
+
         $data = [
-            'restaurant' => $restaurant/* ,
-            'restaurant_category' => $restaurant->category */
+            'restaurant' => $restaurant,
+            'id' => $restaurant->id
         ];
-        return view('admin.restaurants.show', ['restaurant' => $restaurant->id]);
+
+        return view('admin.restaurants.show', $data);
     }
 
     /**
