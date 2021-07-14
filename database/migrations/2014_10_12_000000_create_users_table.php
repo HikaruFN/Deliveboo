@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('address');
             $table->bigInteger('net_number')->unique();
-            $table->bigInteger('net_number')->unique();
             $table->rememberToken();
             $table->timestamps();
         });
