@@ -12,13 +12,13 @@
                             <h5 class="card-title">{{ $dish->name }}</h5>
                             <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-primary">Vai al piatto</a>
 
-                            {{-- <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-success">Modifica piatto</a>
+                            <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-success">Modifica piatto</a>
                         
                             <form action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="post">
-                            @csrf
-                            @method ('DELETE')
-                            <input type="submit" class="btn btn-danger" value="Cancella dish">
-                            </form> --}}
+                                @csrf
+                                @method ('DELETE')
+                                <input type="submit" class="btn btn-danger" value="Cancella piatto">
+                            </form>
                         </div>
                     </div>
                 </div>

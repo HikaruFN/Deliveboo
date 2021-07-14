@@ -116,7 +116,15 @@ class DishController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate($this->getValidationRules());
+
+        $modified_dish_data = $request->all();
+
+        $dish = Dish::findOrFail($id);
+
+        $dish->update($modified_dish_data);
+
+        return redirect()-> route('admin.dishes.show', ['dish' => $dish->id]);
     }
 
     /**
@@ -127,7 +135,11 @@ class DishController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dish_to_delete = Dish::find($id);
+
+        $dish_to_delete->delete();
+
+        return redirect()->route('admin.dishes.index');
     }
 
     // Funzione che ritorna le regole di validazione
