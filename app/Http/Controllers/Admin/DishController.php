@@ -96,7 +96,15 @@ class DishController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dish = Dish::findOrFail($id);
+        $categories = Category::all();
+
+        $data = [
+            'dish' => $dish,
+            'categories' => $categories
+        ];
+
+        return view('admin.dishes.edit', $data);
     }
 
     /**
