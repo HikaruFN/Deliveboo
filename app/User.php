@@ -23,7 +23,6 @@ class User extends Authenticatable
         'net_number',
         'type_id',
         'cover',
-        'slug'
     ];
 
     /**

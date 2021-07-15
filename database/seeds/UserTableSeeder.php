@@ -104,8 +104,6 @@ class UserTableSeeder extends Seeder
             $new_user->net_number = $user['net_number'];
             $new_user->password = $user['password'];
             $new_user->cover = $user['cover'];
-            $slug = Str::of($new_user->name)->slug('-');
-            $new_user->slug = $slug;
             $new_user->save();
         }
     }
