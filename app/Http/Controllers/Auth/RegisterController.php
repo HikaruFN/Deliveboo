@@ -70,9 +70,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if (!empty($data['cover'])) {
-            $cover = Storage::put('covers', $data['cover']);
-            $data['cover'] = $cover;
+        // Aggiungo immagine se è presente
+        if (isset($data['cover-image'])) {
+            $img_path = Storage::put('cover', $data['cover-image']);
+
+            if ($img_path) {
+                $data['cover'] = $img_path;
+            }
         }
 
         User::create([

@@ -113,9 +113,11 @@
                         {{-- End Checkboxes Types --}}
 
                         {{--Cover--}}
-                        <div class="form-group">
-                            <label for="cover">Immagine di copertina</label>
-                            <input type="file" class="form-control-file" name="cover" id="cover">
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
+                                <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
+                            </div>
                         </div>
                         {{--End Cover--}}
 
