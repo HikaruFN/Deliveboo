@@ -52,6 +52,17 @@
                                 </li>
                             @endif
                         @else
+
+                            {{-- GESTISCI I TUOI PIATTI --}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.dishes.index') }}">Gestisci i tuoi piatti</a>
+                            </li>
+
+                            {{-- CREA NUOVO PIATTO --}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.dishes.create') }}">Crea nuovo piatto</a>
+                            </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

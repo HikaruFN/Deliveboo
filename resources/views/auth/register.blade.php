@@ -107,6 +107,24 @@
                             </div>
                         </div>
 
+                        {{-- Checkboxes Types --}}
+                        
+                        <div class="form-group text-align:center">
+                            <h4>Scegli il tipo di ristorante</h4>
+                            @foreach( $types as $type )
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="types[]" value="{{$type->id}}" id="type-{{$type->id}}" {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="type-{{$type->id}}">
+                                        {{ $type->name }}
+                                    </label>
+                                </div>
+                            @endforeach
+                        </div>
+                        @error('types')
+                            <div class="error_field_required">{{ $message }}</div>
+                        @enderror
+                        {{-- End Checkboxes Types --}}
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
