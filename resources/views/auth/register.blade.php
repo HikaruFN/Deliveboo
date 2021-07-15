@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -71,19 +71,6 @@
                         </div>
                         {{-- End P.IVA --}}
 
-                        {{-- Checkbox --}}
-                        {{-- @foreach($types as $type)
-                            <div class="form-check">
-
-                                @if ($errors->any()) 
-                                    <input class="form-check-input" name="types[]" type="checkbox" value="{{ $type->id }}" id="type-{{ $type->id }}" {{ in_array($type->id, old('tags', [])) ? 'checked' : '' }}>
-                                @else
-                                    <input class="form-check-input" name="types[]" type="checkbox" value="{{ $type->id }}" id="type-{{ $type->id }}" {{ $restaurant->types->contains($type->id) ? 'checked' : ''}}>
-                                @endif
-                                    <label class="form-check-label" for="type-{{ $type->id }}"> {{ $type->name }} </label>
-                            </div>
-                        @endforeach --}}
-                        {{-- End Checkbox --}}
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -124,6 +111,13 @@
                             <div class="error_field_required">{{ $message }}</div>
                         @enderror
                         {{-- End Checkboxes Types --}}
+
+                        {{--Cover--}}
+                        <div class="form-group">
+                            <label for="cover">Immagine di copertina</label>
+                            <input type="file" class="form-control-file" name="cover" id="cover">
+                        </div>
+                        {{--End Cover--}}
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

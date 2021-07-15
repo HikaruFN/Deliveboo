@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Type;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -69,6 +70,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if (!empty($data['cover'])) {
+            $cover = Storage::put('covers', $data['cover']);
+            $data['cover'] = $cover;
+        }
+
         User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -89,4 +95,6 @@ class RegisterController extends Controller
         $types = Type::all();
         return view('auth.register', compact('types'));
     }
+
+    
 }

@@ -10,6 +10,7 @@
             <div class="card-title">e-mail: {{$restaurant->email}}</div>
             <div class="card-title">Indirizzo: {{$restaurant->address}}</div>
             <div class="card-title">P.IVA: {{$restaurant->net_number}}</div>
+            <div><img src="{{ asset('storage/' . $restaurant->cover) }}" alt=""></div>
             {{-- <h4 class="card-title">{{$type->name}}</h4> --}}
             
             </div>
