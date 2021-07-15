@@ -21,7 +21,9 @@ class User extends Authenticatable
         'password',
         'address',
         'net_number',
-        'type_id'
+        'type_id',
+        'cover',
+        'slug'
     ];
 
     /**

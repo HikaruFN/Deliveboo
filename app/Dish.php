@@ -14,7 +14,8 @@ class Dish extends Model
         'price',
         'visibility',
         'user_id',
-        'category_id'
+        'category_id',
+        'cover'
     ];
 
     public function orders() {
