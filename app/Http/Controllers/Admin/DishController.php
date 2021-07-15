@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Dish;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Dish;
+use App\Category;
 
 class DishController extends Controller
 {
@@ -14,7 +16,13 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $dishes = Dish::all();
+
+        $data = [
+            'dishes' => $dishes
+        ];
+
+        return view('admin.dishes.index', $data);
     }
 
     /**
@@ -24,7 +32,7 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -41,21 +49,29 @@ class DishController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Dish  $dish
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Dish $dish)
+    public function show($id)
     {
-        //
+        $dish = Dish::findOrFail($id);
+
+        $data = [
+            'dish' => $dish,
+            'dish_category' => $dish->category
+            
+        ];
+
+        return view('admin.dishes.show', $data);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Dish  $dish
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dish $dish)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +80,10 @@ class DishController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Dish  $dish
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dish $dish)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +91,10 @@ class DishController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Dish  $dish
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dish $dish)
+    public function destroy($id)
     {
         //
     }

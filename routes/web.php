@@ -27,5 +27,6 @@ Route::prefix('admin')
         Route::get('/', 'HomeController@index')->name('home');
 
         Route::resource('restaurants', 'RestaurantController');
+        Route::resource('dishes', 'DishController');
 });
 
