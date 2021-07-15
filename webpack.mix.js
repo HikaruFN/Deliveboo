@@ -13,3 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
+
+//Javascript for Guest Homepage
+mix.js('resources/js/restaurants.js', 'public/js')

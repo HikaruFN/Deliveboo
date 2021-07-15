@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!--PlaceHolder CDN Vue e Ajax-->
-    @yield('header-script')
+    @yield('header-scripts')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -51,6 +51,9 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            <li>
+                                <p>prova</p>
+                            </li>
                         @else
 
                             {{-- GESTISCI I TUOI PIATTI --}}
@@ -89,7 +92,7 @@
         <main class="py-4">
             @yield('content')
         </main>
-
+         
     </div>
     <!--Javascript Link Placeholder-->
     @yield('js-script')
