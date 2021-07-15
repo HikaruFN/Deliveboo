@@ -3,26 +3,16 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <h1>Gestisci i tuoi ristoranti</h1>
-            {{-- @foreach($posts as $post)
-                <div class="col-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $post->title }}</h5>
-                            <a href="{{ route('admin.posts.show', ['post' => $post->id]) }}" class="btn btn-primary">Go to post</a>
-                            <a href="{{ route('admin.posts.edit', ['post' => $post->id]) }}" class="btn btn-warning">Edit post</a>
-                            
-                            <form action="{{ route('admin.posts.destroy', ['post' => $post->id]) }}" method="post">
-                                @csrf
-                                @method('DELETE')
-
-                                <input type="submit" class="btn btn-danger" value="Delete post">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            @endforeach --}}
+        <h1>Il tuo ristorante</h1>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Nome: {{$restaurant->name}}</h5>
+            <div class="card-title">e-mail: {{$restaurant->email}}</div>
+            <div class="card-title">Indirizzo: {{$restaurant->address}}</div>
+            <div class="card-title">P.IVA: {{$restaurant->net_number}}</div>
+            {{-- <h4 class="card-title">{{$type->name}}</h4> --}}
+            
+            </div>
         </div>
     </div>
 @endsection

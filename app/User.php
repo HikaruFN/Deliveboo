@@ -21,6 +21,7 @@ class User extends Authenticatable
         'password',
         'address',
         'net_number',
+        'type_id'
     ];
 
     /**

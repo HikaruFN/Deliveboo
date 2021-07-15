@@ -55,7 +55,7 @@
                         </div>
                         {{-- END ADDRESS --}}
 
-                        {{-- P iva --}}
+                        {{-- P.IVA --}}
                         <div class="form-group row">
                             <label for="net_number" class="col-md-4 col-form-label text-md-right">{{ __('Partita Iva') }}</label>
 
@@ -69,7 +69,21 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- End P Iva --}}
+                        {{-- End P.IVA --}}
+
+                        {{-- Checkbox --}}
+                        {{-- @foreach($types as $type)
+                            <div class="form-check">
+
+                                @if ($errors->any()) 
+                                    <input class="form-check-input" name="types[]" type="checkbox" value="{{ $type->id }}" id="type-{{ $type->id }}" {{ in_array($type->id, old('tags', [])) ? 'checked' : '' }}>
+                                @else
+                                    <input class="form-check-input" name="types[]" type="checkbox" value="{{ $type->id }}" id="type-{{ $type->id }}" {{ $restaurant->types->contains($type->id) ? 'checked' : ''}}>
+                                @endif
+                                    <label class="form-check-label" for="type-{{ $type->id }}"> {{ $type->name }} </label>
+                            </div>
+                        @endforeach --}}
+                        {{-- End Checkbox --}}
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
