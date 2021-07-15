@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Type;
 
 class RegisterController extends Controller
 {
@@ -54,7 +55,9 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'address' => ['required', 'string', 'max:255'],
             'net_number' => ['required', 'numeric', 'digits:11', 'unique:users' ],
-            'password' => ['required', 'string', 'min:8', 'confirmed']
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'cover' => ['nullable'],
+            'types' => ['required']
         ]);
     }
 
@@ -66,12 +69,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'address' => $data['address'],
             'net_number' => $data['net_number'],
-            'password' => Hash::make($data['password'])
+            'password' => Hash::make($data['password']),
+            'cover' => isset($data['cover']) ? $data['cover'] : ''
         ]);
+
+        $newUser = User::orderBy('id', 'desc')->first();
+        $newUser->types()->attach($data['types']);
+
+        return $newUser;
+    }
+
+    public function showRegistrationForm()
+    {
+        $types = Type::all();
+        return view('auth.register', compact('types'));
     }
 }
