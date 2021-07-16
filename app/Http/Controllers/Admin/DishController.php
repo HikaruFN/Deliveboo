@@ -72,7 +72,7 @@ class DishController extends Controller
 
         $new_dish->fill($new_dish_data);
 
-        dd($new_dish);
+        // dd($new_dish);
 
         $new_dish->save();
 

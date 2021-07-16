@@ -8,10 +8,9 @@
 
         <h1>{{ $dish->name }}</h1>
 
-        {{-- @if($dish->cover)
-        <div class="mt-2 mb-2">
-        <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->title }}"></div>
-        @endif --}}
+        @if ($dish->cover)
+            <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+        @endif
 
         <p>Descrizione: {{ $dish->description }}</p>
 
