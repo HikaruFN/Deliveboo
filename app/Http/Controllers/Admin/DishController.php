@@ -132,6 +132,15 @@ class DishController extends Controller
 
         $dish = Dish::findOrFail($id);
 
+        // Aggiungo immagine
+        if (isset($modified_dish_data['cover-image'])) {
+            $img_path = Storage::put('cover', $modified_dish_data['cover-image']);
+
+            if ($img_path) {
+                $modified_dish_data['cover'] = $img_path;
+            }
+        }
+
         $dish->update($modified_dish_data);
 
         return redirect()-> route('admin.dishes.show', ['dish' => $dish->id]);
