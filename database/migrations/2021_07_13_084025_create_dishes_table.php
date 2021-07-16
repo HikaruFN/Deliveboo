@@ -19,7 +19,7 @@ class CreateDishesTable extends Migration
             $table->text('description')->nullable();
             $table->float('price');
             $table->boolean('visibility');
-            $table->text('cover');//
+            $table->text('cover')->nullable();//
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('category_id')->nullable();

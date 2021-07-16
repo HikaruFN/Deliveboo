@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Dish;
 //commento prova
 use App\Category;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
@@ -17,7 +19,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Dish::all();
+        $dishes = Auth::user()->dishes;
 
         $data = [
             'dishes' => $dishes
@@ -36,9 +38,7 @@ class DishController extends Controller
         $categories = Category::all();
         
         $data = [
-            'categories' => $categories,
-            
-            
+            'categories' => $categories
         ]; 
 
         return view('admin.dishes.create', $data);
@@ -55,6 +55,15 @@ class DishController extends Controller
         $request->validate($this->getValidationRules());
 
         $new_dish_data = $request->all();
+
+        // Aggiungo immagine
+        if (isset($new_dish_data['cover-image'])) {
+            $img_path = Storage::put('cover', $new_dish_data['cover-image']);
+
+            if ($img_path) {
+                $new_dish_data['cover'] = $img_path;
+            }
+        }
         
         $new_dish = new Dish();
 
@@ -62,6 +71,8 @@ class DishController extends Controller
         $new_dish->user_id=auth()->id();
 
         $new_dish->fill($new_dish_data);
+
+        dd($new_dish);
 
         $new_dish->save();
 
@@ -149,8 +160,8 @@ class DishController extends Controller
             'price' => 'required|numeric',
             'visibility' => 'required|boolean',
             'category_id' => 'nullable|exists:categories,id',
-            'user_id' => 'exists:user,id'
-            
+            'user_id' => 'exists:user,id',
+            'cover' => 'nullable'
         ];
 
         return $validation_rules;

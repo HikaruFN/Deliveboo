@@ -9,6 +9,10 @@
                 <div class="col-6">
                     <div class="card">
                         <div class="card-body">
+                            @if ($dish->cover)
+                                <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+                            @endif
+
                             <h5 class="card-title">{{ $dish->name }}</h5>
                             <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-primary">Vai al piatto</a>
 
