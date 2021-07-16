@@ -15,9 +15,9 @@
         {{--Restaurants list--}}
         <div class="container">
 
+            
 
             <h2>LISTA RISTORANTI</h2>
-
             {{--Ricerca Per Nome--}}
             <div>
                 <label for="search">Cerca Ristorante:</label>
@@ -32,6 +32,7 @@
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
                         <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                        
                     </div>
                 </div>
            </div>

@@ -11,7 +11,7 @@ class Restaurantcontroller extends Controller
 {
     public function index()
     {
-        $restaurants = User::all();
+        $restaurants = User::all();       
 
         $filtered_array = [];
 
@@ -37,10 +37,7 @@ class Restaurantcontroller extends Controller
 
                'success' => true
            ];
-        }
-
-
-       
+        }       
         return response()->json($result);
     }
 
