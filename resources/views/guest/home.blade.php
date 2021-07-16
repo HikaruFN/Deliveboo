@@ -14,18 +14,24 @@
 
         {{--Restaurants list--}}
         <div class="container">
+
+
             <h2>LISTA RISTORANTI</h2>
+
+            {{--Ricerca Per Nome--}}
             <div>
                 <label for="search">Cerca Ristorante:</label>
                 <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search">
             </div>
+            {{--Fine Ricerca Per Nome--}}
+
             {{--All Restaurants--}}
            <div v-if=" search == '' " class="row">            
                 <div v-for="restaurant in restaurants" class="card col-lg-4" style="width: 18rem;">
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
-                        <h4 class="card-title">@{{restaurant.address}}</h4>
+                        <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
                     </div>
                 </div>
            </div>
@@ -34,7 +40,7 @@
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
-                        <h4 class="card-title">@{{restaurant.address}}</h4>
+                        <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
                     </div>
                 </div>
            </div>
