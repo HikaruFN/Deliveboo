@@ -56,6 +56,15 @@
 
             </div>
 
+            {{--Cover--}}
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
+                    <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
+                </div>
+            </div>
+            {{--End Cover--}}
+
             <input type="submit" class="btn btn-success" value="Salva piatto">
         </form>
         <!-- end create form -->

@@ -55,6 +55,21 @@
                 <input type="radio" id="option2" name="visibility" value="1" @if(old('visibility') == '1' || $dish->visibility == '1') checked @endif> Disponibile</label>
 
             </div>
+            {{-- END RADIO BUTTON FOR VISIBILITY --}}
+
+            {{--Cover--}}
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
+                    <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
+                </div>
+            </div>
+
+            {{-- Immagine esistente --}}
+            @if ($dish->cover)
+                <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+            @endif
+            {{--End Cover--}}
 
             <input type="submit" class="btn btn-success" value="Salva le modifiche">
         </form>
