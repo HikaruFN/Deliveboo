@@ -22,6 +22,7 @@ class User extends Authenticatable
         'address',
         'net_number',
         'type_id',
+        'user_id',
         'cover',
     ];
 
