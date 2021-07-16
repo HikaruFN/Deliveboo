@@ -15,8 +15,6 @@
         {{--Restaurants list--}}
         <div class="container">
 
-            
-
             <h2>LISTA RISTORANTI</h2>
             {{--Ricerca Per Nome--}}
             <div>
@@ -31,7 +29,7 @@
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
-                        <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                        <h4 class="card-title"></h4>
                         
                     </div>
                 </div>
@@ -41,7 +39,7 @@
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
-                        <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                        <h4 class="card-title"></h4>
                     </div>
                 </div>
            </div>
