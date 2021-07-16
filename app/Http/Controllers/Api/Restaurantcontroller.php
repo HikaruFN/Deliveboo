@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Type;
 
 class Restaurantcontroller extends Controller
 {
@@ -28,6 +29,7 @@ class Restaurantcontroller extends Controller
 
                'cover' => $restaurant->cover,
 
+               'type' => $restaurant->types->toArray()
            ];
 
            $result = [
@@ -41,4 +43,5 @@ class Restaurantcontroller extends Controller
        
         return response()->json($result);
     }
+
 }
