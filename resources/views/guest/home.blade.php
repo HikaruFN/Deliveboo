@@ -29,7 +29,7 @@
             <div v-if=" search == '' " class="row">
                 
                 <div v-for="restaurant in restaurants" class="card col-lg-4" style="width: 18rem;">
-                    <a href="`menu/${restaurant.id}`">
+                    <a :href="`menu/${restaurant.id}`">
                         
                         <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                         <div class="card-body">
