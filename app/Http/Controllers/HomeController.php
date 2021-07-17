@@ -32,7 +32,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        $restaurant = Restaurant::findOrFail($id);
+        $restaurant = User::findOrFail($id);
 
         $data = [
             'restaurant' => $restaurant,
