@@ -12,6 +12,14 @@
             <h1>HOME PUBBLICA</h1>
         </div>
 
+        {{--Type List--}}
+        <div class="container">
+            <ul>
+                <button type="button" class="btn btn-primary" v-for="type in types">@{{type.name}}</button>
+            </ul>
+        </div>
+        {{--End Type List--}}
+
         {{--Restaurants list--}}
         <div class="container">
 
@@ -31,7 +39,7 @@
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
-                        <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                        
                     </div>
                 </div>
            </div>
@@ -40,7 +48,7 @@
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@{{restaurant.name}}</h5>
-                        <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                        
                     </div>
                 </div>
            </div>

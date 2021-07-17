@@ -2107,6 +2107,7 @@ var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 var app = new Vue({
   el: '#root',
   data: {
+    types: [],
     restaurants: [],
     search: '',
     searchRestaurant: []
@@ -2114,8 +2115,11 @@ var app = new Vue({
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('http://localhost:8889/api/restaurant').then(function (result) {
+    axios.get('http://localhost:8000/api/restaurant').then(function (result) {
       _this.restaurants = result.data.restaurant;
+    });
+    axios.get('http://localhost:8000/api/type').then(function (result) {
+      _this.types = result.data.type;
     });
   },
   methods: {
@@ -2128,7 +2132,7 @@ var app = new Vue({
           _this2.searchRestaurant.push(restaurant);
         }
       });
-      console.log(this.searchRestaurant);
+      console.log(this.types);
     }
   }
 });
