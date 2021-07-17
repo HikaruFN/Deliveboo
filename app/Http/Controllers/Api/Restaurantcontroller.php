@@ -18,6 +18,8 @@ class Restaurantcontroller extends Controller
         foreach ($restaurants as $restaurant) {
 
            $filtered_array[] = [
+
+               'id' => $restaurant->id,
                
                'name' => $restaurant->name,
 

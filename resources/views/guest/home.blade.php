@@ -15,8 +15,18 @@
         {{--Type List--}}
         <div class="container">
             <ul>
-                <button type="button" class="btn btn-primary" v-for="type in types">@{{type.name}}</button>
+                <button type="button" class="btn btn-primary" v-for="type in types" v-on:click="searchRestaurantForType(type.id)" v-model="typeId">@{{type.name}}</button>
             </ul>
+            {{--Print Filtered Restaurants--}}
+            <div v-if=" search == '' " class="row">            
+                <div v-for="restaurant in searchRestaurantType" class="card col-lg-4" style="width: 18rem;">
+                    <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@{{restaurant.name}}</h5>
+                    </div>
+                </div>
+           </div>
+           {{--End Print Filtered Restaurants--}}
         </div>
         {{--End Type List--}}
 

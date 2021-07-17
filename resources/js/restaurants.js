@@ -1,4 +1,5 @@
 const { default: Axios } = require("axios");
+const { result } = require("lodash");
 
 var app = new Vue( {
     el: '#root',
@@ -6,7 +7,9 @@ var app = new Vue( {
         types: [],
         restaurants: [],
         search:'',
+        typeId: 0,
         searchRestaurant: [],
+        searchRestaurantType: [],
     },
     mounted(){
         axios.get('http://localhost:8000/api/restaurant')
@@ -26,8 +29,19 @@ var app = new Vue( {
                     this.searchRestaurant.push(restaurant);
                 }              
             });
-            console.log(this.types);
         },
+        searchRestaurantForType(id){
+           this.searchRestaurantType = [];
+           this.typeId = id;
+            console.log(this.typeId);
+            axios.get(`http://localhost:8000/api/restaurantfilter/${this.typeId}`)
+            .then(result => {
+                result.data.restaurants.forEach(element => {
+                    this.searchRestaurantType.push(element); 
+                });
+            })
+            console.log(this.searchRestaurantType);
+        }
 
     }
 
