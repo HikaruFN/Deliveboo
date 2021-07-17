@@ -17,26 +17,28 @@ class Restaurantcontroller extends Controller
 
         foreach ($restaurants as $restaurant) {
 
-           $filtered_array[] = [
+            $filtered_array[] = [
+
+                'id' => $restaurant->id,
                
-               'name' => $restaurant->name,
+                'name' => $restaurant->name,
 
-               'mail' => $restaurant->email,
+                'mail' => $restaurant->email,
 
-               'net_number' => $restaurant->net_number,
+                'net_number' => $restaurant->net_number,
 
-               'address' => $restaurant->address,
+                'address' => $restaurant->address,
 
-               'cover' => $restaurant->cover,
+                'cover' => $restaurant->cover,
 
-               'type' => $restaurant->types->toArray()
-           ];
+                'type' => $restaurant->types->toArray()
+            ];
 
-           $result = [
-               'restaurant' => $filtered_array,
+            $result = [
+                'restaurant' => $filtered_array,
 
-               'success' => true
-           ];
+                'success' => true
+            ];
         }
 
 

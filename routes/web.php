@@ -18,6 +18,8 @@ Auth::routes();
 //HOME PAGE PUBBLICA
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/menu/{id}', 'HomeController@show')->name('menu');
+
 //HOME PAGE PRIVATA
 Route::prefix('admin')
     ->namespace('Admin')
