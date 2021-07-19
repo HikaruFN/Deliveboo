@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -81,8 +80,8 @@
                                     <a class="dropdown-item link-coloured" href="{{ route('admin.dishes.create') }}">Crea nuovo piatto</a>
 
                                     <a class="dropdown-item link-coloured yellow" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -110,27 +109,55 @@
             <div class="newsletter">
                 <form>
                     <div class="form-group label-text">
-                      <label  for="exampleFormControlInput1">Iscriviti alla nostra newsletter</label>
-                      <div class="input-btn">
+                    <label  for="exampleFormControlInput1">Iscriviti alla nostra newsletter</label>
+                    <div class="input-btn">
                         <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="Inserisci la tua email">
                         <button class="btn-coloured yellow">Iscriviti</button>
-                      </div>
-                      
+                    </div>
+                    
                     </div>
                 </form>
             </div>
             {{--End Newsletter--}}
 
             <div class="container black-bg">
-                <div class="deliveboo-description">
-                    <h5>Deliveboo Team 3</h5>
-                    <p>Progetto realizzato dagli studenti della classe 31. <br>
-                        Enrico Bianco <br>
-                        Francesca Salvini <br>
-                        Francesco Nisi <br>
-                        Ignazio Montebello <br>
-                        Veronica Vannini
-                    </p>
+                <div class="deliveboo-description footer-links">
+                    <ul>
+                        <li>
+                            <h5>Deliveboo Team 3</h5>
+                            Progetto realizzato dagli studenti della classe 31.
+                        </li>
+                        <li>
+                            <a href="">
+                                Enrico Bianco
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Francesca Salvini
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Francesco Nisi
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Ignazio Montebello
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Veronica Vannini
+                            <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="footer-links">
@@ -160,11 +187,40 @@
                         </li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    
+                    <ul>
+                        <li>
+                            <h5>
+                                Vieni a trovarci sui nostri social
+                            </h5>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </footer>
         {{--End Footer--}}
-         
     </div>
     <!--Javascript Link Placeholder-->
     @yield('js-script')
