@@ -54,6 +54,23 @@ footer {
 .footer-links {
     margin: 0px 150px;
     padding-bottom: 50px;
+
+    li {
+        margin: 10px 0;
+       
+    }
+
+    &.social {
+        li:first-child {
+            display: block;
+        }
+        li {
+            display: inline-block;
+            
+            
+            margin: 20px 24px
+        }
+    }
 }
 
 ul{
@@ -64,6 +81,11 @@ ul{
             text-decoration: none;
             &:hover{
                 color: $deliveboo_main_blue;
+            }
+
+            i {
+                font-size: 30px;
+                
             }
         }
     }

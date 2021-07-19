@@ -11076,6 +11076,19 @@ footer {
   padding-bottom: 50px;
 }
 
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links.social li:first-child {
+  display: block;
+}
+
+.footer-links.social li {
+  display: inline-block;
+  margin: 20px 24px;
+}
+
 ul {
   list-style-type: none;
 }
@@ -11087,5 +11100,9 @@ ul li a {
 
 ul li a:hover {
   color: #23cad3;
+}
+
+ul li a i {
+  font-size: 30px;
 }
 

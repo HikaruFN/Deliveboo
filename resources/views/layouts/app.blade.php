@@ -121,7 +121,7 @@
             {{--End Newsletter--}}
             
 
-            <div class="container black-bg">
+            <div class=" black-bg">
                 <div class="deliveboo-description footer-links">
                     <ul>
                         <li>
@@ -189,21 +189,7 @@
                     </ul>
                 </div>
 
-                
-            </div>
-
-            
-
-            <div class="black-bg privacy-terms">
-                <ul>
-                    <li>
-                        <a href="">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="">Termini e condizioni</a>
-                    </li>
-                </ul>
-                <div class="footer-links">
+                <div class="footer-links social">
                     
                     <ul>
                         <li>
@@ -233,6 +219,22 @@
                         </li>
                     </ul>
                 </div>
+
+                
+            </div>
+
+            
+
+            <div class="black-bg privacy-terms">
+                <ul>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="">Termini e condizioni</a>
+                    </li>
+                </ul>
+                
             </div>
 
         </footer>
