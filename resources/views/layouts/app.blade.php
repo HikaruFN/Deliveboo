@@ -105,9 +105,9 @@
         </main>
 
         {{--Footer--}}
-        <footer class="black-bg">
+        <footer >
             {{--Newsletter--}}
-            <div class="newsletter">
+            <div class="newsletter black-bg">
                 <form>
                     <div class="form-group label-text">
                       <label  for="exampleFormControlInput1">Iscriviti alla nostra newsletter</label>
@@ -120,11 +120,12 @@
                 </form>
             </div>
             {{--End Newsletter--}}
+            
 
-            <div class="container black-bg">
+            <div class="black-bg">
                 <div class="deliveboo-description">
                     <h5>Deliveboo Team 3</h5>
-                    <p>Progetto realizzato dagli studenti della classe 31. <br>
+                    <p>
                         Enrico Bianco <br>
                         Francesca Salvini <br>
                         Francesco Nisi <br>
@@ -137,7 +138,7 @@
                     
                     <ul>
                         <li>
-                            <h5>Link utili</h5>
+                            <h5>Links utili</h5>
                         </li>
                         
                         <li>
@@ -160,6 +161,21 @@
                         </li>
                     </ul>
                 </div>
+
+                
+            </div>
+
+            
+
+            <div class="black-bg privacy-terms">
+                <ul>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="">Termini e condizioni</a>
+                    </li>
+                </ul>
             </div>
 
         </footer>

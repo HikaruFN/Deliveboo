@@ -1,10 +1,26 @@
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
 .black-bg {
     background-color: $deliveboo_black_text;
     color: $deliveboo_white_text;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+
+    &.privacy-terms {
+        padding: 40px 0;
+        
+        ul {
+            display: flex;
+            li{
+                margin: 0px 50px;
+            }
+        }
+    }
 }
 
 .label-text {
@@ -15,6 +31,8 @@
 .newsletter {
     padding: 50px 0;
     text-align: center;
+    
+    
 }
 
 .input-btn {
@@ -34,15 +52,18 @@
 }
 
 .footer-links {
-    ul{
-        list-style-type: none;
-        li {
-            a {
-                color: $deliveboo_white_text;
-                text-decoration: none;
-                &:hover{
-                    color: $deliveboo_main_blue;
-                }
+    margin: 0px 150px;
+    padding-bottom: 50px;
+}
+
+ul{
+    list-style-type: none;
+    li {
+        a {
+            color: $deliveboo_white_text;
+            text-decoration: none;
+            &:hover{
+                color: $deliveboo_main_blue;
             }
         }
     }
