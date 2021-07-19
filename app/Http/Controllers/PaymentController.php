@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Braintree\Gateway as Gateway;
+use App\Mail\SendNewMail;
+use Illuminate\Support\Facades\Mail;
+
 
 class PaymentController extends Controller
 {
@@ -30,7 +33,10 @@ class PaymentController extends Controller
                 'submitForSettlement' => true
             ]
         ]);
- 
+        
+        //SEND MAIL
+        Mail::to('deliveboo@boolean.com')->send(new SendNewMail());
+
         if ($result->success) {
  
             $transaction = $result->transaction;
