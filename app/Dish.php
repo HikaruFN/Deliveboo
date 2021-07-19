@@ -15,7 +15,8 @@ class Dish extends Model
         'visibility',
         'user_id',
         'category_id',
-        'cover'
+        'cover',
+        'quantity'
     ];
 
     public function orders() {

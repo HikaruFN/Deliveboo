@@ -19416,6 +19416,18 @@ var app = new Vue({
         });
       });
     },
+    addQuantity: function addQuantity(product, index) {
+      product.quantity++;
+      this.sum = this.sum + product.price;
+    },
+    decreaseQuantity: function decreaseQuantity(product, index) {
+      if (product.quantity > 1) {
+        product.quantity--;
+        this.sum = this.sum - product.price;
+      }
+
+      ;
+    },
     deleteItem: function deleteItem(index, product) {
       this.chartArray.splice(index, 1);
       this.sum = this.sum - product.price;

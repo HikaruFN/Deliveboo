@@ -7,7 +7,7 @@ var app = new Vue( {
         dish_Array: [],
         chartArray: [],
         getId: null,
-        sum: 0
+        sum: 0,
     },  
     methods: {
         setChart(id){
@@ -19,6 +19,19 @@ var app = new Vue( {
             }); 
         })
         },
+
+        addQuantity(product, index){
+            product.quantity ++;
+            this.sum = this.sum + product.price;
+        },
+
+        decreaseQuantity(product, index){
+            if(product.quantity > 1){
+                product.quantity --;
+                this.sum = this.sum - product.price;
+            };        
+        },
+
 
         deleteItem(index, product){
             this.chartArray.splice(index,1);

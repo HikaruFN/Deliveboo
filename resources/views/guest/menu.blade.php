@@ -23,12 +23,17 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-4" v-if="chartArray.length > 0" >
                     <div class="card">
                         <div class="card-body">  
                             <div v-for="(product, index) in chartArray">
                                 <h5>@{{product.name}}</h5>
                                 <h5>Price: @{{product.price}}€</h5>
+                                <h5>Quantità: @{{product.quantity}}</h5>
+                                <button v-on:click="addQuantity(product, index)" class="btn btn-primary">+</button>
+                                <button v-on:click="decreaseQuantity(product, index)" class="btn btn-primary">-</button>
+                                <br>{{--TOGLIERE QUESTI MOSTRI--}}
+                                <br>{{--TOGLIERE QUESTI MOSTRI--}}
                                 <button v-on:click="deleteItem(index, product)" class="btn btn-danger">X</button>
                             </div>   
                             <div class="card-body">
