@@ -30,13 +30,14 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                {{--Logo--}}
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="logo" src="{{ asset('img/db-logo.png') }}" alt="deliveboo logo" srcset="">
                     <div class="deliveboo-logo-text">
                         {{ config('app.name', 'Laravel') }}
                     </div>
-                    
                 </a>
+                {{--End Logo--}}
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -53,20 +54,22 @@
                         <!-- Authentication Links -->
                         @guest
 
-                        
+                            {{--Button Login--}}
                             <li class="nav-item margin-right">
                                 <a class="btn btn-coloured yellow" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
+                            {{--End Button Login--}}
+
+                            {{--Button Register--}}
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="btn btn-coloured blue" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            {{--End Button Register--}}
                             
                         @else
-
-                            
-
+                            {{--Dropdown--}}
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="dropdown-toggle link-coloured" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -90,6 +93,7 @@
                                     
                                 </div>
                             </li>
+                            {{--End Dropdown--}}
                         @endguest
                     </ul>
                 </div>
@@ -100,7 +104,9 @@
             @yield('content')
         </main>
 
+        {{--Footer--}}
         <footer class="black-bg">
+            {{--Newsletter--}}
             <div class="newsletter">
                 <form>
                     <div class="form-group label-text">
@@ -113,8 +119,10 @@
                     </div>
                 </form>
             </div>
+            {{--End Newsletter--}}
 
         </footer>
+        {{--End Footer--}}
          
     </div>
     <!--Javascript Link Placeholder-->
