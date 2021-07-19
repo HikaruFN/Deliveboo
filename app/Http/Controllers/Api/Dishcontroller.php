@@ -8,7 +8,7 @@ use App\Dish;
 
 class Dishcontroller extends Controller
 {
-    public function index()
+    public function index($id)
     {
         $dishes = Dish::all();
 
@@ -16,25 +16,65 @@ class Dishcontroller extends Controller
 
         foreach ($dishes as $dish) {
 
-            $dishes_array[] = [
+            if($dish->id == $id){
+                $dishes_array[] = [
+
+                    'id' => $dish->id,
+                   
+                    'name' => $dish->name,
+    
+                    'description' => $dish->description,
+    
+                    'price' => $dish->price,
+    
+                    'cover' => $dish->cover,
+
+           
+                ];
+    
+                $result = [
+                    'dish' => $dishes_array,
+    
+                    'success' => true
+                ];
+            }
+           
+        }     
+        return response()->json($result);
+    }
+
+    public function allDishes()
+    {
+        $dishes = Dish::all();
+
+        $allDishes_array = [];
+
+        foreach ($dishes as $dish) {
+
+            $allDishes_array[] = [
 
                 'id' => $dish->id,
-               
+                   
                 'name' => $dish->name,
-
+    
+                'description' => $dish->description,
+    
+                'price' => $dish->price,
+    
                 'cover' => $dish->cover,
-       
+
+                'user_id' => $dish->user_id,
+           
             ];
-
+    
             $result = [
-                'dish' => $dishes_array,
-
+                'dish' => $allDishes_array,
+    
                 'success' => true
             ];
-        }
-
-
-       
+            
+           
+        }     
         return response()->json($result);
     }
 }

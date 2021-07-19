@@ -10,26 +10,31 @@
     <div id="root">
         <div class="container">
             <h5>Piatti Ristorante</h5>
-
             <div class="row">
-                @foreach($dishes as $dish)
-                    <div class="col-8">
-                        <div class="card">
-                            <div class="card-body">  
-                                @if ($dish->cover)
-                                    <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
-                                @endif
-                                <h5 class="card-title">{{ $dish->name }}</h5>    
-                                <button v-on:click="printecho()" class="btn btn-success">Aggiungi al carrello</button>       
-                            </div>
+                <div class="col-8">
+                    <div v-for="dish in dish_Array" class="card">
+                        <div v-if="dish.user_id == getId" class="card-body">  {{--TO DO! Background problem--}}
+                            <h5 class="card-title">@{{dish.name}}</h5> 
+                            {{--@if ($dish->cover)
+                                <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+                            @endif --}} 
+                            <button v-on:click="setChart(dish.id)" class="btn btn-success">Aggiungi al carrello</button> 
                         </div>
                     </div>
-                @endforeach
+                </div>
 
                 <div class="col-4">
                     <div class="card">
                         <div class="card-body">  
-                            <h5 class="card-title">prova</h5>           
+                            <div v-for="(product, index) in chartArray">
+                                <h5>@{{product.name}}</h5>
+                                <h5>Price: @{{product.price}}€</h5>
+                                <button v-on:click="deleteItem(index, product)" class="btn btn-danger">X</button>
+                            </div>   
+                            <div class="card-body">
+                                <h3 v-if="sum">Total Price: @{{sum.toFixed(2)}}</h3>
+                                <button  class="btn btn-success"><a href="{{asset('')}}">Vai al pagamento</a></button>
+                            </div>       
                         </div>
                     </div>
                 </div>
