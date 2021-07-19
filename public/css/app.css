@@ -10963,6 +10963,12 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.deliveboo-logo-text {
+  color: #23cad3;
+  font-weight: 600;
+  display: inline;
+}
+
 .margin-right {
   margin-right: 20px;
 }
@@ -10973,6 +10979,16 @@ body {
 
 .link-coloured.yellow {
   color: #ffa704;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
 }
 
 .jumbo {
@@ -10999,5 +11015,36 @@ body {
 
 .jumbo-text p {
   font-weight: 600;
+}
+
+.black-bg {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.label-text {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.newsletter {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.input-btn {
+  display: flex;
+  padding: 20px 0;
+}
+
+.input-btn input {
+  width: 450px;
+}
+
+.input-btn button {
+  padding: 6px 20px;
+  margin-left: 10px;
 }
 

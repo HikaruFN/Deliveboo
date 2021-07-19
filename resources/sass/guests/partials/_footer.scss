@@ -1,0 +1,32 @@
+.black-bg {
+    background-color: $deliveboo_black_text;
+    color: $deliveboo_white_text;
+
+    display: flex;
+    justify-content: center;
+}
+
+.label-text {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.newsletter {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.input-btn {
+    display: flex;
+    padding: 20px 0;
+
+    input {
+        // flex-grow: 2;
+        width: 450px;
+    }
+
+    button {
+        padding: 6px 20px;
+        margin-left: 10px;
+    }
+}
