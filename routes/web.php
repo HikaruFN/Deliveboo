@@ -32,5 +32,6 @@ Route::prefix('admin')
         Route::resource('dishes', 'DishController');
 });
 
-
+Route::get('/cart', 'PaymentController@index')->name('braintree-index');
+Route::post('/', 'PaymentController@checkout')->name('braintree-checkout');
 
