@@ -32,3 +32,18 @@
         margin-left: 10px;
     }
 }
+
+.footer-links {
+    ul{
+        list-style-type: none;
+        li {
+            a {
+                color: $deliveboo_white_text;
+                text-decoration: none;
+                &:hover{
+                    color: $deliveboo_main_blue;
+                }
+            }
+        }
+    }
+}

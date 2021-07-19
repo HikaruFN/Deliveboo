@@ -11050,3 +11050,16 @@ body {
   margin-left: 10px;
 }
 
+.footer-links ul {
+  list-style-type: none;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #23cad3;
+}
+
