@@ -16,3 +16,6 @@ mix.js('resources/js/app.js', 'public/js')
 
 //Javascript for Guest Homepage
 mix.js('resources/js/restaurants.js', 'public/js')
+
+//Javascript for Dish Page
+mix.js('resources/js/dish.js', 'public/js')

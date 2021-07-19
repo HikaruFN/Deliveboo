@@ -32,7 +32,6 @@
                     <a :href="`menu/${restaurant.id}`">
                         
                         <img class="card-img-top" :src="restaurant.cover" alt="cover">
-                        @{{restaurant.cover}}
 
                         <div class="card-body">
                             <h5 class="card-title">@{{restaurant.name}}</h5>
