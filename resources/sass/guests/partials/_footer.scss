@@ -12,14 +12,20 @@ footer {
     justify-content: center;
 
     &.privacy-terms {
-        padding: 40px 0;
-        border-top: 0.5px solid $deliveboo_grey;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        border-top: 1px solid $deliveboo_grey;
+        border-bottom: 1px solid $deliveboo_grey;
         ul {
             display: flex;
             li{
                 margin: 0px 50px;
             }
         }
+    }
+
+    p {
+        padding-top: 20px;
     }
 }
 
@@ -31,7 +37,7 @@ footer {
 .newsletter {
     padding: 50px 0;
     text-align: center;
-    border-bottom: 0.5px solid $deliveboo_grey;
+    border-bottom: 1px solid $deliveboo_grey;
     
 }
 
@@ -59,6 +65,17 @@ footer {
     li {
         margin: 10px 0;
        
+    }
+
+    &.github {
+        li {
+            
+            a {
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 
     &.social {

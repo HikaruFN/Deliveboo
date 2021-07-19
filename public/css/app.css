@@ -11035,8 +11035,10 @@ footer {
 }
 
 .black-bg.privacy-terms {
-  padding: 40px 0;
-  border-top: 0.5px solid #464646;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-top: 1px solid #464646;
+  border-bottom: 1px solid #464646;
 }
 
 .black-bg.privacy-terms ul {
@@ -11047,6 +11049,10 @@ footer {
   margin: 0px 50px;
 }
 
+.black-bg p {
+  padding-top: 20px;
+}
+
 .label-text {
   font-size: 25px;
   font-weight: 600;
@@ -11055,7 +11061,7 @@ footer {
 .newsletter {
   padding: 50px 0;
   text-align: center;
-  border-bottom: 0.5px solid #464646;
+  border-bottom: 1px solid #464646;
 }
 
 .input-btn {
@@ -11080,6 +11086,10 @@ footer {
 
 .footer-links li {
   margin: 10px 0;
+}
+
+.footer-links.github li a i {
+  margin-right: 5px;
 }
 
 .footer-links.social li:first-child {

@@ -122,7 +122,7 @@
             
 
             <div class=" black-bg">
-                <div class="deliveboo-description footer-links">
+                <div class="deliveboo-description footer-links github">
                     <ul>
                         <li>
                             <h5>Deliveboo Team 3</h5>
@@ -130,32 +130,37 @@
                         </li>
                         <li>
                             <a href="">
+                                <i class="fab fa-github"></i>
                                 Enrico Bianco
-                            <i class="fab fa-github"></i>
+                            
                             </a>
                         </li>
                         <li>
                             <a href="">
+                                <i class="fab fa-github"></i>
                                 Francesca Salvini
-                            <i class="fab fa-github"></i>
+                            
                             </a>
                         </li>
                         <li>
                             <a href="">
+                                <i class="fab fa-github"></i>
                                 Francesco Nisi
-                            <i class="fab fa-github"></i>
+                            
                             </a>
                         </li>
                         <li>
                             <a href="">
+                                <i class="fab fa-github"></i>
                                 Ignazio Montebello
-                            <i class="fab fa-github"></i>
+                            
                             </a>
                         </li>
                         <li>
                             <a href="">
+                                <i class="fab fa-github"></i>
                                 Veronica Vannini
-                            <i class="fab fa-github"></i>
+                            
                             </a>
                         </li>
                     </ul>
@@ -235,6 +240,10 @@
                     </li>
                 </ul>
                 
+            </div>
+
+            <div class="black-bg">
+                <p>© Copyright 2021. Tutti i diritti sono riservati</p>
             </div>
 
         </footer>
