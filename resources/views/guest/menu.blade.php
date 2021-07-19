@@ -10,8 +10,7 @@
                         <div class="card-body">  
                             
                                 @if ($dish->cover)
-                                    {{--<img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">--}}
-                                    <img src="{{$dish->cover}}" alt="{{ $dish->name }}">
+                                    <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
                                 @endif
                                 <h5 class="card-title">{{ $dish->name }}</h5>
                             

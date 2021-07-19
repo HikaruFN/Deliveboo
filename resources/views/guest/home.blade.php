@@ -31,7 +31,9 @@
                 <div v-for="restaurant in restaurants" class="card col-lg-4" style="width: 18rem;">
                     <a :href="`menu/${restaurant.id}`">
                         
-                        <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
+                        <img class="card-img-top" :src="restaurant.cover" alt="cover">
+                        @{{restaurant.cover}}
+
                         <div class="card-body">
                             <h5 class="card-title">@{{restaurant.name}}</h5>
                             <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
