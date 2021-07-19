@@ -10965,24 +10965,23 @@ a.text-dark:focus {
   margin: 10px 0;
 }
 
-.yellow-inp {
+.custom-input {
   border-radius: 20px;
   box-shadow: 2px 5px #888888;
-  padding: 20px;
   opacity: 0.3;
 }
 
-.yellow-inp::-moz-placeholder {
+.custom-input::-moz-placeholder {
   color: black;
   opacity: 1;
 }
 
-.yellow-inp:-ms-input-placeholder {
+.custom-input:-ms-input-placeholder {
   color: black;
   opacity: 1;
 }
 
-.yellow-inp::placeholder {
+.custom-input::placeholder {
   color: black;
   opacity: 1;
 }

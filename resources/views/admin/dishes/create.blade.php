@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
 
-        <h1>Crea un nuovo piatto</h1>
+        <div class="margin-top-bottom">
+            <h1 class="title-section">Crea un nuovo piatto</h1>
 
         @if ($errors->any()) 
             <div class="alert alert-danger">
@@ -21,24 +22,24 @@
             @csrf
             @method ('POST')
 
-            <div class="form-group">
+            <div class="form-group alignment">
                 <label for="name">Nome piatto</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
+                <input type="text" class="form-control custom-input" id="name" name="name" value="{{ old('name') }}">
             </div>
 
-            <div class="form-group">
+            <div class="form-group alignment">
                 <label for="description">Descrizione piatto</label>
-                <textarea  class="form-control" id="description" name="description" cols="30" rows="10">{{ old('description') }}</textarea>
+                <textarea  class="form-control custom-input" id="description" name="description" cols="30" rows="10">{{ old('description') }}</textarea>
             </div>
 
-            <div class="form-group">
+            <div class="form-group alignment">
                 <label for="price">Prezzo</label>
-                <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}">
+                <input type="text" class="form-control custom-input" id="price" name="price" value="{{ old('price') }}">
             </div>
 
-            <div class="form-group">
+            <div class="form-group alignment">
                 <label for="category_id">Categoria</label>
-                <select class="form-control" name="category_id" id="category_id">
+                <select class="form-control custom-input" name="category_id" id="category_id">
                     <option value="">Nessuna</option>
 
                     @foreach($categories as $category)
@@ -49,7 +50,7 @@
 
 
             {{-- RADIO BUTTON FOR VISIBILITY --}}
-            <div class="form-group">
+            <div class="form-group alignment">
                 <input type="radio"  id="option1" name="visibility" value="0" @if(old('visibility') == '0') checked @endif> Non Disponibile</label>
 
                 <input type="radio" id="option2" name="visibility" value="1" @if(old('visibility') == '1') checked @endif> Disponibile</label>
@@ -65,8 +66,11 @@
             </div>
             {{--End Cover--}}
 
-            <input type="submit" class="btn btn-success" value="Salva piatto">
+            <input type="submit" class="btn-coloured wthmargin btn-success" value="Salva piatto">
         </form>
         <!-- end create form -->
+        </div>
+
+        
     </div>
 @endsection

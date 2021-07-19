@@ -5,7 +5,7 @@
     <div class="row justify-content-center margin-top-bottom">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header title-section">{{ __('Registra il tuo ristorante') }}</div>
+                <div class="card-header">{{ __('Registra il tuo ristorante') }}</div>
 
                 <div class="card-body padding">
                     <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
@@ -16,7 +16,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
 
                             <div class="col-md-6 col-lg-12">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror yellow-inp" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Pizzeria da Mario">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror custom-input" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Pizzeria da Mario">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6 col-lg-12">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror yellow-inp" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="pizzeriadamario@mail.com">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror custom-input" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="pizzeriadamario@mail.com">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Indirizzo') }}</label>
 
                             <div class="col-md-6 col-lg-12">
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror yellow-inp" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Via dei Pini 14, Milano">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror custom-input" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Via dei Pini 14, Milano">
 
                                 @error('address')
                                     <span class="invalid-feedback" role="alert">
@@ -64,7 +64,7 @@
                             <label for="net_number" class="col-md-4 col-form-label text-md-right">{{ __('Partita Iva') }}</label>
 
                             <div class="col-md-6 col-lg-12">
-                                <input id="net_number" type="text" class="form-control @error('net_number') is-invalid @enderror yellow-inp" name="net_number" value="{{ old('net_number') }}" required autocomplete="net_number" placeholder="12345678910">
+                                <input id="net_number" type="text" class="form-control @error('net_number') is-invalid @enderror custom-input" name="net_number" value="{{ old('net_number') }}" required autocomplete="net_number" placeholder="12345678910">
 
                                 @error('net_number')
                                     <span class="invalid-feedback" role="alert">
@@ -81,7 +81,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6 col-lg-12">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror yellow-inp" name="password" required autocomplete="new-password" placeholder="cjgLDoP3459C">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror custom-input" name="password" required autocomplete="new-password" placeholder="cjgLDoP3459C">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -98,7 +98,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Conferma Password') }}</label>
 
                             <div class="col-md-6 col-lg-12">
-                                <input id="password-confirm" type="password" class="form-control yellow-inp" name="password_confirmation" required autocomplete="new-password" placeholder="cjgLDoP3459C">
+                                <input id="password-confirm" type="password" class="form-control custom-input" name="password_confirmation" required autocomplete="new-password" placeholder="cjgLDoP3459C">
                             </div>
                         </div>
                         {{-- END CONFERMA PASSWORD --}}
