@@ -22,7 +22,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Gennaro Agosto 11, Milano',
                 'net_number' => 45676809124,
                 'password' => 'adminadmin',
-                'cover' => 'cover/wooden-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
             ],
             //Hamburger
             [
@@ -31,7 +31,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Settembre 117, Milano',
                 'net_number' => 45379809124,
                 'password' => 'adminadmin',
-                'cover' => 'cover/hamburger-plaza.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
                 
             ],
             
@@ -42,7 +42,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Kyote 2, Milano',
                 'net_number' => 45376809184,
                 'password' => 'adminadmin',
-                'cover' => 'cover/fudeden-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1480796927426-f609979314bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
             ],
             //Cinese
             [
@@ -51,7 +51,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Lubu 435, Milano',
                 'net_number' => 45376809124,
                 'password' => 'adminadmin',
-                'cover' => 'cover/lubu-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1531878003199-99f8c1c586c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1613&q=80',
             ],
             //Italiano
             [
@@ -60,7 +60,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Venti 4, Milano',
                 'net_number' => 45376800124,
                 'password' => 'adminadmin',
-                'cover' => 'cover/bellaria-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1103&q=80',
             ],
              //Pizza
              [
@@ -69,7 +69,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Gennarino 37, Milano',
                 'net_number' => 45376800164,
                 'password' => 'adminadmin',
-                'cover' => 'cover/rossella-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1579824218206-e70b13561132?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
             ],
               //Dolce
               [
@@ -78,7 +78,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Glucoside 9, Milano',
                 'net_number' => 48376800764,
                 'password' => 'adminadmin',
-                'cover' => 'cover/sweet-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80',
             ],
              //Gelato
              [
@@ -87,7 +87,7 @@ class UserTableSeeder extends Seeder
                 'address' => 'Via Glucoside 237, Milano',
                 'net_number' => 48366800764,
                 'password' => 'adminadmin',
-                'cover' => 'cover/cream-restaurant.jpg'
+                'cover' => 'https://images.unsplash.com/photo-1599999182263-ce6c07e98764?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80',
             ],
         ];
 
