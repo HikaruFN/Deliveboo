@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center margin-top-bottom">
         <div class="col-md-8">
             <div class="card">
-                <h1>HOMEPAGE ristoratori loggati</h1>
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                
+                <div class="card-header title-section">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
+                <div class="card-body padding">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -16,9 +16,9 @@
                     @endif
                 </div>
 
-                <a href="{{ route('admin.restaurants.index')}}" class="btn btn-primary">Vai al tuo ristorante</a>
+                <a href="{{ route('admin.restaurants.index')}}" class="btn-coloured blue wthmargin">Vai al tuo ristorante</a>
 
-                <a href="{{ route('admin.dishes.index')}}" class="btn btn-primary">Gestisci i tuoi piatti</a>
+                <a href="{{ route('admin.dishes.index')}}" class="btn-coloured yellow wthmargin">Gestisci i tuoi piatti</a>
             </div>
         </div>
     </div>

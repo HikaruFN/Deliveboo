@@ -62,7 +62,7 @@
                             {{--Button Register--}}
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="btn btn-coloured blue" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="btn btn-coloured blue" href="{{ route('register') }}">{{ __('Registrati') }}</a>
                                 </li>
                             @endif
                             {{--End Button Register--}}

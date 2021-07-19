@@ -10953,10 +10953,50 @@ a.text-dark:focus {
 
 .btn-coloured.yellow {
   background-color: #ffa704;
+  text-align: center;
 }
 
 .btn-coloured.blue {
   background-color: #23cad3;
+  text-align: center;
+}
+
+.btn-coloured.wthmargin {
+  margin: 10px 0;
+}
+
+.yellow-inp {
+  border-radius: 20px;
+  box-shadow: 2px 5px #888888;
+  padding: 20px;
+  opacity: 0.3;
+}
+
+.yellow-inp::-moz-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.yellow-inp:-ms-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.yellow-inp::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.alignment {
+  display: flex;
+  flex-direction: column;
+  -moz-text-align-last: start;
+       text-align-last: start;
+}
+
+.alignment label {
+  font-weight: 600;
+  color: #23cad3;
 }
 
 body {
@@ -11116,5 +11156,35 @@ ul li a:hover {
 
 ul li a i {
   font-size: 30px;
+}
+
+.title-section {
+  color: #23cad3;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+
+.padding {
+  padding: 20px 100px;
+}
+
+.margin-top-bottom {
+  margin: 100px 0;
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 15px 0;
+  color: #23cad3;
+}
+
+.black-text label {
+  color: #221F1F;
 }
 
