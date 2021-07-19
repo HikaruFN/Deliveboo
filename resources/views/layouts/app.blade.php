@@ -121,6 +121,45 @@
             </div>
             {{--End Newsletter--}}
 
+            <div class="container black-bg">
+                <div class="deliveboo-description">
+                    <h5>Deliveboo Team 3</h5>
+                    <p>Progetto realizzato dagli studenti della classe 31. <br>
+                        Enrico Bianco <br>
+                        Francesca Salvini <br>
+                        Francesco Nisi <br>
+                        Ignazio Montebello <br>
+                        Veronica Vannini
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li>
+                            Link utili
+                        </li>
+                        <li>
+                            <a href="">Login</a>
+                        </li>
+                        <li>
+                            <a href="">Registrati</a>
+                        </li>
+                        <li>
+                            <a href="">Ordini</a>
+                        </li>
+                        <li>
+                            <a href="">Blog</a>
+                        </li>
+                        <li>
+                            <a href="">Tracking</a>
+                        </li>
+                        <li>
+                            <a href="">Contatti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </footer>
         {{--End Footer--}}
          

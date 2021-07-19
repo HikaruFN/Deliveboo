@@ -11018,9 +11018,10 @@ body {
 }
 
 .black-bg {
-  background-color: #000;
+  background-color: #221F1F;
   color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -11037,6 +11038,7 @@ body {
 .input-btn {
   display: flex;
   padding: 20px 0;
+  justify-content: center;
 }
 
 .input-btn input {

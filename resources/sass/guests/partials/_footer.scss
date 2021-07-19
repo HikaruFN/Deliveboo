@@ -3,6 +3,7 @@
     color: $deliveboo_white_text;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -19,6 +20,7 @@
 .input-btn {
     display: flex;
     padding: 20px 0;
+    justify-content: center;
 
     input {
         // flex-grow: 2;
