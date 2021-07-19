@@ -19,6 +19,32 @@
         height: auto;
         object-position: 0 -85px;
     }
+
+    .ricerca-ristorante {
+        position: absolute;
+        top: 70%;
+        left: 55%;
+
+        label {
+            font-size: 28px;
+            font-weight: 600;
+            color: $deliveboo_main_orange;
+        }
+
+        input {
+            padding: 10px;
+            background-color: $deliveboo_white_text;
+            opacity: 0.9;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 2px 5px $deliveboo_main_orange;
+
+            &::placeholder { 
+                color: $deliveboo_black_text;
+                opacity: 0.8; 
+            }
+        }
+    }
 }
 
 .jumbo-text {

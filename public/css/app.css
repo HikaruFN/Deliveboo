@@ -11025,6 +11025,25 @@ hr {
   color: #72a79f;
 }
 
+.title {
+  text-align: center;
+  color: #221F1F;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+
+.check-inp {
+  margin-left: -70px;
+}
+
+.custom-margin-left {
+  margin-left: -40px;
+}
+
+.black-txt {
+  color: #221F1F;
+}
+
 .logo {
   width: 50px;
   height: 50px;
@@ -11047,6 +11066,42 @@ hr {
   height: auto;
   -o-object-position: 0 -85px;
      object-position: 0 -85px;
+}
+
+.jumbo .ricerca-ristorante {
+  position: absolute;
+  top: 70%;
+  left: 55%;
+}
+
+.jumbo .ricerca-ristorante label {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffa704;
+}
+
+.jumbo .ricerca-ristorante input {
+  padding: 10px;
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 2px 5px #ffa704;
+}
+
+.jumbo .ricerca-ristorante input::-moz-placeholder {
+  color: #221F1F;
+  opacity: 0.8;
+}
+
+.jumbo .ricerca-ristorante input:-ms-input-placeholder {
+  color: #221F1F;
+  opacity: 0.8;
+}
+
+.jumbo .ricerca-ristorante input::placeholder {
+  color: #221F1F;
+  opacity: 0.8;
 }
 
 .jumbo-text {
@@ -11186,5 +11241,21 @@ input {
 
 .black-text label {
   color: #221F1F;
+}
+
+.cover-card {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.address-grey {
+  color: #a3a3a3;
+  font-size: 14px;
 }
 

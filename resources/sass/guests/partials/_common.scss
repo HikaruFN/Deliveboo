@@ -23,3 +23,22 @@ body {
 hr {
     color: $deliveboo_azure;
 }
+
+.title {
+    text-align: center;
+    color: $deliveboo_black_text;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+.check-inp {
+    margin-left: -70px;
+}
+
+.custom-margin-left {
+    margin-left: -40px;
+}
+
+.black-txt {
+    color: $deliveboo_black_text;
+}

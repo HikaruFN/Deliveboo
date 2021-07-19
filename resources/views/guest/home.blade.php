@@ -17,6 +17,13 @@
                     a domicilio.
                 </p>
             </div>
+
+            {{--Ricerca Per Nome--}}
+            <div class="ricerca-ristorante">
+                <label for="search">Sai già cosa cercare?</label>
+                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito">
+            </div>
+            {{--Fine Ricerca Per Nome--}}
         </div>
         
 
@@ -39,38 +46,46 @@
         {{--End Type List--}}
 
         {{--Restaurants list--}}
-        <div class="container">
+        <div class="container ">
 
+            <div class="margin-top-bottom">
+                <h2 class="title">I nostri ristoranti</h2>
 
-            <h2>LISTA RISTORANTI</h2>
+            
 
-            {{--Ricerca Per Nome--}}
-            <div>
-                <label for="search">Cerca Ristorante:</label>
-                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search">
+                {{--All Restaurants--}}
+                <div v-if=" search == '' " class="row">            
+                    <div v-for="restaurant in restaurants" class="card col-lg-4 no-padding" style="width: 18rem;">
+                        <img class="card-img-top cover-card" :src="restaurant.cover" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title black-txt">@{{restaurant.name}}</h5>
+                            <p class="card-text address-grey">
+                                <i class="fas fa-map-marker-alt"></i>
+                                @{{restaurant.address}}
+                            </p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div v-else class="row">
+                    <div v-for="restaurant in searchRestaurant" class="card col-lg-4 no-padding" style="width: 18rem;">
+                        <img class="card-img-top cover-card" :src="restaurant.cover" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title black-txt"> @{{restaurant.name}}</h5>
+                            <p class="card-text address-grey">
+                                <i class="fas fa-map-marker-alt"></i>
+                                @{{restaurant.address}}
+                            </p>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+                {{--End All Restaurants--}}
             </div>
-            {{--Fine Ricerca Per Nome--}}
 
-            {{--All Restaurants--}}
-           <div v-if=" search == '' " class="row">            
-                <div v-for="restaurant in restaurants" class="card col-lg-4" style="width: 18rem;">
-                    <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">@{{restaurant.name}}</h5>
-                        
-                    </div>
-                </div>
-           </div>
-           <div v-else class="row">
-                <div v-for="restaurant in searchRestaurant" class="card col-lg-4" style="width: 18rem;">
-                    <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">@{{restaurant.name}}</h5>
-                        
-                    </div>
-                </div>
-           </div>
-            {{--All Restaurants--}}
+            
 
         </div>
         {{--End Restaurants list--}}
