@@ -31,10 +31,14 @@
                                 <h5>Price: @{{product.price}}€</h5>
                                 <button v-on:click="deleteItem(index, product)" class="btn btn-danger">X</button>
                             </div>   
-                            <div class="card-body">
-                                <h3 v-if="sum">Total Price: @{{sum.toFixed(2)}}</h3>
-                                <button  class="btn btn-success"><a href="{{asset('')}}">Vai al pagamento</a></button>
-                            </div>       
+                            <form action="{{  }}" method="post">
+                                @csrf
+                                @method('POST')
+                                <div class="card-body">
+                                    <h3 v-if="sum">Total Price: @{{sum.toFixed(2)}}</h3>
+                                    <button  class="btn btn-success"><a href="{{route('braintree-index')}}">Vai al pagamento</a></button>
+                                </div>  
+                            </form>     
                         </div>
                     </div>
                 </div>
