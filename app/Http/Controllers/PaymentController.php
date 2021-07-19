@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Braintree\Gateway as Gateway;
 use App\Mail\SendNewMail;
 use Illuminate\Support\Facades\Mail;
+use App\Order;
 
 
 class PaymentController extends Controller
@@ -33,7 +34,20 @@ class PaymentController extends Controller
                 'submitForSettlement' => true
             ]
         ]);
+
+
+        //SEND DATA TO ORDER
         
+        
+        $new_order_data = $request->all();
+
+        $new_order = new Order();
+        
+        $new_order->fill($new_order_data);
+
+        $new_order->save();
+
+
         //SEND MAIL
         Mail::to('deliveboo@boolean.com')->send(new SendNewMail());
 

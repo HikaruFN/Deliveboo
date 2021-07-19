@@ -15,10 +15,11 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name_on_card');
             $table->string('address');
-            $table->string('status');
-            $table->float('payment_total');
+            $table->string('email');
+            $table->string('status')->default(true);
+            $table->float('amount');
             $table->timestamps();
         });
     }

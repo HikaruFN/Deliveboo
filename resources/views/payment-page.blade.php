@@ -56,7 +56,7 @@
                     @method('POST')
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" name="email">
                     </div>
  
                     <div class="form-group">
@@ -116,7 +116,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="amount">Amount</label>
-                                <input type="text" class="form-control" id="amount" name="amount" value="11">
+                                <input type="text" class="form-control" id="amount" name="amount" value="Inserisci l'importo da pagare">
                             </div>
                         </div>
                     </div>
