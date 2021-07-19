@@ -31,7 +31,7 @@
                                 <h5>Price: @{{product.price}}€</h5>
                                 <button v-on:click="deleteItem(index, product)" class="btn btn-danger">X</button>
                             </div>   
-                            <form action="{{  }}" method="post">
+                            <form action="" method="post">
                                 @csrf
                                 @method('POST')
                                 <div class="card-body">
