@@ -5,7 +5,7 @@
     <div class="row justify-content-center margin-top-bottom">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registra il tuo ristorante') }}</div>
+                <div class="card-header title-section">{{ __('Registra il tuo ristorante') }}</div>
 
                 <div class="card-body padding">
                     <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}">
