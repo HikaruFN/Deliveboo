@@ -8,9 +8,17 @@
 @section('content')
     {{-- ID ROOT --}}
     <div id="root">
-        <div class="container">
-            <h1>HOME PUBBLICA</h1>
+        
+       {{--Jumbotron--}}
+        <div class="jumbo">
+            <img src="{{ asset('img/burger.jpg') }}" alt="burger">
+            <div class="jumbo-text">
+                <p>I piatti che ami, <br>
+                    a domicilio.
+                </p>
+            </div>
         </div>
+        
 
         {{--Type List--}}
         <div class="container">

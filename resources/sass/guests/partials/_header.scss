@@ -1,0 +1,24 @@
+.jumbo {
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-position: 0 -85px;
+    }
+}
+
+.jumbo-text {
+    color: $deliveboo_white_text;
+    font-size: 80px;
+    position: absolute;
+    top: 33%;
+    left: 55%;
+    
+    p {
+        font-weight: 600;
+    }
+}

@@ -6,3 +6,17 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+// VARIABILI
+@import 'guests/partials/variables';
+// MIXINS
+@import 'guests/partials/mixins';
+// COMMON
+@import 'guests/partials/common';
+// HEADER
+@import 'guests/partials/header';
+// MAIN
+@import 'guests/partials/main';
+// FOOTER
+@import 'guests/partials/footer';

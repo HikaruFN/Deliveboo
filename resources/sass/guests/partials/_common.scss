@@ -1,0 +1,16 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.link-coloured {
+    color: $deliveboo_main_blue;
+
+    &.yellow {
+        color: $deliveboo_main_orange;
+    }
+}
+

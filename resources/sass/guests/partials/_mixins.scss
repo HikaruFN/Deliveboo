@@ -1,0 +1,18 @@
+.btn-coloured {
+    
+    color: $deliveboo_white_text;
+    padding: 6px 52px;
+    border: none;
+    font-size: 13px;
+    border-radius: 2px;
+    font-weight: 700;
+    
+    
+    &.yellow {
+        background-color: $deliveboo_main_orange;
+    }
+
+    &.blue {
+        background-color: $deliveboo_main_blue;
+    }
+}

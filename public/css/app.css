@@ -10942,3 +10942,62 @@ a.text-dark:focus {
   }
 }
 
+.btn-coloured {
+  color: #fff;
+  padding: 6px 52px;
+  border: none;
+  font-size: 13px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.btn-coloured.yellow {
+  background-color: #ffa704;
+}
+
+.btn-coloured.blue {
+  background-color: #23cad3;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.margin-right {
+  margin-right: 20px;
+}
+
+.link-coloured {
+  color: #23cad3;
+}
+
+.link-coloured.yellow {
+  color: #ffa704;
+}
+
+.jumbo {
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.jumbo img {
+  width: 100%;
+  height: auto;
+  -o-object-position: 0 -85px;
+     object-position: 0 -85px;
+}
+
+.jumbo-text {
+  color: #fff;
+  font-size: 80px;
+  position: absolute;
+  top: 33%;
+  left: 55%;
+}
+
+.jumbo-text p {
+  font-weight: 600;
+}
+
