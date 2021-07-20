@@ -11,13 +11,14 @@
         <div class="container">
             <h5 class="title">Il nostro menu</h5>
             <div class="row">
-                <div class="col-8">
+                <div class="col-8" style="width: 18rem;">
                     <div v-for="dish in dish_Array" class="card">
                         <div v-if="dish.user_id == getId" class="card-body">  {{--TO DO! Background problem--}}
+                            
+
                             <h5 class="card-title yellow-txt">@{{dish.name}}</h5> 
-                            {{--@if ($dish->cover)
-                                <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
-                            @endif --}} 
+                            <img class="card-img-top cover-card" :src="`/storage/${dish.cover}`" :alt="dish.name">
+
                             <button v-on:click="setChart(dish.id)" class="btn-coloured blue">Aggiungi al carrello</button> 
                         </div>
                     </div>
