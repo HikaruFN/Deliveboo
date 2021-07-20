@@ -11387,3 +11387,13 @@ input {
   text-align: center;
 }
 
+.carrello {
+  font-size: 25px;
+  color: #ffa704;
+}
+
+.padding-top-bottom {
+  padding: 4px 20px;
+  margin: 0px 10px;
+}
+
