@@ -10962,7 +10962,7 @@ a.text-dark:focus {
 }
 
 .btn-coloured.red {
-  background-color: #932611;
+  background-color: #cc3d20;
   text-align: center;
 }
 
@@ -10976,7 +10976,7 @@ a.text-dark:focus {
 
 .chart-btn {
   border-radius: 60px;
-  background-color: #932611;
+  background-color: #cc3d20;
   color: #fff;
 }
 
@@ -11350,6 +11350,7 @@ input {
 .yellow-txt {
   color: #ffa704;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .chart-entities {

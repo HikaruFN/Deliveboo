@@ -41,10 +41,10 @@
                         <div class="card-body">  
                             <div v-for="(product, index) in chartArray" class="text-align">
                                 <h5 class="yellow-txt">@{{product.name}}</h5>
-                                <h5 class="chart-entities price"> Prezzo:  €@{{product.price}}</h5>
-                                <h5 class="chart-entities"> Quantità:  @{{product.quantity}}</h5>
-                                <button v-on:click="addQuantity(product, index)" class="btn btn-primary">+</button>
-                                <button v-on:click="decreaseQuantity(product, index)" class="btn btn-primary">-</button>
+                                <h5 class="chart-entities payment"> Prezzo:  €@{{product.price}}</h5>
+                                <h5 class="chart-entities payment"> Quantità:  @{{product.quantity}}</h5>
+                                <button v-on:click="addQuantity(product, index)" class="btn-coloured yellow">+</button>
+                                <button v-on:click="decreaseQuantity(product, index)" class="btn-coloured yellow">-</button>
                                 <br>{{--TOGLIERE QUESTI MOSTRI--}}
                                 <br>{{--TOGLIERE QUESTI MOSTRI--}}
                                 <button v-on:click="deleteItem(index, product)" class="btn-coloured red">Annulla</button>
