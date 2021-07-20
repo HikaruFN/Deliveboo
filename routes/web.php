@@ -34,5 +34,7 @@ Route::prefix('admin')
 
 Route::get('/cart', 'PaymentController@index')->name('braintree-index');
 
+Route::get('/cart/store', 'PaymentController@store')->name('order-store');
+
 Route::post('/', 'PaymentController@checkout')->name('braintree-checkout');
 

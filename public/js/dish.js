@@ -19433,6 +19433,14 @@ var app = new Vue({
       this.sum = this.sum - product.price;
     }
   },
+  watch: {
+    chartArray: {
+      handler: function handler(newNotes) {
+        localStorage.chartArray = JSON.stringify(newNotes);
+      },
+      deep: true
+    }
+  },
   created: function created() {
     var _window$location$href = window.location.href.split('/'),
         _window$location$href2 = _slicedToArray(_window$location$href, 5),
@@ -19443,6 +19451,10 @@ var app = new Vue({
         id = _window$location$href2[4];
 
     this.getId = id;
+
+    if (localStorage.chartArray) {
+      this.chartArray = JSON.parse(localStorage.chartArray);
+    }
   },
   mounted: function mounted() {
     var _this2 = this;

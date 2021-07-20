@@ -7,6 +7,7 @@ use Braintree\Gateway as Gateway;
 use App\Mail\SendNewMail;
 use Illuminate\Support\Facades\Mail;
 use App\Order;
+use App\Dish;
 
 
 class PaymentController extends Controller
@@ -66,6 +67,21 @@ class PaymentController extends Controller
             return back()->withErrors('An error occurred with the message:  ' . $result->message);
         }
 
+    }
+
+    public function store(Request $request){
+
+        $new_order_data = $request->all();
+
+        $new_order = new Order();   
+
+        $new_order->fill($new_dish_data);
+
+        // dd($new_dish);
+
+        $new_order->save();
+
+        return redirect()->route('admin.dishes.show', ['dish' => $new_dish->id]);
     }
 
 }

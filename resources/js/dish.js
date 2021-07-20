@@ -38,9 +38,20 @@ var app = new Vue( {
             this.sum = this.sum - product.price;
         },
     },
+    watch:{
+        chartArray: {
+            handler(newNotes) {
+                localStorage.chartArray = JSON.stringify(newNotes);
+            },
+            deep: true
+        }
+    },
     created(){
         const [a, b, c, d, id] = window.location.href.split('/');
         this.getId = id;
+        if(localStorage.chartArray){
+            this.chartArray = JSON.parse(localStorage.chartArray);
+        }
     },
     mounted(){
         axios.get(`http://localhost:8000/api/dish`)

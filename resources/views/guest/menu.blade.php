@@ -22,6 +22,7 @@
                     </div>
                 </div>
 
+                {{----}}
                 <div class="col-4" v-if="chartArray.length > 0" >
                     <div class="card">
                         <div class="card-body">  
@@ -43,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{----}}
             </div>
         </div>
     </div>
