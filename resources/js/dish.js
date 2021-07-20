@@ -11,7 +11,7 @@ var app = new Vue( {
     },  
     methods: {
         setChart(id){
-            axios.get(`http://localhost:8889/api/dish/${id}`)
+            axios.get(`http://localhost:8000/api/dish/${id}`)
         .then(result => {
             result.data.dish.forEach(element => {
                 this.chartArray.push(element);
@@ -43,7 +43,7 @@ var app = new Vue( {
         this.getId = id;
     },
     mounted(){
-        axios.get(`http://localhost:8889/api/dish`)
+        axios.get(`http://localhost:8000/api/dish`)
         .then(result => {
             this.dish_Array = result.data.dish
     })

@@ -19408,7 +19408,7 @@ var app = new Vue({
     setChart: function setChart(id) {
       var _this = this;
 
-      axios.get("http://localhost:8889/api/dish/".concat(id)).then(function (result) {
+      axios.get("http://localhost:8000/api/dish/".concat(id)).then(function (result) {
         result.data.dish.forEach(function (element) {
           _this.chartArray.push(element);
 
@@ -19447,7 +19447,7 @@ var app = new Vue({
   mounted: function mounted() {
     var _this2 = this;
 
-    axios.get("http://localhost:8889/api/dish").then(function (result) {
+    axios.get("http://localhost:8000/api/dish").then(function (result) {
       _this2.dish_Array = result.data.dish;
     });
   }
