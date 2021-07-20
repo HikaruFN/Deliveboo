@@ -9,7 +9,8 @@
     {{-- ID ROOT --}}
     <div id="root">
         <div class="container">
-            <h5 class="title">Il nostro menu</h5>
+            <div class="margin-top-bottom">
+                <h5 class="title no-padding-top">Il nostro menu</h5>
             <div class="row">
                 <div class="col-8" style="width: 18rem;">
                     <div v-for="dish in dish_Array" class="card">
@@ -59,6 +60,8 @@
                 </div>
 
             </div>
+            </div>
+            
         </div>
     </div>
 
