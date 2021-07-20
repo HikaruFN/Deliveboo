@@ -18,6 +18,8 @@ Auth::routes();
 //HOME PAGE PUBBLICA
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/menu/{id}', 'HomeController@show')->name('menu');
+
 //HOME PAGE PRIVATA
 Route::prefix('admin')
     ->namespace('Admin')
@@ -29,4 +31,7 @@ Route::prefix('admin')
         Route::resource('restaurants', 'RestaurantController');
         Route::resource('dishes', 'DishController');
 });
+
+Route::get('/cart', 'PaymentController@index')->name('braintree-index');
+Route::post('/', 'PaymentController@checkout')->name('braintree-checkout');
 

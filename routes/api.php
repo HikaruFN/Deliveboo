@@ -19,3 +19,9 @@ Route::get('/restaurant','Api\RestaurantController@index')->name('api.restaurant
 Route::get('/type','Api\TypeController@index')->name('api.type');
 
 Route::get('/restaurantfilter/{type}','Api\SearchrestaurantController@searchRestaurants')->name('api.restaurantfilter');
+
+Route::get('/dish/{id}','Api\Dishcontroller@index')->name('api.dish');
+
+Route::get('/dish','Api\Dishcontroller@allDishes')->name('api.all.dish');
+
+Route::get('/restaurant/{id}','Api\Restaurantcontroller@restaurantForId')->name('api.restaurant.id');

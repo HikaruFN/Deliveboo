@@ -44,15 +44,21 @@
             {{--Fine Ricerca Per Nome--}}
 
             {{--All Restaurants--}}
-           <div v-if=" search == '' " class="row">            
+            <div v-if=" search == '' " class="row">
+                
                 <div v-for="restaurant in restaurants" class="card col-lg-4" style="width: 18rem;">
-                    <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">@{{restaurant.name}}</h5>
+                    <a :href="`menu/${restaurant.id}`">
                         
-                    </div>
+                        <img class="card-img-top" :src="restaurant.cover" alt="cover">
+
+                        <div class="card-body">
+                            <h5 class="card-title">@{{restaurant.name}}</h5>
+                            <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                        </div>
+                    </a>
                 </div>
-           </div>
+                
+            </div>
            <div v-else class="row">
                 <div v-for="restaurant in searchRestaurant" class="card col-lg-4" style="width: 18rem;">
                     <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">

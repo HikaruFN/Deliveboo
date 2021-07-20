@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -14,6 +15,30 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('guest.home',);
+        $restaurants = User::all();
+
+        $data = [
+            'restaurants' => $restaurants
+        ];
+
+        return view('guest.home', $data);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $restaurant = User::findOrFail($id);
+
+        $data = [
+            'restaurant' => $restaurant,
+            'dishes' => $restaurant->dishes
+        ];
+
+        return view('guest.menu', $data);
     }
 }

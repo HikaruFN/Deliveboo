@@ -18,6 +18,7 @@ class CreateDishesTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->float('price');
+            $table->integer('quantity')->default(1);
             $table->boolean('visibility');
             $table->text('cover')->nullable();//
             $table->unsignedBigInteger('user_id');
