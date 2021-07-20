@@ -6,6 +6,10 @@
 
 .no-padding {
     padding: 0;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .address-grey {
@@ -13,3 +17,6 @@
     font-size: 14px;
 }
 
+.kitchen-type {
+    color: $deliveboo_main_orange;
+}

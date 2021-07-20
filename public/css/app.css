@@ -11257,8 +11257,16 @@ input {
   padding: 0;
 }
 
+.no-padding a {
+  text-decoration: none;
+}
+
 .address-grey {
   color: #a3a3a3;
   font-size: 14px;
+}
+
+.kitchen-type {
+  color: #ffa704;
 }
 
