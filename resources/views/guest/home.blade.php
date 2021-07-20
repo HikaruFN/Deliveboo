@@ -8,9 +8,24 @@
 @section('content')
     {{-- ID ROOT --}}
     <div id="root">
-        <div class="container">
-            <h1>HOME PUBBLICA</h1>
+        
+       {{--Jumbotron--}}
+        <div class="jumbo">
+            <img src="{{ asset('img/burger.jpg') }}" alt="burger">
+            <div class="jumbo-text">
+                <p>I piatti che ami, <br>
+                    a domicilio.
+                </p>
+            </div>
+
+            {{--Ricerca Per Nome--}}
+            <div class="ricerca-ristorante">
+                <label for="search">Sai già cosa cercare?</label>
+                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito...">
+            </div>
+            {{--Fine Ricerca Per Nome--}}
         </div>
+        
 
         {{--Type List--}}
         <div class="container">
@@ -20,10 +35,16 @@
             {{--Print Filtered Restaurants--}}
             <div v-if=" search == '' " class="row">            
                 <div v-for="restaurant in searchRestaurantType" class="card col-lg-4" style="width: 18rem;">
-                    <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">@{{restaurant.name}}</h5>
-                    </div>
+                    <a :href="`menu/${restaurant.id}`">
+                        <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@{{restaurant.name}}</h5>
+                            <p class="card-text address-grey">
+                                <i class="fas fa-map-marker-alt"></i>
+                                @{{restaurant.address}}
+                            </p>
+                        </div>
+                    </a>
                 </div>
            </div>
            {{--End Print Filtered Restaurants--}}
@@ -31,45 +52,43 @@
         {{--End Type List--}}
 
         {{--Restaurants list--}}
-        <div class="container">
+        <div class="container ">
 
-
-            <h2>LISTA RISTORANTI</h2>
-
-            {{--Ricerca Per Nome--}}
-            <div>
-                <label for="search">Cerca Ristorante:</label>
-                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search">
-            </div>
-            {{--Fine Ricerca Per Nome--}}
-
-            {{--All Restaurants--}}
-            <div v-if=" search == '' " class="row">
-                
-                <div v-for="restaurant in restaurants" class="card col-lg-4" style="width: 18rem;">
-                    <a :href="`menu/${restaurant.id}`">
-                        
-                        <img class="card-img-top" :src="restaurant.cover" alt="cover">
-
-                        <div class="card-body">
-                            <h5 class="card-title">@{{restaurant.name}}</h5>
-                            <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
-                        </div>
-                    </a>
-                </div>
-                
-            </div>
-           <div v-else class="row">
-                <div v-for="restaurant in searchRestaurant" class="card col-lg-4" style="width: 18rem;">
-                    <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">@{{restaurant.name}}</h5>
-                        
+            <div class="margin-top-bottom">
+                <h2 class="title">I nostri ristoranti</h2>
+     
+                {{--All Restaurants--}}
+                <div v-if=" search == '' " class="row">            
+                    <div v-for="restaurant in restaurants" class="card col-lg-4 no-padding" style="width: 18rem;">
+                        <a :href="`menu/${restaurant.id}`">
+                            <img class="card-img-top cover-card" :src="restaurant.cover" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title black-txt">@{{restaurant.name}}</h5>
+                                <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
+                                <p class="card-text address-grey">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    @{{restaurant.address}}
+                                </p>              
+                            </div>
+                        </a>
                     </div>
                 </div>
-           </div>
-            {{--All Restaurants--}}
-
+                <div v-else class="row">
+                    <div v-for="restaurant in searchRestaurant" class="card col-lg-4 no-padding" style="width: 18rem;">
+                        <a :href="`menu/${restaurant.id}`">
+                            <img class="card-img-top cover-card" :src="restaurant.cover" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title black-txt"> @{{restaurant.name}}</h5>
+                                <p class="card-text address-grey">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    @{{restaurant.address}}
+                                </p>           
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{--End All Restaurants--}}
+            </div>
         </div>
         {{--End Restaurants list--}}
     </div>

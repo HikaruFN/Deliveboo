@@ -1,0 +1,62 @@
+.logo {
+    width: 50px;
+    height: 50px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.jumbo {
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-position: 0 -85px;
+    }
+
+    .ricerca-ristorante {
+        position: absolute;
+        top: 70%;
+        left: 55%;
+
+        label {
+            font-size: 28px;
+            font-weight: 600;
+            color: $deliveboo_main_orange;
+        }
+
+        input {
+            padding: 10px;
+            background-color: $deliveboo_white_text;
+            opacity: 0.9;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 2px 5px $deliveboo_main_orange;
+
+            &:focus { outline:0; }
+
+            &::placeholder { 
+                color: $deliveboo_black_text;
+                opacity: 0.8; 
+            }
+        }
+    }
+}
+
+.jumbo-text {
+    color: $deliveboo_white_text;
+    font-size: 80px;
+    position: absolute;
+    top: 33%;
+    left: 55%;
+    
+    p {
+        font-weight: 600;
+    }
+}

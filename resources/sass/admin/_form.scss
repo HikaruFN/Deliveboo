@@ -1,0 +1,37 @@
+.title-section {
+    color: $deliveboo_main_blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+input {
+    width: 100%;
+}
+
+
+
+.padding {
+    padding: 20px 100px;
+    
+}
+
+.margin-top-bottom {
+    margin: 100px 0;
+}
+
+.sub-title {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 0;
+    color: $deliveboo_main_blue;
+}
+
+
+.black-text{
+    label{
+        color: $deliveboo_black_text;
+    }
+    
+}

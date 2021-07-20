@@ -1,0 +1,57 @@
+// BUTTONS
+
+.btn-coloured {
+    
+    color: $deliveboo_white_text;
+    padding: 6px 52px;
+    border: none;
+    font-size: 13px;
+    border-radius: 2px;
+    font-weight: 700;
+    
+    
+    &.yellow {
+        background-color: $deliveboo_main_orange;
+        text-align: center;
+        
+    }
+
+    &.blue {
+        background-color: $deliveboo_main_blue;
+        text-align: center;
+       
+    }
+
+    &.wthmargin {
+        margin: 10px 0;
+    }
+    
+}
+
+//INPUT FORM YELLOW
+
+.custom-input {
+    
+    border-radius: 20px;
+    
+    box-shadow: 2px 5px #888888;
+    // padding: 15px ;
+    opacity: 0.3;
+
+    &::placeholder { 
+        color: black;
+        opacity: 1; 
+    }
+}
+
+.alignment {
+    display: flex;
+    flex-direction: column;
+    
+    text-align-last: start;
+
+    label {
+        font-weight: 600;
+        color: $deliveboo_main_blue;
+    }
+}
