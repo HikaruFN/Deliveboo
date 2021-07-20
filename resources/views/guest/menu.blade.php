@@ -13,8 +13,9 @@
             <div class="row">
                 <div class="col-8" style="width: 18rem;">
                     <div v-for="dish in dish_Array" class="card">
-                        <div v-if="dish.user_id == getId" class="card-body">  {{--TO DO! Background problem--}}
+                        <div v-if="dish.user_id == getId && dish.visibility" class="card-body">  {{--TO DO! Background problem--}}
                             <h5 class="card-title">@{{dish.name}}</h5> 
+                            
                             <img class="card-img-top cover-card" :src="`/storage/${dish.cover}`" :alt="dish.name">
 
                             <button v-on:click="setChart(dish.id)" class="btn btn-success">Aggiungi al carrello</button> 

@@ -29,8 +29,7 @@ class Dishcontroller extends Controller
     
                     'cover' => $dish->cover,
 
-                    'quantity'  => $dish->quantity,
-
+                    'quantity'  => $dish->quantity
                 ];
     
                 $result = [
@@ -67,6 +66,8 @@ class Dishcontroller extends Controller
                 'user_id' => $dish->user_id,
 
                 'quantity'  => $dish->quantity,
+
+                'visibility'  => $dish->visibility
            
             ];
     
