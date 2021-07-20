@@ -36,7 +36,7 @@
             <div v-if=" search == '' " class="row">            
                 <div v-for="restaurant in searchRestaurantType" class="card col-lg-4" style="width: 18rem;">
                     <a :href="`menu/${restaurant.id}`">
-                        <img class="card-img-top" :src="restaurant.cover" alt="Card image cap">
+                        <img class="card-img-top cover-card" :src="`storage/${restaurant.cover}`" :alt="restaurant.name">
                         <div class="card-body">
                             <h5 class="card-title">@{{restaurant.name}}</h5>
                             <p class="card-text address-grey">
@@ -61,7 +61,8 @@
                 <div v-if=" search == '' " class="row">            
                     <div v-for="restaurant in restaurants" class="card col-lg-4 no-padding" style="width: 18rem;">
                         <a :href="`menu/${restaurant.id}`">
-                            <img class="card-img-top cover-card" :src="restaurant.cover" alt="Card image cap">
+                            <img class="card-img-top cover-card" :src="`storage/${restaurant.cover}`" :alt="restaurant.name">
+
                             <div class="card-body">
                                 <h5 class="card-title black-txt">@{{restaurant.name}}</h5>
                                 <h4 class="card-title">@{{restaurant.type[0].name}}</h4>
@@ -76,7 +77,8 @@
                 <div v-else class="row">
                     <div v-for="restaurant in searchRestaurant" class="card col-lg-4 no-padding" style="width: 18rem;">
                         <a :href="`menu/${restaurant.id}`">
-                            <img class="card-img-top cover-card" :src="restaurant.cover" alt="Card image cap">
+                            <img class="card-img-top cover-card" :src="`storage/${restaurant.cover}`" :alt="restaurant.name">
+
                             <div class="card-body">
                                 <h5 class="card-title black-txt"> @{{restaurant.name}}</h5>
                                 <p class="card-text address-grey">
