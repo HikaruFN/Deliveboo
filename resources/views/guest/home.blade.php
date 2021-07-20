@@ -33,12 +33,14 @@
                 <button type="button" class="btn btn-primary" v-for="type in types" v-on:click="searchRestaurantForType(type.id)" v-model="typeId">@{{type.name}}</button>
             </ul> --}}
 
-                <div class="card-body" >
-                    <button class="btn btn-lg px-5 btn-primary"  role="button" v-for="type in types"  v-model="typeId" v-on:click="searchRestaurantForType(type.id)">
-                        <div class="card" style="width: 18rem;" >
-                            <img :src="type.cover" class="card-img-top" alt="...">
-                            <h5 class="card-title">@{{type.name}}</h5>
-                          
+                <h2 class="title">Scegli la tua cucina preferita</h2>
+                <div class="card-body">
+                    <button class="btn "  role="button" v-for="type in types"  v-model="typeId" v-on:click="searchRestaurantForType(type.id)">
+                        <div class="card" style="width: 15rem;" >
+                            <img :src="type.cover" class="card-img-top cover-card card-type" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title white-title">@{{type.name}}</h5>
+                            </div>
                         </div>
                     </button>
                 </div>
@@ -67,7 +69,7 @@
         <div class="container ">
 
             <div class="margin-top-bottom">
-                <h2 class="title">I nostri ristoranti</h2>
+                <h2 class="title no-padding-top">I nostri ristoranti</h2>
      
                 {{--All Restaurants--}}
                 <div v-if=" search == '' " class="row">            

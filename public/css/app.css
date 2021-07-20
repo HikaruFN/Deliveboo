@@ -10965,6 +10965,16 @@ a.text-dark:focus {
   margin: 10px 0;
 }
 
+.btn-coloured a {
+  color: #fff;
+}
+
+.chart-btn {
+  border-radius: 60px;
+  background-color: #932611;
+  color: #fff;
+}
+
 .custom-input {
   border-radius: 20px;
   box-shadow: 2px 5px #888888;
@@ -11026,9 +11036,10 @@ hr {
 
 .title {
   text-align: center;
-  color: #221F1F;
-  font-weight: 300;
-  padding-bottom: 30px;
+  color: #23cad3;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 70px 0px 30px 0px;
 }
 
 .check-inp {
@@ -11253,12 +11264,20 @@ input {
      object-fit: cover;
 }
 
+.cover-card.card-type {
+  height: 80px;
+}
+
 .no-padding {
   padding: 0;
 }
 
 .no-padding a {
   text-decoration: none;
+}
+
+.no-padding-top {
+  padding-top: 0;
 }
 
 .address-grey {
@@ -11268,5 +11287,64 @@ input {
 
 .kitchen-type {
   color: #ffa704;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.white-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 8px #888888;
+}
+
+.display-flex img {
+  width: 550px;
+  height: auto;
+}
+
+.flex-items {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  color: #464646;
+}
+
+.flex-items .sub-title {
+  font-size: 22px;
+}
+
+.flex-items span {
+  font-weight: 600;
+  color: #23cad3;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.yellow-txt {
+  color: #ffa704;
+  text-transform: uppercase;
+}
+
+.chart-entities {
+  color: #464646;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 

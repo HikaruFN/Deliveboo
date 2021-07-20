@@ -1,0 +1,41 @@
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        width: 550px;
+        height: auto;
+    }
+
+    box-shadow: 5px 8px #888888
+}
+
+
+
+.flex-items {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    
+    color: $deliveboo_grey;
+    
+
+    .sub-title {
+        font-size: 22px;
+    }
+    span {
+        font-weight: 600;
+        color: $deliveboo_main_blue;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+.yellow-txt {
+    color: $deliveboo_main_orange;
+    text-transform: uppercase;
+}
