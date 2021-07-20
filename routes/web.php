@@ -33,5 +33,6 @@ Route::prefix('admin')
 });
 
 Route::get('/cart', 'PaymentController@index')->name('braintree-index');
+
 Route::post('/', 'PaymentController@checkout')->name('braintree-checkout');
 
