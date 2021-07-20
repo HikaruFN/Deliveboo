@@ -10961,6 +10961,11 @@ a.text-dark:focus {
   text-align: center;
 }
 
+.btn-coloured.red {
+  background-color: #932611;
+  text-align: center;
+}
+
 .btn-coloured.wthmargin {
   margin: 10px 0;
 }
@@ -11268,6 +11273,11 @@ input {
   height: 80px;
 }
 
+.cover-card.menu {
+  width: 300px;
+  height: 180px;
+}
+
 .no-padding {
   padding: 0;
 }
@@ -11346,5 +11356,33 @@ input {
   color: #464646;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.display-flex-menu {
+  display: flex;
+}
+
+.menu-description {
+  align-self: center;
+  width: 50%;
+  margin: auto;
+}
+
+.price {
+  font-size: 18px;
+  color: #464646;
+}
+
+.description {
+  color: #a3a3a3;
+}
+
+.payment {
+  color: #464646;
+  font-size: 15px;
+}
+
+.text-align {
+  text-align: center;
 }
 
