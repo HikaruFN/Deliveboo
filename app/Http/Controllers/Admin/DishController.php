@@ -19,7 +19,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Auth::user()->dishes;
+        $dishes = Auth::user()->dishes->sortBy('name');
 
         $data = [
             'dishes' => $dishes
