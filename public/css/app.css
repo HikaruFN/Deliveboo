@@ -11088,6 +11088,10 @@ hr {
   box-shadow: 2px 5px #ffa704;
 }
 
+.jumbo .ricerca-ristorante input:focus {
+  outline: 0;
+}
+
 .jumbo .ricerca-ristorante input::-moz-placeholder {
   color: #221F1F;
   opacity: 0.8;

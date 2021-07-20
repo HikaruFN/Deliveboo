@@ -21,7 +21,7 @@
             {{--Ricerca Per Nome--}}
             <div class="ricerca-ristorante">
                 <label for="search">Sai già cosa cercare?</label>
-                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito">
+                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito...">
             </div>
             {{--Fine Ricerca Per Nome--}}
         </div>
