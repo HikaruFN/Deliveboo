@@ -7,7 +7,17 @@
         height: auto;
     }
 
-    box-shadow: 5px 8px #888888
+    box-shadow: 5px 8px #888888;
+
+    &.dish-section {
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        
+    }
 }
 
 
@@ -28,6 +38,11 @@
     span {
         font-weight: 600;
         color: $deliveboo_main_blue;
+    }
+
+    .btn-coloured {
+        margin: 5px 0;
+        width: 250px;
     }
 }
 

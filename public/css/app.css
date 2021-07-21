@@ -11059,6 +11059,10 @@ hr {
   color: #221F1F;
 }
 
+.no-flex {
+  display: block;
+}
+
 .logo {
   width: 50px;
   height: 50px;
@@ -11325,6 +11329,13 @@ input {
   height: auto;
 }
 
+.display-flex.dish-section img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .flex-items {
   display: flex;
   flex-direction: column;
@@ -11341,6 +11352,11 @@ input {
 .flex-items span {
   font-weight: 600;
   color: #23cad3;
+}
+
+.flex-items .btn-coloured {
+  margin: 5px 0;
+  width: 250px;
 }
 
 .margin-bottom {
