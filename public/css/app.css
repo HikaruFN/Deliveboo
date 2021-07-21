@@ -11321,7 +11321,7 @@ input {
 .display-flex {
   display: flex;
   justify-content: space-between;
-  box-shadow: 5px 8px #888888;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
 }
 
 .display-flex img {
