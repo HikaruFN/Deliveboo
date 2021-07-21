@@ -46,8 +46,8 @@
                 </div>
 
             {{--Print Filtered Restaurants--}}
-            <div v-if=" search == '' " class="row">            
-                <div v-for="restaurant in searchRestaurantType" class="card col-lg-4" style="width: 18rem;">
+            <div v-if=" search == '' " class="row" style="width:1200px; justify-content:center;">            
+                <div v-for="restaurant in searchRestaurantType" class="card col-lg-3" style="width: 18rem; margin:15px 15px; box-shadow: 0 6px 6px rgba(0,0,0,0.2);">
                     <a :href="`menu/${restaurant.id}`">
                         <img class="card-img-top cover-card" :src="`storage/${restaurant.cover}`" :alt="restaurant.name">
                         <div class="card-body">
@@ -72,8 +72,8 @@
                 <h2 class="title no-padding-top">I nostri ristoranti</h2>
      
                 {{--All Restaurants--}}
-                <div v-if=" search == '' " class="row">            
-                    <div v-for="restaurant in restaurants" class="card col-lg-4 no-padding" style="width: 18rem;">
+                <div v-if=" search == '' " class="row" style="width:1200px; justify-content:center;">            
+                    <div v-for="restaurant in restaurants" class="card col-lg-3 no-padding" style="width: 18rem; margin:15px 15px; box-shadow: 0 6px 6px rgba(0,0,0,0.2);">
                         <a :href="`menu/${restaurant.id}`">
                             <img class="card-img-top cover-card" :src="`storage/${restaurant.cover}`" :alt="restaurant.name">
 
@@ -93,8 +93,8 @@
                         </a>
                     </div>
                 </div>
-                <div v-else class="row">
-                    <div v-for="restaurant in searchRestaurant" class="card col-lg-4 no-padding" style="width: 18rem;">
+                <div v-else class="row" style="width:1200px; justify-content:center;">
+                    <div v-for="restaurant in searchRestaurant" class="card col-lg-3 no-padding" style="width: 18rem; margin:15px 15px; box-shadow: 0 6px 6px rgba(0,0,0,0.2);">
                         <a :href="`menu/${restaurant.id}`">
                             <img class="card-img-top cover-card" :src="`storage/${restaurant.cover}`" :alt="restaurant.name">
 
