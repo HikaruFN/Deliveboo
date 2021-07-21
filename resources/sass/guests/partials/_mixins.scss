@@ -22,10 +22,26 @@
        
     }
 
+    &.red {
+        background-color: $deliveboo_vedi_tuo_ristorante;
+        text-align: center;
+    }
+
     &.wthmargin {
         margin: 10px 0;
     }
     
+    a {
+        color: $deliveboo_white_text;
+    }
+
+    
+}
+
+.chart-btn {
+    border-radius: 60px;
+    background-color: $deliveboo_vedi_tuo_ristorante;
+    color: $deliveboo_white_text;
 }
 
 //INPUT FORM YELLOW

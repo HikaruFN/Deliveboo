@@ -10961,8 +10961,23 @@ a.text-dark:focus {
   text-align: center;
 }
 
+.btn-coloured.red {
+  background-color: #cc3d20;
+  text-align: center;
+}
+
 .btn-coloured.wthmargin {
   margin: 10px 0;
+}
+
+.btn-coloured a {
+  color: #fff;
+}
+
+.chart-btn {
+  border-radius: 60px;
+  background-color: #cc3d20;
+  color: #fff;
 }
 
 .custom-input {
@@ -11026,9 +11041,10 @@ hr {
 
 .title {
   text-align: center;
-  color: #221F1F;
-  font-weight: 300;
-  padding-bottom: 30px;
+  color: #23cad3;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 70px 0px 30px 0px;
 }
 
 .check-inp {
@@ -11041,6 +11057,10 @@ hr {
 
 .black-txt {
   color: #221F1F;
+}
+
+.no-flex {
+  display: block;
 }
 
 .logo {
@@ -11253,12 +11273,144 @@ input {
      object-fit: cover;
 }
 
+.cover-card.card-type {
+  height: 80px;
+}
+
+.cover-card.menu {
+  width: 300px;
+  height: 180px;
+}
+
 .no-padding {
   padding: 0;
+}
+
+.no-padding a {
+  text-decoration: none;
+}
+
+.no-padding-top {
+  padding-top: 0;
 }
 
 .address-grey {
   color: #a3a3a3;
   font-size: 14px;
+}
+
+.kitchen-type {
+  color: #ffa704;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.white-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.display-flex img {
+  width: 550px;
+  height: auto;
+}
+
+.display-flex.dish-section img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.flex-items {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  color: #464646;
+}
+
+.flex-items .sub-title {
+  font-size: 22px;
+}
+
+.flex-items span {
+  font-weight: 600;
+  color: #23cad3;
+}
+
+.flex-items .btn-coloured {
+  margin: 5px 0;
+  width: 250px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.yellow-txt {
+  color: #ffa704;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.chart-entities {
+  color: #464646;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.display-flex-menu {
+  display: flex;
+}
+
+.menu-description {
+  align-self: center;
+  width: 50%;
+  margin: auto;
+}
+
+.price {
+  font-size: 18px;
+  color: #464646;
+}
+
+.description {
+  color: #a3a3a3;
+}
+
+.payment {
+  color: #464646;
+  font-size: 15px;
+}
+
+.text-align {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.carrello {
+  font-size: 25px;
+  color: #ffa704;
+}
+
+.padding-top-bottom {
+  padding: 4px 20px;
+  margin: 0px 10px;
 }
 

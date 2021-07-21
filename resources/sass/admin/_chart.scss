@@ -1,0 +1,48 @@
+.chart-entities {
+    color: $deliveboo_grey;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.display-flex-menu {
+    display: flex;
+
+
+}
+
+.menu-description {
+    align-self: center;
+    width: 50%;
+    margin: auto;
+}
+
+.price {
+    font-size: 18px;
+    color: $deliveboo_grey;
+}
+
+.description {
+    color: $deliveboo_light_grey;
+}
+
+.payment {
+    color: $deliveboo_grey;
+    font-size: 15px;
+
+}
+
+.text-align {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.carrello {
+    font-size: 25px;
+    color: $deliveboo_main_orange;
+    
+}
+
+.padding-top-bottom {
+    padding: 4px 20px;
+    margin: 0px 10px;
+}

@@ -20,6 +20,8 @@ class Typecontroller extends Controller
                
                'name' => $type->name,
 
+               'cover' => $type->cover,
+
                'id' => $type->id
            ];
 

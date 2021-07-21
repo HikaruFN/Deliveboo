@@ -2,14 +2,53 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
+
+    &.card-type {
+        height: 80px;
+        
+    }
+
+    &.menu {
+        width: 300px;
+        height: 180px;
+        
+    }
 }
+
 
 .no-padding {
     padding: 0;
+
+    a {
+        text-decoration: none;
+    }
 }
+
+.no-padding-top {
+    padding-top: 0;
+}
+
 
 .address-grey {
     color: $deliveboo_light_grey;
     font-size: 14px;
 }
 
+.kitchen-type {
+    color: $deliveboo_main_orange;
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;   
+    background-color: rgba($color: #000000, $alpha: 0.4);
+}
+
+.white-title {
+    color: $deliveboo_white_text;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}

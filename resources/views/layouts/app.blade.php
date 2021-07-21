@@ -69,7 +69,7 @@
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('braintree-index') }}"><i class="fas fa-shopping-cart"></i></a>
+                                <a class="nav-link padding-top-bottom" href="{{ route('braintree-index') }}"><i class="fas fa-shopping-cart carrello"></i></a>
                                 
                             </li>
                             {{--End Button Register--}}

@@ -1,0 +1,57 @@
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        width: 550px;
+        height: auto;
+    }
+
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+
+    &.dish-section {
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        
+    }
+}
+
+
+
+.flex-items {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    
+    color: $deliveboo_grey;
+    
+
+    .sub-title {
+        font-size: 22px;
+    }
+    span {
+        font-weight: 600;
+        color: $deliveboo_main_blue;
+    }
+
+    .btn-coloured {
+        margin: 5px 0;
+        width: 250px;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+.yellow-txt {
+    color: $deliveboo_main_orange;
+    text-transform: uppercase;
+    font-weight: 600;
+}
