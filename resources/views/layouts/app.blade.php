@@ -85,6 +85,7 @@
 
                                     <a class="dropdown-item link-coloured" href="{{ route('admin.dishes.index') }}">Gestisci i tuoi piatti</a>
                                     <a class="dropdown-item link-coloured" href="{{ route('admin.dishes.create') }}">Crea nuovo piatto</a>
+                                    <a class="dropdown-item link-coloured" href="{{ route('admin.restaurants.index') }}">Il tuo ristorante</a>
 
                                     <a class="dropdown-item link-coloured yellow" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
