@@ -13,15 +13,14 @@
                 <h5 class="title no-padding-top">Il nostro menu</h5>
             <div class="row">
                 <div class="col-8" style="width: 18rem;">
-                    <div v-for="dish in dish_Array" class="card">
-                        <div v-if="dish.user_id == getId" class="card-body">  
+                    <div v-if="dish.user_id == getId && dish.visibility" v-for="dish in dish_Array" class="card">
+                        <div  class="card-body">  
                             <div class="display-flex-menu">
 
                                 <div>
                                     <h5 class="card-title yellow-txt">@{{dish.name}}</h5> 
                                     <img class="card-img-top cover-card menu" :src="`/storage/${dish.cover}`" :alt="dish.name">
                                 </div>
-                                
 
                                 <div class="menu-description">
                                     <h5 class="price">Prezzo: €@{{dish.price}}</h5>
@@ -30,8 +29,6 @@
                                 </div>
                                  
                             </div>
-                            
-
                             
                         </div>
                     </div>
