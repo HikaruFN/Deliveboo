@@ -19,3 +19,6 @@ mix.js('resources/js/restaurants.js', 'public/js')
 
 //Javascript for Dish Page
 mix.js('resources/js/dish.js', 'public/js')
+
+//Javascript for Payment Page
+mix.js('resources/js/payment.js', 'public/js')

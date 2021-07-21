@@ -93,7 +93,24 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\franc\\laravel-projects\\deliveboo-team3\\resources\\js\\payment.js'");
+var app = new Vue({
+  el: '#root',
+  data: {
+    prodotti: JSON.parse(localStorage.getItem("prodotti")),
+    total: 0
+  },
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
+
+    console.log(this.prodotti);
+    this.prodotti.forEach(function (element) {
+      _this.total += element.price * element.quantity;
+    });
+    return this.total;
+    console.log(this.total);
+  }
+});
 
 /***/ }),
 

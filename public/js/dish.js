@@ -19406,8 +19406,6 @@ var app = new Vue({
   },
   methods: {
     setChart: function setChart(dish) {
-      console.log(dish);
-
       if (!this.chartArray.includes(dish)) {
         this.chartArray.push(dish);
         this.sum = this.sum + dish.price;
@@ -19421,16 +19419,24 @@ var app = new Vue({
       this.sum = this.sum + product.price;
     },
     decreaseQuantity: function decreaseQuantity(product, index) {
-      if (product.quantity > 1) {
+      if (product.quantity >= 1) {
         product.quantity--;
         this.sum = this.sum - product.price;
-      }
 
-      ;
+        if (product.quantity < 1) {
+          product.quantity = 1;
+          this.$delete(this.chartArray, index);
+          console.log(this.chartArray);
+        }
+      }
     },
-    deleteItem: function deleteItem(index, product) {
-      this.chartArray.splice(index, 1);
-      this.sum = this.sum - product.price;
+    deleteItem: function deleteItem() {
+      this.sum = 0;
+      this.chartArray = [];
+    },
+    setLocalStorage: function setLocalStorage() {
+      localStorage.clear();
+      localStorage.setItem("prodotti", JSON.stringify(this.chartArray));
     }
   },
   watch: {

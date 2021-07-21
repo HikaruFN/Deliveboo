@@ -6,6 +6,8 @@
  
         <title>Braintree Checkout</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
  
         <!-- Additional Styles -->
         <style>
@@ -29,159 +31,143 @@
     </head>
  
     <body>
-        <div class="container">
-            <div class="col-md-6 offset-md-3">
-                <h1>Payment Form</h1>
-                <div class="spacer"></div>
- 
-                @if (session()->has('success_message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('success_message') }}
-                    </div>
-                @endif
- 
-                @if(count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
- 
-                {{-- Payment Form --}}
-                <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form">
-                    @csrf
-                    @method('POST')
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
- 
-                    <div class="form-group">
-                        <label for="name_on_card">Name on Card</label>
-                        <input type="text" class="form-control" id="name_on_card" name="name_on_card">
-                    </div>
- 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="address">Address</label>
-                                <input type="text" class="form-control" id="address" name="address">
+        <div id="root">   
+            <div class="container">
+                <div class="col-md-6 offset-md-3">
+                    <h1>Checkout</h1>
+                    <div class="spacer"></div>
+    
+                    @if (session()->has('success_message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success_message') }}
+                        </div>
+                    @endif
+    
+                    @if(count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+    
+                    {{-- Payment Form --}}
+                    <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form">
+                        @csrf
+                        @method('POST')
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    
+                                    <label for="amount">Il totale del tuo ordine è: <br> &euro; @{{total}}</label>
+                                    <input style="display: none;"  type="text" :value="total">                                   
+                                </div>
                             </div>
                         </div>
- 
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="city">City</label>
-                                <input type="text" class="form-control" id="city" name="city">
-                            </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email">
                         </div>
- 
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="province">Province</label>
-                                <input type="text" class="form-control" id="province" name="province">
-                            </div>
+    
+                        <div class="form-group">
+                            <label for="name_on_card">Name on Card</label>
+                            <input type="text" class="form-control" id="name_on_card" name="name_on_card">
                         </div>
- 
-                    </div>
- 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="postalcode">Postal Code</label>
-                                <input type="text" class="form-control" id="postalcode" name="postalcode">
+    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address">
+                                </div>
                             </div>
+    
                         </div>
- 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="country">Country</label>
-                                <input type="text" class="form-control" id="country" name="country">
+    
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="postalcode">Postal Code</label>
+                                    <input type="text" class="form-control" id="postalcode" name="postalcode">
+                                </div>
                             </div>
-                        </div>
- 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="text" class="form-control" id="phone" name="phone">
+    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone" name="phone">
+                                </div>
                             </div>
+    
                         </div>
- 
-                    </div>
- 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="amount">Amount</label>
-                                <input type="text" class="form-control" id="amount" name="amount" value="Inserisci l'importo da pagare">
+    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="cc_number">Credit Card Number</label>
+                                    <input type="text" class="form-control" id="cc_number" name="cc_number">
+                                </div>
                             </div>
+    
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry</label>
+                                    <input type="text" class="form-control" id="expiry" name="expiry">
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="cvc">CVV</label>
+                                    <input type="text" class="form-control" id="cvc" name="cvc">
+                                </div>
+                            </div>
+    
                         </div>
-                    </div>
- 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
+    
+                        <div class="row">
+                            <div class="col-md-6">
                                 <label for="cc_number">Credit Card Number</label>
-                                <input type="text" class="form-control" id="cc_number" name="cc_number">
+    
+                                <div class="form-group" id="card-number">
+    
+                                </div>
                             </div>
-                        </div>
- 
-                        <div class="col-md-3">
-                            <div class="form-group">
+    
+                            <div class="col-md-3">
                                 <label for="expiry">Expiry</label>
-                                <input type="text" class="form-control" id="expiry" name="expiry">
+    
+                                <div class="form-group" id="expiration-date">
+    
+                                </div>
                             </div>
-                        </div>
- 
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="cvc">CVV</label>
-                                <input type="text" class="form-control" id="cvc" name="cvc">
+    
+                            <div class="col-md-3">
+                                <label for="cvv">CVV</label>
+    
+                                <div class="form-group" id="cvv">
+    
+                                </div>
                             </div>
+    
                         </div>
- 
-                    </div>
- 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="cc_number">Credit Card Number</label>
- 
-                            <div class="form-group" id="card-number">
- 
-                            </div>
-                        </div>
- 
-                        <div class="col-md-3">
-                            <label for="expiry">Expiry</label>
- 
-                            <div class="form-group" id="expiration-date">
- 
-                            </div>
-                        </div>
- 
-                        <div class="col-md-3">
-                            <label for="cvv">CVV</label>
- 
-                            <div class="form-group" id="cvv">
- 
-                            </div>
-                        </div>
- 
-                    </div>
- 
-                    <div class="spacer"></div>
- 
-                    <div id="paypal-button"></div>
- 
-                    <div class="spacer"></div>
- 
-                    <input id="nonce" name="payment_method_nonce" type="hidden" />
-                    <button type="submit" class="btn btn-success">Submit Payment</button>
-                </form>
-                {{-- End Payment Form --}}
+    
+                        <div class="spacer"></div>
+    
+                        <div id="paypal-button"></div>
+    
+                        <div class="spacer"></div>
+    
+                        <input id="nonce" name="payment_method_nonce" type="hidden" />
+                        <button type="submit" class="btn btn-success">Submit Payment</button>
+                    </form>
+                    {{-- End Payment Form --}}
+                </div>
             </div>
         </div>
  
@@ -303,6 +289,7 @@
         });
  
     </script>
- 
+       <script src="{{asset('js/payment.js')}}"></script>    
     </body>
+ 
 </html>
