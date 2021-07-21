@@ -137,35 +137,35 @@
                             Progetto realizzato dagli studenti della classe 31.
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://github.com/biancoenrico">
                                 <i class="fab fa-github"></i>
                                 Enrico Bianco
                             
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://github.com/Francesca-Salvini">
                                 <i class="fab fa-github"></i>
                                 Francesca Salvini
                             
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://github.com/HikaruFN">
                                 <i class="fab fa-github"></i>
                                 Francesco Nisi
                             
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://github.com/IgnazioMont">
                                 <i class="fab fa-github"></i>
                                 Ignazio Montebello
                             
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://github.com/Verovannini">
                                 <i class="fab fa-github"></i>
                                 Veronica Vannini
                             
