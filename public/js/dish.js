@@ -19405,16 +19405,16 @@ var app = new Vue({
     sum: 0
   },
   methods: {
-    setChart: function setChart(id) {
-      var _this = this;
+    setChart: function setChart(dish) {
+      console.log(dish);
 
-      axios.get("http://localhost:8000/api/dish/".concat(id)).then(function (result) {
-        result.data.dish.forEach(function (element) {
-          _this.chartArray.push(element);
-
-          _this.sum = _this.sum + element.price;
-        });
-      });
+      if (!this.chartArray.includes(dish)) {
+        this.chartArray.push(dish);
+        this.sum = this.sum + dish.price;
+      } else {
+        dish.quantity++;
+        this.sum = this.sum + dish.price;
+      }
     },
     addQuantity: function addQuantity(product, index) {
       product.quantity++;
@@ -19439,6 +19439,9 @@ var app = new Vue({
         localStorage.chartArray = JSON.stringify(newNotes);
       },
       deep: true
+    },
+    sum: function sum(newSum) {
+      localStorage.sum = newSum;
     }
   },
   created: function created() {
@@ -19455,12 +19458,16 @@ var app = new Vue({
     if (localStorage.chartArray) {
       this.chartArray = JSON.parse(localStorage.chartArray);
     }
+
+    if (localStorage.sum) {
+      this.sum = JSON.parse(localStorage.sum);
+    }
   },
   mounted: function mounted() {
-    var _this2 = this;
+    var _this = this;
 
     axios.get("http://localhost:8000/api/dish").then(function (result) {
-      _this2.dish_Array = result.data.dish;
+      _this.dish_Array = result.data.dish;
     });
   }
 });

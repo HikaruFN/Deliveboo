@@ -17,7 +17,7 @@
                             <h5 class="card-title">@{{dish.name}}</h5> 
                             <img class="card-img-top cover-card" :src="`/storage/${dish.cover}`" :alt="dish.name">
 
-                            <button v-on:click="setChart(dish.id)" class="btn btn-success">Aggiungi al carrello</button> 
+                            <button v-on:click="setChart(dish)" class="btn btn-success">Aggiungi al carrello</button> 
                         </div>
                     </div>
                 </div>

@@ -10,16 +10,16 @@ var app = new Vue( {
         sum: 0,
     },  
     methods: {
-        setChart(id){
-            axios.get(`http://localhost:8000/api/dish/${id}`)
-        .then(result => {
-            result.data.dish.forEach(element => {
-                this.chartArray.push(element);
-                this.sum = this.sum + element.price;
-            }); 
-        })
+        setChart(dish){
+            console.log(dish);
+            if (!this.chartArray.includes(dish)) {
+                this.chartArray.push(dish);
+                this.sum = this.sum + dish.price;
+            }else{
+                dish.quantity++;
+                this.sum = this.sum + dish.price;
+            }
         },
-
         addQuantity(product, index){
             product.quantity ++;
             this.sum = this.sum + product.price;
@@ -44,6 +44,10 @@ var app = new Vue( {
                 localStorage.chartArray = JSON.stringify(newNotes);
             },
             deep: true
+            
+        },
+        sum(newSum){
+            localStorage.sum = newSum;
         }
     },
     created(){
@@ -51,6 +55,9 @@ var app = new Vue( {
         this.getId = id;
         if(localStorage.chartArray){
             this.chartArray = JSON.parse(localStorage.chartArray);
+        }
+        if(localStorage.sum){
+            this.sum = JSON.parse(localStorage.sum);
         }
     },
     mounted(){
