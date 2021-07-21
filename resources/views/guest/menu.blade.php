@@ -46,15 +46,15 @@
                                 <h5 class="chart-entities payment"> Prezzo:  €@{{product.price}}</h5>
                                 <h5 class="chart-entities payment"> Quantità:  @{{product.quantity}}</h5>
                                 <button v-on:click="decreaseQuantity(product, index)" class="btn-coloured yellow">-</button>
-                                <button v-on:click="addQuantity(product, index)" class="btn-coloured yellow">+</button>
+                                <button v-on:click="addQuantity(product)" class="btn-coloured yellow">+</button>
                                 
                                 <br>{{--TOGLIERE QUESTI MOSTRI--}}
                                 <br>{{--TOGLIERE QUESTI MOSTRI--}}
-                                <button v-on:click="deleteItem(index, product)" class="btn-coloured red">Annulla</button>
                             </div>   
                             <div class="card-body text-align" >
                                 <p v-if="sum" class="payment"> Importo da pagare: €@{{sum.toFixed(2)}}</p>
-                                <button  class="btn-coloured blue"><a href="{{route('braintree-index')}}">Vai al pagamento</a></button>
+                                <button v-on:click="setLocalStorage"  class="btn-coloured blue"><a href="{{route('braintree-index')}}">Vai al pagamento</a></button>
+                                <button v-on:click="deleteItem()" class="btn-coloured red">Annulla Ordine</button>
                             </div>  
                             </form>     
                         </div>
