@@ -10979,6 +10979,12 @@ a.text-dark:focus {
   color: #fff;
 }
 
+.btn-pay {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .chart-btn {
   border-radius: 60px;
   background-color: #cc3d20;
@@ -11438,5 +11444,21 @@ input {
 
 .border-rad {
   border-radius: 20px;
+}
+
+i {
+  margin-right: 8px;
+  color: #464646;
+}
+
+.amount {
+  text-align: center;
+  color: #a3a3a3;
+}
+
+.amount label span {
+  color: #23cad3;
+  font-size: 25px;
+  font-weight: 600;
 }
 
