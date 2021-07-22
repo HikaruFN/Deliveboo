@@ -103,12 +103,10 @@ var app = new Vue({
   mounted: function mounted() {
     var _this = this;
 
-    console.log(this.prodotti);
     this.prodotti.forEach(function (element) {
       _this.total += element.price * element.quantity;
     });
     return this.total;
-    console.log(this.total);
   }
 });
 

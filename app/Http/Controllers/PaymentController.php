@@ -30,7 +30,7 @@ class PaymentController extends Controller
  
         $result = $gateway->transaction()->sale([
             'amount' => $amount,
-            'paymentMethodNonce' => $nonce,
+            'paymentMethodNonce' => 'fake-valid-nonce',
             'options' => [
                 'submitForSettlement' => true
             ]
