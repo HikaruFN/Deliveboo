@@ -19418,15 +19418,22 @@ var app = new Vue({
     searchRestaurantForType: function searchRestaurantForType(id) {
       var _this3 = this;
 
-      this.searchRestaurantType = [];
-      this.typeId = id;
-      console.log(this.typeId);
-      axios.get("http://localhost:8000/api/restaurantfilter/".concat(this.typeId)).then(function (result) {
-        result.data.restaurants.forEach(function (element) {
-          _this3.searchRestaurantType.push(element);
+      if (!this.searchRestaurantType.length || this.typeId != id) {
+        this.typeId = id;
+        console.log("sono nell if");
+        axios.get("http://localhost:8000/api/restaurantfilter/".concat(this.typeId)).then(function (result) {
+          result.data.restaurants.forEach(function (element) {
+            _this3.searchRestaurantType.push(element);
+          });
         });
-      });
-      console.log(this.searchRestaurantType);
+        this.searchRestaurantType = [];
+      } else {
+        this.searchRestaurantType = [];
+        console.log("sono nell else");
+      }
+    },
+    deleteRestaurants: function deleteRestaurants() {
+      this.searchRestaurantType = [];
     }
   }
 });
@@ -19440,7 +19447,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\franc\laravel-projects\deliveboo-team3\resources\js\restaurants.js */"./resources/js/restaurants.js");
+module.exports = __webpack_require__(/*! C:\Users\enric\boolean\repo\php_project\deliveboo-team3\resources\js\restaurants.js */"./resources/js/restaurants.js");
 
 
 /***/ })
