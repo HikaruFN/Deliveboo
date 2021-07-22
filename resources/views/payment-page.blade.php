@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
  
-        <title>Braintree Checkout</title>
+        <title>Checkout</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -32,9 +32,9 @@
  
     <body>
         <div id="root">   
-            <div class="container">
-                <div class="col-md-6 offset-md-3">
-                    <h1>Checkout</h1>
+            <div class="container display-flex">
+                <div class="col-md-6 offset-md-3 margin-top-bottom">
+                    <h1 class="title white-txt ">Checkout</h1>
                     <div class="spacer"></div>
     
                     @if (session()->has('success_message'))
@@ -54,7 +54,7 @@
                     @endif
     
                     {{-- Payment Form --}}
-                    <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form">
+                    <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form" class="checkout-form">
                         @csrf
                         @method('POST')
 
@@ -69,21 +69,23 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email">
+                        <div class="form-group alignment">
+                            <div><i class="fas fa-at"></i></div>
+                            <label for="email"> <i class="fas fa-at"></i> Indirizzo E-mail</label>
+                            
+                            <input type="email" class="form-control checkout-input" id="email" name="email">
                         </div>
     
-                        <div class="form-group">
-                            <label for="name_on_card">Name on Card</label>
-                            <input type="text" class="form-control" id="name_on_card" name="name_on_card">
+                        <div class="form-group alignment">
+                            <label for="name_on_card">Intestatario carta</label>
+                            <input type="text" class="form-control checkout-input" id="name_on_card" name="name_on_card">
                         </div>
     
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" class="form-control" id="address" name="address">
+                                <div class="form-group alignment">
+                                    <label for="address">Indirizzo</label>
+                                    <input type="text" class="form-control checkout-input" id="address" name="address">
                                 </div>
                             </div>
     
@@ -91,16 +93,16 @@
     
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="postalcode">Postal Code</label>
-                                    <input type="text" class="form-control" id="postalcode" name="postalcode">
+                                <div class="form-group alignment">
+                                    <label for="postalcode">Codice postale</label>
+                                    <input type="text" class="form-control checkout-input" id="postalcode" name="postalcode">
                                 </div>
                             </div>
     
                             <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" class="form-control" id="phone" name="phone">
+                                <div class="form-group alignment">
+                                    <label for="phone">Telefono</label>
+                                    <input type="text" class="form-control checkout-input" id="phone" name="phone">
                                 </div>
                             </div>
     
@@ -108,46 +110,46 @@
     
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="cc_number">Credit Card Number</label>
-                                    <input type="text" class="form-control" id="cc_number" name="cc_number">
+                                <div class="form-group alignment">
+                                    <label for="cc_number">Numero Carta</label>
+                                    <input type="text" class="form-control checkout-input" id="cc_number" name="cc_number">
                                 </div>
                             </div>
     
                             <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="expiry">Expiry</label>
-                                    <input type="text" class="form-control" id="expiry" name="expiry">
+                                <div class="form-group alignment">
+                                    <label for="expiry">Scadenza Carta</label>
+                                    <input type="text" class="form-control checkout-input" id="expiry" name="expiry">
                                 </div>
                             </div>
     
                             <div class="col-md-3">
-                                <div class="form-group">
+                                <div class="form-group alignment">
                                     <label for="cvc">CVV</label>
-                                    <input type="text" class="form-control" id="cvc" name="cvc">
+                                    <input type="text" class="form-control checkout-input" id="cvc" name="cvc">
                                 </div>
                             </div>
     
                         </div>
     
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="cc_number">Credit Card Number</label>
+                        <div class="row ">
+                            <div class="col-md-6 alignment">
+                                <label for="cc_number">Numero Carta</label>
     
                                 <div class="form-group" id="card-number">
     
                                 </div>
                             </div>
     
-                            <div class="col-md-3">
-                                <label for="expiry">Expiry</label>
+                            <div class="col-md-3 alignment">
+                                <label for="expiry">Scadenza Carta</label>
     
                                 <div class="form-group" id="expiration-date">
     
                                 </div>
                             </div>
     
-                            <div class="col-md-3">
+                            <div class="col-md-3 alignment">
                                 <label for="cvv">CVV</label>
     
                                 <div class="form-group" id="cvv">
@@ -164,7 +166,7 @@
                         <div class="spacer"></div>
     
                         <input id="nonce" name="payment_method_nonce" type="hidden" />
-                        <button type="submit" class="btn btn-success">Submit Payment</button>
+                        <button type="submit" class="btn-coloured checkout-btn">Concludi pagamento</button>
                     </form>
                     {{-- End Payment Form --}}
                 </div>

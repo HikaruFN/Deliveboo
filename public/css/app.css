@@ -10966,6 +10966,11 @@ a.text-dark:focus {
   text-align: center;
 }
 
+.btn-coloured.checkout-btn {
+  background-color: #f45074;
+  text-align: center;
+}
+
 .btn-coloured.wthmargin {
   margin: 10px 0;
 }
@@ -11061,6 +11066,14 @@ hr {
 
 .no-flex {
   display: block;
+}
+
+.white-txt {
+  color: #fff;
+  background-color: #0066CC;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 .logo {
@@ -11198,7 +11211,7 @@ footer {
 }
 
 .footer-links {
-  margin: 0px 150px;
+  margin: 0px 100px;
   padding: 50px 0;
 }
 
@@ -11216,7 +11229,7 @@ footer {
 
 .footer-links.social li {
   display: inline-block;
-  margin: 20px 24px;
+  margin: 10px 24px 20px 24px;
 }
 
 ul {
@@ -11412,5 +11425,18 @@ input {
 .padding-top-bottom {
   padding: 4px 20px;
   margin: 0px 10px;
+}
+
+.checkout-form .checkout-input {
+  border: none;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.checkout-form .alignment label {
+  color: #a3a3a3;
+}
+
+.border-rad {
+  border-radius: 20px;
 }
 

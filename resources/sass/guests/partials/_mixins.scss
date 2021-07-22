@@ -27,6 +27,11 @@
         text-align: center;
     }
 
+    &.checkout-btn {
+        background-color: $deliveboo-checkout-btn;
+        text-align: center;
+    }
+
     &.wthmargin {
         margin: 10px 0;
     }
@@ -44,7 +49,7 @@
     color: $deliveboo_white_text;
 }
 
-//INPUT FORM YELLOW
+//INPUT FORM 
 
 .custom-input {
     

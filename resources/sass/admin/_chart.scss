@@ -46,3 +46,25 @@
     padding: 4px 20px;
     margin: 0px 10px;
 }
+
+
+
+.checkout-form {
+
+    
+    .checkout-input {
+        border: none;
+        border-bottom: 1px solid $deliveboo_light_grey;
+        
+    }
+    .alignment {
+        label {
+            color: $deliveboo_light_grey;
+        }
+        
+    }
+}
+
+.border-rad {
+    border-radius: 20px;
+}

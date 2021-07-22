@@ -47,3 +47,12 @@ hr {
 .no-flex {
     display: block;
 }
+
+.white-txt {
+    color: $deliveboo_white_text;
+    background-color: $deliveboo_dark_blue;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
