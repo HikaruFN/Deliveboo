@@ -73,19 +73,19 @@
                             <div><i class="fas fa-at"></i></div>
                             <label for="email"> <i class="fas fa-at"></i> Indirizzo E-mail</label>
                             
-                            <input type="email" class="form-control checkout-input" id="email" name="email">
+                            <input type="email" class="checkout-input" id="email" name="email">
                         </div>
     
                         <div class="form-group alignment">
                             <label for="name_on_card">Intestatario carta</label>
-                            <input type="text" class="form-control checkout-input" id="name_on_card" name="name_on_card">
+                            <input type="text" class="checkout-input" id="name_on_card" name="name_on_card">
                         </div>
     
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group alignment">
                                     <label for="address">Indirizzo</label>
-                                    <input type="text" class="form-control checkout-input" id="address" name="address">
+                                    <input type="text" class="checkout-input" id="address" name="address">
                                 </div>
                             </div>
     
@@ -95,14 +95,14 @@
                             <div class="col-md-4">
                                 <div class="form-group alignment">
                                     <label for="postalcode">Codice postale</label>
-                                    <input type="text" class="form-control checkout-input" id="postalcode" name="postalcode">
+                                    <input type="text" class="checkout-input" id="postalcode" name="postalcode">
                                 </div>
                             </div>
     
                             <div class="col-md-4">
                                 <div class="form-group alignment">
                                     <label for="phone">Telefono</label>
-                                    <input type="text" class="form-control checkout-input" id="phone" name="phone">
+                                    <input type="text" class="checkout-input" id="phone" name="phone">
                                 </div>
                             </div>
     
@@ -112,21 +112,21 @@
                             <div class="col-md-6">
                                 <div class="form-group alignment">
                                     <label for="cc_number">Numero Carta</label>
-                                    <input type="text" class="form-control checkout-input" id="cc_number" name="cc_number">
+                                    <input type="text" class="checkout-input" id="cc_number" name="cc_number">
                                 </div>
                             </div>
     
                             <div class="col-md-3">
                                 <div class="form-group alignment">
                                     <label for="expiry">Scadenza Carta</label>
-                                    <input type="text" class="form-control checkout-input" id="expiry" name="expiry">
+                                    <input type="text" class="checkout-input" id="expiry" name="expiry">
                                 </div>
                             </div>
     
                             <div class="col-md-3">
                                 <div class="form-group alignment">
                                     <label for="cvc">CVV</label>
-                                    <input type="text" class="form-control checkout-input" id="cvc" name="cvc">
+                                    <input type="text" class="checkout-input" id="cvc" name="cvc">
                                 </div>
                             </div>
     
@@ -136,7 +136,7 @@
                             <div class="col-md-6 alignment">
                                 <label for="cc_number">Numero Carta</label>
     
-                                <div class="form-group" id="card-number">
+                                <div class="checkout-input" id="card-number" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
     
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
                             <div class="col-md-3 alignment">
                                 <label for="expiry">Scadenza Carta</label>
     
-                                <div class="form-group" id="expiration-date">
+                                <div class="checkout-input" id="expiration-date" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
     
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
                             <div class="col-md-3 alignment">
                                 <label for="cvv">CVV</label>
     
-                                <div class="form-group" id="cvv">
+                                <div class="checkout-input" id="cvv" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
     
                                 </div>
                             </div>
