@@ -68,7 +68,7 @@
     
                 {{-- Immagine esistente --}}
                 @if ($dish->cover)
-                    <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+                    <img class="col-12" src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
                 @endif
                 {{--End Cover--}}
     

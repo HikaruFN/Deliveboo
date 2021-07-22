@@ -114,12 +114,12 @@
         {{--Footer--}}
         <footer >
             {{--Newsletter--}}
-            <div class="newsletter black-bg">
+            <div class="col-12 col-sm-12 col-md-12 newsletter black-bg">
                 <form>
                     <div class="form-group label-text">
                     <label  for="exampleFormControlInput1">Iscriviti alla nostra newsletter</label>
                     <div class="input-btn">
-                        <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="Inserisci la tua email">
+                        <input type="email" class="col-md-12 form-control " id="exampleFormControlInput1" placeholder="Inserisci la tua email">
                         <button class="btn-coloured yellow">Iscriviti</button>
                     </div>
                     
@@ -130,108 +130,111 @@
             
 
             <div class=" black-bg">
-                <div class="deliveboo-description footer-links github">
-                    <ul>
-                        <li>
-                            <h5>Deliveboo Team 3</h5>
-                            Progetto realizzato dagli studenti della classe 31.
-                        </li>
-                        <li>
-                            <a href="https://github.com/biancoenrico">
-                                <i class="fab fa-github"></i>
-                                Enrico Bianco
-                            
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Francesca-Salvini">
-                                <i class="fab fa-github"></i>
-                                Francesca Salvini
-                            
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/HikaruFN">
-                                <i class="fab fa-github"></i>
-                                Francesco Nisi
-                            
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IgnazioMont">
-                                <i class="fab fa-github"></i>
-                                Ignazio Montebello
-                            
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Verovannini">
-                                <i class="fab fa-github"></i>
-                                Veronica Vannini
-                            
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    
-                    <ul>
-                        <li>
-                            <h5>Links utili</h5>
-                        </li>
+                <div class="row">
+                    <div class="deliveboo-description footer-links github">
+                        <ul>
+                            <li>
+                                <h5>Deliveboo Team 3</h5>
+                                Progetto realizzato dagli studenti della classe 31.
+                            </li>
+                            <li>
+                                <a href="https://github.com/biancoenrico">
+                                    <i class="fab fa-github"></i>
+                                    Enrico Bianco
+                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Francesca-Salvini">
+                                    <i class="fab fa-github"></i>
+                                    Francesca Salvini
+                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/HikaruFN">
+                                    <i class="fab fa-github"></i>
+                                    Francesco Nisi
+                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IgnazioMont">
+                                    <i class="fab fa-github"></i>
+                                    Ignazio Montebello
+                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Verovannini">
+                                    <i class="fab fa-github"></i>
+                                    Veronica Vannini
+                                
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-links">
                         
-                        <li>
-                            <a href="">Login</a>
-                        </li>
-                        <li>
-                            <a href="">Registrati</a>
-                        </li>
-                        <li>
-                            <a href="">Ordini</a>
-                        </li>
-                        <li>
-                            <a href="">Blog</a>
-                        </li>
-                        <li>
-                            <a href="">Tracking</a>
-                        </li>
-                        <li>
-                            <a href="">Contatti</a>
-                        </li>
-                    </ul>
+                        <ul>
+                            <li>
+                                <h5>Links utili</h5>
+                            </li>
+                            
+                            <li>
+                                <a href="">Login</a>
+                            </li>
+                            <li>
+                                <a href="">Registrati</a>
+                            </li>
+                            <li>
+                                <a href="">Ordini</a>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">Tracking</a>
+                            </li>
+                            <li>
+                                <a href="">Contatti</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-links social">
+                        
+                        <ul>
+                            <li>
+                                <h5>
+                                    Vieni a trovarci sui nostri social
+                                </h5>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="footer-links social">
-                    
-                    <ul>
-                        <li>
-                            <h5>
-                                Vieni a trovarci sui nostri social
-                            </h5>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.twitter.com/">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                
 
                 
             </div>
