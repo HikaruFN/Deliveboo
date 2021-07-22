@@ -32,14 +32,13 @@ class PaymentController extends Controller
             'amount' => $amount,
             'paymentMethodNonce' => 'fake-valid-nonce',
             'options' => [
-                'submitForSettlement' => true
+            'submitForSettlement' => true
             ]
         ]);
 
 
         //SEND DATA TO ORDER
-        
-        
+              
         $new_order_data = $request->all();
 
         $new_order = new Order();
@@ -48,14 +47,13 @@ class PaymentController extends Controller
 
         $new_order->save();
 
-
         //SEND MAIL
         Mail::to('deliveboo@boolean.com')->send(new SendNewMail());
 
         if ($result->success) {
  
             $transaction = $result->transaction;
-            return back()->with('success_message', 'Transaction Successful. Transaction ID:' . $transaction->id);
+            return redirect()->route('end-transition');
  
         } else {
             $errorString = "";
@@ -67,21 +65,6 @@ class PaymentController extends Controller
             return back()->withErrors('An error occurred with the message:  ' . $result->message);
         }
 
-    }
-
-    public function store(Request $request){
-
-        $new_order_data = $request->all();
-
-        $new_order = new Order();   
-
-        $new_order->fill($new_dish_data);
-
-        // dd($new_dish);
-
-        $new_order->save();
-
-        return redirect()->route('admin.dishes.show', ['dish' => $new_dish->id]);
     }
 
 }
