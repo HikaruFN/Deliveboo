@@ -68,10 +68,7 @@
                                     <a class="btn btn-coloured blue" href="{{ route('register') }}">{{ __('Registrati') }}</a>
                                 </li>
                             @endif
-                            <li class="nav-item">
-                                <a class="nav-link padding-top-bottom" href="{{ route('braintree-index') }}"><i class="fas fa-shopping-cart carrello"></i></a>
-                                
-                            </li>
+                           
                             {{--End Button Register--}}
                             
                         @else
@@ -114,7 +111,7 @@
         {{--Footer--}}
         <footer >
             {{--Newsletter--}}
-            <div class="col-12 col-sm-12 col-md-12 newsletter black-bg">
+            <div class="col-12 newsletter black-bg">
                 <form>
                     <div class="form-group label-text">
                     <label  for="exampleFormControlInput1">Iscriviti alla nostra newsletter</label>

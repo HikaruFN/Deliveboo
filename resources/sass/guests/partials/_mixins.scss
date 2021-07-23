@@ -9,9 +9,12 @@
     border-radius: 2px;
     font-weight: 700;
 
-    @media all and (max-width: 425px) {
-        padding: 0;
+    &.add-to-chart {
+        @media all and (max-width: 425px) {
+            padding: 0;
+        }
     }
+    
     
     &.yellow {
         background-color: $deliveboo_main_orange;

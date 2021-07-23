@@ -13,7 +13,7 @@
                     <div class="card-title"> <span>P.IVA:</span>  {{$restaurant->net_number}}</div>
                 </div>
             
-                <div class="row col-sm-12">
+                <div class="row col-12 col-sm-12">
                     {{-- Aggiungo l'immagine se è presente nel database --}}
                     @if ($restaurant->cover)
                     <img src="{{ asset('storage/' . $restaurant->cover) }}" alt="{{ $restaurant->name }}">

@@ -10952,7 +10952,7 @@ a.text-dark:focus {
 }
 
 @media all and (max-width: 425px) {
-  .btn-coloured {
+  .btn-coloured.add-to-chart {
     padding: 0;
   }
 }

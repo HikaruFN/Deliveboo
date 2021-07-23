@@ -25,7 +25,7 @@
                                 <div class="col-6 col-sm-6 menu-description">
                                     <h5 class="price">Prezzo: €@{{dish.price}}</h5>
                                     <p v-if="dish.description" class="description">@{{dish.description}}</p>
-                                    <button v-on:click="setChart(dish)" class="btn-coloured blue">Aggiungi al carrello</button>
+                                    <button v-on:click="setChart(dish)" class="btn-coloured blue add-to-chart">Aggiungi al carrello</button>
                                 </div>
                                  
                             </div>
@@ -45,8 +45,7 @@
                                 <button v-on:click="decreaseQuantity(product, index)" class="col-3 btn-coloured yellow">-</button>
                                 <button v-on:click="addQuantity(product)" class="col-3 btn-coloured yellow">+</button>
                                 
-                                <br>{{--TOGLIERE QUESTI MOSTRI--}}
-                                <br>{{--TOGLIERE QUESTI MOSTRI--}}
+                                
                             </div>   
                             <div class="card-body text-align" >
                                 <p v-if="sum" class="payment"> Importo da pagare: €@{{sum.toFixed(2)}}</p>

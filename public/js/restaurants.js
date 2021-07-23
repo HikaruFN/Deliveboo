@@ -19447,7 +19447,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Boolean repo\DeliveBoo\deliveboo-team3\resources\js\restaurants.js */"./resources/js/restaurants.js");
+module.exports = __webpack_require__(/*! /Users/francescasalvini/laravel-projects/deliveboo-team3/resources/js/restaurants.js */"./resources/js/restaurants.js");
 
 
 /***/ })
