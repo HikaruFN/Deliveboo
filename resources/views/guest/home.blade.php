@@ -12,18 +12,22 @@
         {{--Jumbotron--}}
         <div class="jumbo">
             <img src="{{ asset('img/burger.jpg') }}" alt="burger">
-            <div class="jumbo-text">
-                <p>I piatti che ami, <br>
-                    a domicilio.
-                </p>
-            </div>
 
-            {{--Ricerca Per Nome--}}
-            <div class="ricerca-ristorante">
-                <label for="search">Sai già cosa cercare?</label>
-                <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito...">
+            <div class="layover">
+                <div class="jumbo-text">
+                    <p>I piatti che ami, <br>
+                        a domicilio.
+                    </p>
+                </div>
+    
+                {{--Ricerca Per Nome--}}
+                <div class="ricerca-ristorante">
+                    <label for="search">Sai già cosa cercare?</label>
+                    <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito...">
+                </div>
+                {{--Fine Ricerca Per Nome--}}
             </div>
-            {{--Fine Ricerca Per Nome--}}
+            
         </div>
         
 
