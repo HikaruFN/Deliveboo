@@ -10192,6 +10192,36 @@ hr {
   font-weight: 600;
 }
 
+@media all and (max-width: 575px) {
+  .jumbo {
+    height: 350px;
+  }
+  .jumbo .layover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .jumbo img {
+    width: auto;
+    height: 100%;
+    -o-object-position: 0;
+       object-position: 0;
+  }
+  .jumbo .ricerca-ristorante {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+  }
+
+  .jumbo-text {
+    font-size: 30px;
+    top: 20%;
+    left: 55%;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
