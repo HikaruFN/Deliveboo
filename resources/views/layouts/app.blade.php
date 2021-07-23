@@ -104,7 +104,8 @@
             </div>
         </nav>
 
-        <main>
+        <main class="pattern">
+            
             @yield('content')
         </main>
 
