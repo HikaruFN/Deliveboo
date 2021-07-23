@@ -10951,12 +10951,6 @@ a.text-dark:focus {
   font-weight: 700;
 }
 
-@media all and (max-width: 425px) {
-  .btn-coloured.add-to-chart {
-    padding: 0;
-  }
-}
-
 .btn-coloured.yellow {
   background-color: #ffa704;
   text-align: center;
@@ -11414,13 +11408,18 @@ input {
 
 .menu-description {
   align-self: center;
-  width: 50%;
   margin: auto;
 }
 
 .price {
-  font-size: 18px;
-  color: #464646;
+  font-size: 16px;
+}
+
+@media all and (max-width: 425px) {
+  .price {
+    color: #fff;
+    background-color: #ffa704;
+  }
 }
 
 .description {

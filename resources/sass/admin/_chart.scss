@@ -12,13 +12,18 @@
 
 .menu-description {
     align-self: center;
-    width: 50%;
+   
     margin: auto;
 }
 
 .price {
-    font-size: 18px;
-    color: $deliveboo_grey;
+    font-size: 16px;
+
+    @media all and (max-width: 425px) {
+        color: $deliveboo_white_text;
+        background-color: $deliveboo_main_orange;
+    }
+    
 }
 
 .description {
