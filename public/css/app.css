@@ -11240,6 +11240,12 @@ footer {
   margin: 10px 24px 20px 24px;
 }
 
+@media all and (max-width: 425px) {
+  .footer-links.align-cent-link {
+    text-align: center;
+  }
+}
+
 ul {
   list-style-type: none;
 }
@@ -11301,12 +11307,7 @@ input {
 .cover-card.menu {
   width: 300px;
   height: 180px;
-}
-
-@media all and (max-width: 425px) {
-  .cover-card.menu {
-    padding: 0;
-  }
+  padding: 0;
 }
 
 .no-padding {
@@ -11361,6 +11362,12 @@ input {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media all and (max-width: 425px) {
+  .display-flex-menu {
+    flex-direction: column;
+  }
 }
 
 .flex-items {
