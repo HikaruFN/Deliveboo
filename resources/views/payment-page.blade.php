@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Braintree Checkout</title>
+ 
+        <title>Checkout</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <!-- Additional Styles -->
@@ -30,10 +32,10 @@
     </head>
 
     <body>
-        <div id="root">
-            <div class="container">
-                <div class="col-md-6 offset-md-3">
-                    <h1>Payment Form</h1>
+        <div id="root">   
+            <div class="container display-flex">
+                <div class="col-md-6 offset-md-3 margin-top-bottom">
+                    <h1 class="title white-txt ">Checkout</h1>
                     <h2>L'ordine del tuo carrello ammonta a @{{total.toFixed(2)}} €</h2>
                     <div class="spacer"></div>
 
@@ -54,7 +56,7 @@
                     @endif
 
                     {{-- Payment Form --}}
-                    <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form">
+                    <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form" class="checkout-form">
                         @csrf
                         @method('POST')
                         <div class="form-group">
@@ -63,10 +65,32 @@
                         </div>
 
                         <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group amount">
+                                    
+                                    <label for="amount">Importo da pagare <br> <span>&euro; @{{total}}</span> </label>
+                                    <input style="display: none;"  type="text" :value="total">                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group alignment">
+                            
+                            <label for="email"><i class="fas fa-at"></i> Indirizzo E-mail</label>
+                            
+                            <input type="email" class="checkout-input" id="email" name="email">
+                        </div>
+    
+                        <div class="form-group alignment">
+                            <label for="name_on_card"> <i class="fas fa-user-alt"></i> Intestatario carta</label>
+                            <input type="text" class="checkout-input" id="name_on_card" name="name_on_card">
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" class="form-control" id="address" name="address">
+                                <div class="form-group alignment">
+                                    <label for="address"><i class="fas fa-map-marker-alt"></i> Indirizzo</label>
+                                    <input type="text" class="checkout-input" id="address" name="address">
                                 </div>
                             </div>
                         </div>  
@@ -76,6 +100,20 @@
                                 <div class="form-group">
                                     <label for="amount">Amount</label>
                                     <input  type="text" class="form-control" id="amount" name="amount" :value="total.toFixed(2)">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="form-group alignment">
+                                    <label for="postalcode"><i class="fas fa-map-pin"></i>Codice postale</label>
+                                    <input type="text" class="checkout-input" id="postalcode" name="postalcode">
+                                </div>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <div class="form-group alignment">
+                                    <label for="phone"><i class="fas fa-phone-alt"></i> Telefono</label>
+                                    <input type="text" class="checkout-input" id="phone" name="phone">
                                 </div>
                             </div>
                         </div>
@@ -98,7 +136,6 @@
                                 <label for="cc_number">Credit Card Number</label>
 
                                 <div class="form-group" id="card-number">
-                                    
                                 </div>
                             </div>
 
@@ -106,7 +143,6 @@
                                 <label for="expiry">Expiry</label>
 
                                 <div class="form-group" id="expiration-date">
-                                    
                                 </div>
                             </div>
 
@@ -114,11 +150,65 @@
                                 <label for="cvv">CVV</label>
 
                                 <div class="form-group" id="cvv">
-                                    
+                                </div>
+                            </div>
+                        </div>
+    
+                        {{-- <div class="row flex-items">
+                            <div class="col-md-6">
+                                <div class="form-group alignment">
+                                    <label for="cc_number"><i class="far fa-credit-card"></i> Numero Carta</label>
+                                    <input type="text" class="checkout-input" id="cc_number" name="cc_number">
+                                </div>
+                            </div>
+    
+                            <div style="display: flex; justify-content: space-between;">
+                                <div class="col-md-4">
+                                    <div class="form-group alignment">
+                                        <label for="expiry"><i class="far fa-calendar-alt"></i> Scadenza Carta</label>
+                                        <input type="text" class="checkout-input" id="expiry" name="expiry">
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-3" style="align-self:center;">
+                                    <div class="form-group alignment">
+                                        <label for="cvc">  <i class="fas fa-lock"></i> CVV</label>
+                                        <input type="text" class="checkout-input" id="cvc" name="cvc">
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+                        </div>
+    
+                        <div class="row flex-items">
+                            <div class="col-md-6 alignment" style="padding-bottom: 25px">
+                                <label for="cc_number"><i class="far fa-credit-card"></i>  Numero Carta</label>
+    
+                                <div class="checkout-input" id="card-number" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
+    
                                 </div>
                             </div>
 
-                        </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div class="col-md-4 alignment" >
+                                    <label for="expiry"> <i class="far fa-calendar-alt"></i> Scadenza Carta</label>
+        
+                                    <div class="checkout-input" id="expiration-date" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
+        
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-3 alignment" style="align-self:center;">
+                                    <label for="cvv"> <i class="fas fa-lock"></i> CVV</label>
+        
+                                    <div class="checkout-input" id="cvv" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
+        
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>--}}
+                        
 
                         <div class="spacer"></div>
 
@@ -127,7 +217,9 @@
                         <div class="spacer"></div>
 
                         <input id="nonce" name="payment_method_nonce" type="hidden" />
-                        <button type="submit" class="btn btn-success">Payment</button>
+                        <div class="btn-pay">
+                            <button type="submit" class="btn-coloured checkout-btn">Concludi pagamento</button>
+                        </div>
                     </form>
                     {{-- End Payment Form --}}
                 </div>

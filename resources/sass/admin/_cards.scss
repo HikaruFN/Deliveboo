@@ -11,6 +11,10 @@
     &.menu {
         width: 300px;
         height: 180px;
+
+        @media all and (max-width: 425px) {
+            padding: 0;
+        }
         
     }
 }

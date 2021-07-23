@@ -28,11 +28,11 @@
         
 
         {{--Type List--}}
-        <div class="container">
+        <div class="container" style="text-align: center;">
             {{-- <ul>
                 <button type="button" class="btn btn-primary" v-for="type in types" v-on:click="searchRestaurantForType(type.id)" v-model="typeId">@{{type.name}}</button>
             </ul> --}}
-
+            <div class="col-sm-12 col-md-12">
                 <h2 class="title">Scegli la tua cucina preferita</h2>
                 <div class="card-body">
                     <button class="btn "  role="button" v-for="type in types"  v-model="typeId" v-on:click="searchRestaurantForType(type.id)">
@@ -44,6 +44,8 @@
                         </div>
                     </button>
                 </div>
+            </div>
+                
 
             {{--Print Filtered Restaurants--}}
             <div v-if=" search == '' " class="row" style="justify-content:center;">            

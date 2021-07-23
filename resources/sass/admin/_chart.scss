@@ -46,3 +46,43 @@
     padding: 4px 20px;
     margin: 0px 10px;
 }
+
+
+
+.checkout-form {
+
+    
+    .checkout-input {
+        border: none;
+        border-bottom: 1px solid $deliveboo_light_grey;
+        
+    }
+    .alignment {
+        label {
+            color: $deliveboo_light_grey;
+        }
+        
+    }
+}
+
+.border-rad {
+    border-radius: 20px;
+}
+
+i {
+    margin-right: 8px;
+    color: $deliveboo_grey;
+}
+
+.amount {
+    text-align: center;
+    color: $deliveboo_light_grey;
+
+    label {
+        span {
+            color: $deliveboo_main_blue;
+            font-size: 25px;
+            font-weight: 600;
+        }
+    }
+}

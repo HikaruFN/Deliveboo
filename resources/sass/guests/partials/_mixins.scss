@@ -8,7 +8,10 @@
     font-size: 13px;
     border-radius: 2px;
     font-weight: 700;
-    
+
+    @media all and (max-width: 425px) {
+        padding: 0;
+    }
     
     &.yellow {
         background-color: $deliveboo_main_orange;
@@ -27,6 +30,12 @@
         text-align: center;
     }
 
+    &.checkout-btn {
+        background-color: $deliveboo-checkout-btn;
+        text-align: center;
+    }
+
+
     &.wthmargin {
         margin: 10px 0;
     }
@@ -38,13 +47,19 @@
     
 }
 
+.btn-pay {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
 .chart-btn {
     border-radius: 60px;
     background-color: $deliveboo_vedi_tuo_ristorante;
     color: $deliveboo_white_text;
 }
 
-//INPUT FORM YELLOW
+//INPUT FORM 
 
 .custom-input {
     

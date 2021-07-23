@@ -46,10 +46,7 @@ footer {
     padding: 20px 0;
     justify-content: center;
 
-    input {
-        // flex-grow: 2;
-        width: 450px;
-    }
+    
 
     button {
         padding: 6px 20px;
@@ -58,7 +55,7 @@ footer {
 }
 
 .footer-links {
-    margin: 0px 150px;
+    margin: 0px 100px;
     padding: 50px 0;
     
 
@@ -86,7 +83,7 @@ footer {
             display: inline-block;
             
             
-            margin: 20px 24px
+            margin: 10px 24px 20px 24px;
         }
     }
 }

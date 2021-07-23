@@ -10951,6 +10951,12 @@ a.text-dark:focus {
   font-weight: 700;
 }
 
+@media all and (max-width: 425px) {
+  .btn-coloured {
+    padding: 0;
+  }
+}
+
 .btn-coloured.yellow {
   background-color: #ffa704;
   text-align: center;
@@ -10966,12 +10972,23 @@ a.text-dark:focus {
   text-align: center;
 }
 
+.btn-coloured.checkout-btn {
+  background-color: #f45074;
+  text-align: center;
+}
+
 .btn-coloured.wthmargin {
   margin: 10px 0;
 }
 
 .btn-coloured a {
   color: #fff;
+}
+
+.btn-pay {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .chart-btn {
@@ -11061,6 +11078,14 @@ hr {
 
 .no-flex {
   display: block;
+}
+
+.white-txt {
+  color: #fff;
+  background-color: #0066CC;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 .logo {
@@ -11188,17 +11213,13 @@ footer {
   justify-content: center;
 }
 
-.input-btn input {
-  width: 450px;
-}
-
 .input-btn button {
   padding: 6px 20px;
   margin-left: 10px;
 }
 
 .footer-links {
-  margin: 0px 150px;
+  margin: 0px 100px;
   padding: 50px 0;
 }
 
@@ -11216,7 +11237,7 @@ footer {
 
 .footer-links.social li {
   display: inline-block;
-  margin: 20px 24px;
+  margin: 10px 24px 20px 24px;
 }
 
 ul {
@@ -11282,6 +11303,12 @@ input {
   height: 180px;
 }
 
+@media all and (max-width: 425px) {
+  .cover-card.menu {
+    padding: 0;
+  }
+}
+
 .no-padding {
   padding: 0;
 }
@@ -11325,7 +11352,7 @@ input {
 }
 
 .display-flex img {
-  width: 550px;
+  width: 450px;
   height: auto;
 }
 
@@ -11356,7 +11383,6 @@ input {
 
 .flex-items .btn-coloured {
   margin: 5px 0;
-  width: 250px;
 }
 
 .margin-bottom {
@@ -11412,5 +11438,34 @@ input {
 .padding-top-bottom {
   padding: 4px 20px;
   margin: 0px 10px;
+}
+
+.checkout-form .checkout-input {
+  border: none;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.checkout-form .alignment label {
+  color: #a3a3a3;
+}
+
+.border-rad {
+  border-radius: 20px;
+}
+
+i {
+  margin-right: 8px;
+  color: #464646;
+}
+
+.amount {
+  text-align: center;
+  color: #a3a3a3;
+}
+
+.amount label span {
+  color: #23cad3;
+  font-size: 25px;
+  font-weight: 600;
 }
 
