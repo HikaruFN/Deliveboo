@@ -5,7 +5,7 @@
     <div class="container">
         <h1 class="title">Il tuo ristorante</h1>
         <div class="row col-12 col-sm-12 margin-bottom" style="width: 65rem;">
-            <div class="col-12 col-sm-12 card-body display-flex">
+            <div class="col-12 col-sm-12 card-body display-flex column-flex">
                 <div class="col-12 col-sm-12  col-md-5 flex-items">
                     <h5 class="card-title sub-title">{{$restaurant->name}}</h5>
                     <div class="card-title"> <span>E-mail:</span>  {{$restaurant->email}}</div>

@@ -6,14 +6,14 @@
         <h1 class="title"> <span>{{ $dish->name }}</span> </h1>
 
         <div class="card margin-bottom" style="width: 65rem;">
-            <div class="card-body display-flex">
+            <div class="card-body display-flex column-flex">
                 
 
                 @if ($dish->cover)
-                    <img src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+                    <img class="col-12 col-sm-6" src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
                 @endif
 
-                <div class="flex-items">
+                <div class="col-12 col-sm-6 flex-items">
 
                     <p> <span>Descrizione:</span>  {{ $dish->description }}</p>
 

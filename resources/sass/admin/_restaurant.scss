@@ -15,10 +15,18 @@
             height: 200px;
             object-fit: cover;
         }
+    }
 
-        
+    
+
+    &.column-flex {
+        @media all and (max-width: 425px) {
+            flex-direction: column;
+        }
     }
 }
+    
+
 
 .display-flex-menu {
     @media all and (max-width: 425px) {

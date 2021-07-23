@@ -10367,6 +10367,11 @@ input:not(.check-inp) {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media all and (max-width: 425px) {
+  .display-flex.column-flex {
+    flex-direction: column;
+  }
+}
 
 @media all and (max-width: 425px) {
   .display-flex-menu {
