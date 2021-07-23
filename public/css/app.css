@@ -10195,33 +10195,37 @@ hr {
 @media all and (max-width: 575px) {
   .jumbo {
     height: 350px;
+    position: static;
   }
-  .jumbo .layover {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
+  .jumbo .remove {
+    display: none;
   }
   .jumbo img {
     width: auto;
     height: 100%;
-    -o-object-position: 0;
-       object-position: 0;
+    -o-object-position: -145px 0px;
+       object-position: -145px 0px;
   }
   .jumbo .ricerca-ristorante {
+    text-align: center;
     position: absolute;
-    top: 65%;
-    left: 5%;
+    top: 57%;
+    left: 1%;
+    padding: 10px 20px;
   }
 
   .jumbo-text {
     font-size: 30px;
-    top: 20%;
-    left: 55%;
+    top: 25%;
+    left: 41%;
   }
 }
+@media all and (max-width: 575px) {
+  .margin-top-media {
+    margin-top: 150px;
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;

@@ -64,32 +64,30 @@
 @media all and (max-width: 575px) {
     .jumbo {
         height: 350px;
+        position: static;
 
-        .layover{
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.3);
-            position: absolute;
-            top: 0;
-            left: 0;
+        .remove {
+            display: none;
         }
 
         img {
             width: auto;
             height: 100%;
-            object-position: 0;
+            object-position: -145px 0px;
         }
     
         .ricerca-ristorante {
+            text-align: center;
             position: absolute;
-            top: 65%;
-            left: 5%;
+            top: 57%;
+            left: 1%;
+            padding: 10px 20px;
         }
     }
 
     .jumbo-text {
         font-size: 30px;
-        top: 20%;
-        left: 55%;
+        top: 25%;
+        left: 41%;
     }
 }
