@@ -10242,7 +10242,6 @@ footer {
 }
 
 .footer-links {
-  margin: 0px 100px;
   padding: 50px 0;
 }
 .footer-links li {
@@ -10257,11 +10256,6 @@ footer {
 .footer-links.social li {
   display: inline-block;
   margin: 10px 24px 20px 24px;
-}
-@media all and (max-width: 425px) {
-  .footer-links.align-cent-link {
-    text-align: center;
-  }
 }
 
 ul {

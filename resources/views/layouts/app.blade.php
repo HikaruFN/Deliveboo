@@ -128,7 +128,7 @@
             
 
             <div class=" black-bg">
-                <div class="row">
+                <div class="row col-12 col-sm-6" style="justify-content:space-between;">
                     <div class="deliveboo-description footer-links github">
                         <ul>
                             <li>

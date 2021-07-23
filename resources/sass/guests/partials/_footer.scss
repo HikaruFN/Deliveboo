@@ -55,7 +55,7 @@ footer {
 }
 
 .footer-links {
-    margin: 0px 100px;
+    // margin: 0px 100px;
     padding: 50px 0;
     
 
@@ -87,11 +87,11 @@ footer {
         }
     }
 
-    &.align-cent-link {
-        @media all and (max-width: 425px) {
-            text-align: center;
-        }
-    }
+    // &.align-cent-link {
+    //     @media all and (max-width: 425px) {
+    //         text-align: center;
+    //     }
+    // }
 }
 
 ul{
