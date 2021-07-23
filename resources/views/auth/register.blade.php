@@ -109,8 +109,8 @@
                             <div class="sub-title">Scegli il tipo di cucina</div>
                             @foreach( $types as $type )
                                 <div class="form-check black-text">
-                                    <input class="form-check-input" type="checkbox" name="types[]" value="{{$type->id}}" id="type-{{$type->id}}" {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}>
-                                    <label class="form-check-label " for="type-{{$type->id}}">
+                                    <input class="form-check-input check-inp" type="checkbox" name="types[]" value="{{$type->id}}" id="type-{{$type->id}}" {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="type-{{$type->id}}">
                                         {{ $type->name }}
                                     </label>
                                 </div>
