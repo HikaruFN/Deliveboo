@@ -10047,20 +10047,19 @@ h3 {
 
 .custom-input {
   border-radius: 20px;
-  box-shadow: 2px 5px #888888;
-  opacity: 0.3;
+  box-shadow: 2px 3px #bdbdbd;
 }
 .custom-input::-moz-placeholder {
   color: black;
-  opacity: 1;
+  opacity: 0.3;
 }
 .custom-input:-ms-input-placeholder {
   color: black;
-  opacity: 1;
+  opacity: 0.3;
 }
 .custom-input::placeholder {
   color: black;
-  opacity: 1;
+  opacity: 0.3;
 }
 
 .alignment {
