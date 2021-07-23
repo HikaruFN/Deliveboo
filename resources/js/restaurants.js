@@ -31,18 +31,29 @@ var app = new Vue( {
             });
         },
         searchRestaurantForType(id){
-           this.searchRestaurantType = [];
-           this.typeId = id;
-            console.log(this.typeId);
-            axios.get(`http://localhost:8000/api/restaurantfilter/${this.typeId}`)
-            .then(result => {
-                result.data.restaurants.forEach(element => {
-                    this.searchRestaurantType.push(element); 
-                });
-            })
-            console.log(this.searchRestaurantType);
+            if (!this.searchRestaurantType.length || this.typeId != id) {
+                this.typeId = id;
+                console.log("sono nell if");
+                axios
+                    .get(
+                        `http://localhost:8000/api/restaurantfilter/${this.typeId}`
+                    )
+                    .then(result => {
+                        result.data.restaurants.forEach(element => {
+                            this.searchRestaurantType.push(element);
+                        });
+                    });
+                    this.searchRestaurantType = [];
+            } else {
+                this.searchRestaurantType = [];
+                console.log("sono nell else");
+            }
+        },
+        deleteRestaurants()
+        {
+            this.searchRestaurantType = [];
         }
 
-    }
+    },
 
 });

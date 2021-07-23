@@ -19418,15 +19418,22 @@ var app = new Vue({
     searchRestaurantForType: function searchRestaurantForType(id) {
       var _this3 = this;
 
-      this.searchRestaurantType = [];
-      this.typeId = id;
-      console.log(this.typeId);
-      axios.get("http://localhost:8000/api/restaurantfilter/".concat(this.typeId)).then(function (result) {
-        result.data.restaurants.forEach(function (element) {
-          _this3.searchRestaurantType.push(element);
+      if (!this.searchRestaurantType.length || this.typeId != id) {
+        this.typeId = id;
+        console.log("sono nell if");
+        axios.get("http://localhost:8000/api/restaurantfilter/".concat(this.typeId)).then(function (result) {
+          result.data.restaurants.forEach(function (element) {
+            _this3.searchRestaurantType.push(element);
+          });
         });
-      });
-      console.log(this.searchRestaurantType);
+        this.searchRestaurantType = [];
+      } else {
+        this.searchRestaurantType = [];
+        console.log("sono nell else");
+      }
+    },
+    deleteRestaurants: function deleteRestaurants() {
+      this.searchRestaurantType = [];
     }
   }
 });

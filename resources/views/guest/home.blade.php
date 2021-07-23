@@ -9,7 +9,7 @@
     {{-- ID ROOT --}}
     <div id="root">
         
-       {{--Jumbotron--}}
+        {{--Jumbotron--}}
         <div class="jumbo">
             <img src="{{ asset('img/burger.jpg') }}" alt="burger">
             <div class="jumbo-text">
@@ -60,8 +60,8 @@
                         </div>
                     </a>
                 </div>
-           </div>
-           {{--End Print Filtered Restaurants--}}
+            </div>
+            {{--End Print Filtered Restaurants--}}
         </div>
         {{--End Type List--}}
 
@@ -70,7 +70,7 @@
 
             <div class="margin-top-bottom">
                 <h2 class="title no-padding-top">I nostri ristoranti</h2>
-     
+    
                 {{--All Restaurants--}}
                 <div v-if=" search == '' " class="row" style="justify-content:center;">            
                     <div v-for="restaurant in restaurants" class="card col-lg-3 no-padding" style="width: 18rem; margin:15px 15px; box-shadow: 0 6px 6px rgba(0,0,0,0.2);">
