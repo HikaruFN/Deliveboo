@@ -129,6 +129,8 @@
                                     <div class="checkout-input" id="cvv" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
                                     </div>
                                 </div>
+
+                                <textarea style="display: none;" name="prodotti" id="prodotti" cols="30" rows="10">@{{prodottiToJson}}</textarea>
                             </div> 
                         </div>
                         
