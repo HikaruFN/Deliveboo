@@ -36,8 +36,6 @@
             <div class="container display-flex">
                 <div class="col-md-6 offset-md-3 margin-top-bottom">
                     <h1 class="title white-txt ">Checkout</h1>
-                    <h2>L'ordine del tuo carrello ammonta a @{{total.toFixed(2)}} €</h2>
-                    <div class="spacer"></div>
 
                     @if (session()->has('success_message'))
                         <div class="alert alert-success">
@@ -59,10 +57,7 @@
                     <form action="{{ route('braintree-checkout') }}" method="POST" id="payment-form" class="checkout-form">
                         @csrf
                         @method('POST')
-                        <div class="form-group">
-                            <label for="name_on_card">First Name And Second Name</label>
-                            <input type="text" class="form-control" id="name_on_card" name="name_on_card" >
-                        </div>
+                        
 
                         <div class="row">
                             <div class="col-md-12">
@@ -72,34 +67,23 @@
                                     <input style="display: none;"  type="text" :value="total">                                   
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="form-group alignment">
-                            
-                            <label for="email"><i class="fas fa-at"></i> Indirizzo E-mail</label>
-                            
-                            <input type="email" class="checkout-input" id="email" name="email">
-                        </div>
+                        </div>                        
     
                         <div class="form-group alignment">
-                            <label for="name_on_card"> <i class="fas fa-user-alt"></i> Intestatario carta</label>
+                            <label for="name_on_card"> <i class="fas fa-user-alt"></i>Intestatario carta</label>
                             <input type="text" class="checkout-input" id="name_on_card" name="name_on_card">
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group alignment">
-                                    <label for="address"><i class="fas fa-map-marker-alt"></i> Indirizzo</label>
-                                    <input type="text" class="checkout-input" id="address" name="address">
-                                </div>
-                            </div>
-                        </div>  
+                        <div class="form-group alignment">
+                            <label for="address"><i class="fas fa-map-marker-alt"></i>Indirizzo</label>
+                            <input type="text" class="checkout-input" id="address" name="address">
+                        </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" style="display: none;">
                                 <div class="form-group">
                                     <label for="amount">Amount</label>
-                                    <input  type="text" class="form-control" id="amount" name="amount" :value="total.toFixed(2)">
+                                    <input type="text" class="form-control" id="amount" name="amount" :value="total.toFixed(2)">
                                 </div>
                             </div>
                             
@@ -116,98 +100,37 @@
                                     <input type="text" class="checkout-input" id="phone" name="phone">
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Mail</label>
-                                    <input type="text" class="form-control" id="email" name="email">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="cc_number">Credit Card Number</label>
-
-                                <div class="form-group" id="card-number">
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="expiry">Expiry</label>
-
-                                <div class="form-group" id="expiration-date">
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="cvv">CVV</label>
-
-                                <div class="form-group" id="cvv">
-                                </div>
-                            </div>
-                        </div>
-    
-                        {{-- <div class="row flex-items">
-                            <div class="col-md-6">
-                                <div class="form-group alignment">
-                                    <label for="cc_number"><i class="far fa-credit-card"></i> Numero Carta</label>
-                                    <input type="text" class="checkout-input" id="cc_number" name="cc_number">
-                                </div>
-                            </div>
-    
-                            <div style="display: flex; justify-content: space-between;">
-                                <div class="col-md-4">
-                                    <div class="form-group alignment">
-                                        <label for="expiry"><i class="far fa-calendar-alt"></i> Scadenza Carta</label>
-                                        <input type="text" class="checkout-input" id="expiry" name="expiry">
-                                    </div>
-                                </div>
-        
-                                <div class="col-md-3" style="align-self:center;">
-                                    <div class="form-group alignment">
-                                        <label for="cvc">  <i class="fas fa-lock"></i> CVV</label>
-                                        <input type="text" class="checkout-input" id="cvc" name="cvc">
-                                    </div>
-                                </div>
-                            </div>
-                            
-    
+                        <div class="form-group alignment">
+                            <label for="email"><i class="fas fa-at"></i>E-mail</label>
+                            <input type="email" class="checkout-input" id="email" name="email">
                         </div>
     
                         <div class="row flex-items">
                             <div class="col-md-6 alignment" style="padding-bottom: 25px">
-                                <label for="cc_number"><i class="far fa-credit-card"></i>  Numero Carta</label>
+                                <label for="cc_number"><i class="far fa-credit-card"></i>Numero Carta</label>
     
                                 <div class="checkout-input" id="card-number" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
-    
                                 </div>
                             </div>
 
                             <div style="display: flex; justify-content: space-between;">
                                 <div class="col-md-4 alignment" >
-                                    <label for="expiry"> <i class="far fa-calendar-alt"></i> Scadenza Carta</label>
+                                    <label for="expiry"> <i class="far fa-calendar-alt"></i>Scadenza Carta</label>
         
                                     <div class="checkout-input" id="expiration-date" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
-        
                                     </div>
                                 </div>
         
                                 <div class="col-md-3 alignment" style="align-self:center;">
-                                    <label for="cvv"> <i class="fas fa-lock"></i> CVV</label>
+                                    <label for="cvv"> <i class="fas fa-lock"></i>CVV</label>
         
                                     <div class="checkout-input" id="cvv" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
-        
                                     </div>
                                 </div>
                             </div> 
-                        </div>--}}
+                        </div>
                         
 
                         <div class="spacer"></div>
