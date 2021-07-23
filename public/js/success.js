@@ -93,7 +93,21 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\franc\\laravel-projects\\deliveboo-team3\\resources\\js\\success.js'");
+var app = new Vue({
+  el: '#root',
+  data: {
+    prodottiSuccess: JSON.parse(localStorage.getItem("prodotti")),
+    total: 0
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.prodottiSuccess.forEach(function (element) {
+      _this.total += element.price * element.quantity;
+    });
+    return this.total;
+  }
+});
 
 /***/ }),
 

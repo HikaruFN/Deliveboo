@@ -97,6 +97,7 @@ var app = new Vue({
   el: '#root',
   data: {
     prodotti: JSON.parse(localStorage.getItem("prodotti")),
+    prodottiToJson: "",
     total: 0
   },
   methods: {},
@@ -106,6 +107,7 @@ var app = new Vue({
     this.prodotti.forEach(function (element) {
       _this.total += element.price * element.quantity;
     });
+    this.prodottiToJson = JSON.stringify(this.prodotti);
     return this.total;
   }
 });

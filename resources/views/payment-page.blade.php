@@ -63,7 +63,7 @@
                             <div class="col-md-12">
                                 <div class="form-group amount">
                                     
-                                    <label for="amount">Importo da pagare <br> <span>&euro; @{{total}}</span> </label>
+                                    <label for="amount">Importo da pagare <br> <span>&euro; @{{total.toFixed(2)}}</span> </label>
                                     <input style="display: none;"  type="text" :value="total">                                   
                                 </div>
                             </div>
@@ -129,6 +129,8 @@
                                     <div class="checkout-input" id="cvv" style="border:none; border-bottom: 1px solid #a3a3a3; border-radius:0px;">
                                     </div>
                                 </div>
+
+                                <textarea style="display: none;" name="prodotti" id="prodotti" cols="30" rows="10">@{{prodottiToJson}}</textarea>
                             </div> 
                         </div>
                         

@@ -47,6 +47,15 @@ class PaymentController extends Controller
 
         $new_order->save();
 
+        foreach ( json_decode($request->prodotti) as $prodotto ) {
+            $prodotto->id;
+            $prodotto->quantity;
+            $new_order->dishes()->attach($prodotto->id, ['quantity' => $prodotto->quantity]);
+        };
+        
+
+
+
         //SEND MAIL
         Mail::to('deliveboo@boolean.com')->send(new SendNewMail());
 
