@@ -19487,11 +19487,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Boolean repo\DeliveBoo\deliveboo-team3\resources\js\dish.js */"./resources/js/dish.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\enric\boolean\repo\php_project\deliveboo-team3\resources\js\dish.js */"./resources/js/dish.js");
->>>>>>> 58aaa55b591709f05bb68dd3838ec16f67f4c79a
 
 
 /***/ })
