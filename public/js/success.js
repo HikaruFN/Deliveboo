@@ -81,45 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/payment.js":
+/***/ "./resources/js/success.js":
 /*!*********************************!*\
-  !*** ./resources/js/payment.js ***!
+  !*** ./resources/js/success.js ***!
   \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var app = new Vue({
-  el: '#root',
-  data: {
-    prodotti: JSON.parse(localStorage.getItem("prodotti")),
-    total: 0
-  },
-  methods: {},
-  mounted: function mounted() {
-    var _this = this;
-
-    this.prodotti.forEach(function (element) {
-      _this.total += element.price * element.quantity;
-    });
-    return this.total;
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\franc\\laravel-projects\\deliveboo-team3\\resources\\js\\success.js'");
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***************************************!*\
-  !*** multi ./resources/js/payment.js ***!
+  !*** multi ./resources/js/success.js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\franc\laravel-projects\deliveboo-team3\resources\js\payment.js */"./resources/js/payment.js");
+module.exports = __webpack_require__(/*! C:\Users\franc\laravel-projects\deliveboo-team3\resources\js\success.js */"./resources/js/success.js");
 
 
 /***/ })
