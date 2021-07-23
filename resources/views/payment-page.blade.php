@@ -63,7 +63,7 @@
                             <div class="col-md-12">
                                 <div class="form-group amount">
                                     
-                                    <label for="amount">Importo da pagare <br> <span>&euro; @{{total}}</span> </label>
+                                    <label for="amount">Importo da pagare <br> <span>&euro; @{{total.toFixed(2)}}</span> </label>
                                     <input style="display: none;"  type="text" :value="total">                                   
                                 </div>
                             </div>
