@@ -11058,10 +11058,6 @@ hr {
   padding: 70px 0px 30px 0px;
 }
 
-.check-inp {
-  margin-left: -70px;
-}
-
 .custom-margin-left {
   margin-left: -40px;
 }
@@ -11264,7 +11260,7 @@ ul li a i {
   text-align: center;
 }
 
-input {
+input:not(.check-inp) {
   width: 100%;
 }
 
