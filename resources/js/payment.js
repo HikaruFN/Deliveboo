@@ -5,18 +5,13 @@ var app = new Vue( {
         total : 0,
     },
     methods: {   
-       
+
     },
     mounted(){
-
-        console.log(this.prodotti);
         this.prodotti.forEach(element => {
             this.total += element.price * element.quantity;
         });
-        return(this.total);
-        console.log(this.total);
-        
-        
+        return(this.total);     
     },
 
 })

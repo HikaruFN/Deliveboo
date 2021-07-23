@@ -38,3 +38,4 @@ Route::get('/cart/store', 'PaymentController@store')->name('order-store');
 
 Route::post('/', 'PaymentController@checkout')->name('braintree-checkout');
 
+Route::get('/success', 'EndTransitionController@index')->name('end-transition');
