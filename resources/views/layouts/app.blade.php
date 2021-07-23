@@ -172,7 +172,7 @@
                         </ul>
                     </div>
     
-                    <div class="footer-links">
+                    <div class="footer-links align-cent-link">
                         
                         <ul>
                             <li>

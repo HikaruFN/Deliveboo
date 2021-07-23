@@ -20,6 +20,12 @@
     }
 }
 
+.display-flex-menu {
+    @media all and (max-width: 425px) {
+        flex-direction: column;
+    }
+}
+
 
 
 .flex-items {
