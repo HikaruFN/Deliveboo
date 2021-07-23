@@ -123,15 +123,13 @@
 
                         {{--Cover--}}
                         <div class="input-group mb-3">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
-                                <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
-                            </div>
+                            <label class="sub-title" for="cover-image">Scegli immagine di copertina</label>
+                            <input type="file" id="cover-image" name="cover-image">
                         </div>
                         {{--End Cover--}}
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-12 text-center">
                                 <button type="submit" class="btn-coloured blue">
                                     {{ __('Registrati') }}
                                 </button>

@@ -59,10 +59,8 @@
 
             {{--Cover--}}
             <div class="input-group mb-3">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
-                    <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
-                </div>
+                <label class="sub-title" for="cover-image">Scegli immagine di copertina</label>
+                <input type="file" id="cover-image" name="cover-image">
             </div>
             {{--End Cover--}}
 
