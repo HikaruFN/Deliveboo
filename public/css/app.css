@@ -10317,6 +10317,10 @@ input:not(.check-inp) {
   width: 100%;
 }
 
+input[type=radio] {
+  width: auto;
+}
+
 .padding {
   padding: 20px 100px;
 }
@@ -10395,19 +10399,24 @@ input:not(.check-inp) {
   width: 450px;
   height: auto;
 }
+@media all and (max-width: 575px) {
+  .display-flex img {
+    width: 100%;
+  }
+}
 .display-flex.dish-section img {
   width: 300px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 575px) {
   .display-flex.column-flex {
     flex-direction: column;
   }
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 575px) {
   .display-flex-menu {
     flex-direction: column;
   }

@@ -50,11 +50,16 @@
     
     
                 {{-- RADIO BUTTON FOR VISIBILITY --}}
-                <div class="form-group alignment">
-                    <input type="radio"  id="option1" name="visibility" value="0" @if(old('visibility') == '0' || $dish->visibility == '0') checked @endif> Non Disponibile</label>
-    
-                    <input type="radio" id="option2" name="visibility" value="1" @if(old('visibility') == '1' || $dish->visibility == '1') checked @endif> Disponibile</label>
-    
+                <div class="form-group">
+                    <div>
+                        <input type="radio"  id="option1" name="visibility" value="0" @if(old('visibility') == '0') checked @endif>
+                        <label for="option1">Non Disponibile</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="option2" name="visibility" value="1" @if(old('visibility') == '1') checked @endif>
+                        <label for="option2">Disponibile</label>
+                    </div>
                 </div>
                 {{-- END RADIO BUTTON FOR VISIBILITY --}}
     

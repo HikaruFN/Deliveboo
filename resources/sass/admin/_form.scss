@@ -9,7 +9,9 @@
 input:not(.check-inp) {
     width: 100%;
 }
-
+input[type="radio"] {
+    width: auto;
+}
 
 
 .padding {
