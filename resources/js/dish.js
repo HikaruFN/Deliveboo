@@ -45,7 +45,7 @@ var app = new Vue( {
         setLocalStorage: function () {
             localStorage.clear();
             localStorage.setItem("prodotti", JSON.stringify(this.chartArray));
-       },
+        },
     },
     watch:{
         chartArray: {

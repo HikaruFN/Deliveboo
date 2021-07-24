@@ -40,12 +40,10 @@ class Restaurantcontroller extends Controller
                 'success' => true
             ];
         }
-
-
-       
         return response()->json($result);
     }
 
+    
     public function restaurantForId($id)
     {
 
