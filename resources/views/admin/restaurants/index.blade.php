@@ -21,7 +21,7 @@
                     {{-- <h4 class="card-title">{{$type->name}}</h4> --}}
                 </div>
                 
-            
+                
             </div>
         </div>
     </div>
