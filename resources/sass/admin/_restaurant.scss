@@ -15,12 +15,17 @@
             height: 200px;
             object-fit: cover;
         }
+
+        @media all and (max-width: 576px) {
+            flex-direction: column;
+        }
     }
+    
 
     
 
     &.column-flex {
-        @media all and (max-width: 425px) {
+        @media all and (max-width: 576px) {
             flex-direction: column;
         }
     }
@@ -29,7 +34,7 @@
 
 
 .display-flex-menu {
-    @media all and (max-width: 425px) {
+    @media all and (max-width: 576px) {
         flex-direction: column;
     }
 }

@@ -73,7 +73,7 @@
         img {
             width: auto;
             height: 100%;
-            object-position: -145px 0px;
+            object-position: 0px 0px;
         }
     
         .ricerca-ristorante {
@@ -88,6 +88,23 @@
     .jumbo-text {
         font-size: 30px;
         top: 25%;
-        left: 41%;
+        left: 57%;
     }
+}
+
+@media all and (max-width: 425px) {
+    .jumbo {
+        img {
+        width: auto;
+        height: 100%;
+        object-position: -145px 0px;
+        }
+
+        .jumbo-text {
+            font-size: 30px;
+            top: 25%;
+            left: 41%;
+        }
+    }
+
 }
