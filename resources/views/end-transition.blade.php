@@ -24,9 +24,8 @@
     
                     <img style="width: 130px; height:auto; margin:auto;" src="{{ asset('img/delivebo.png') }}" alt="deliveboo">
 
-                    
-    
                 </div>
+
             </div>
             
             <p style="text-align:center;">Grazie per aver acquistato da Deliveboo, riceverai una email di notifica quando il driver partirà dal locale! </p>
