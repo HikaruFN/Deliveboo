@@ -145,7 +145,7 @@ class DishTableSeeder extends Seeder
                 'price' => 4.50 ,
                 'visibility' => true,
                 'category_id' => 1,
-                'user_id' => 7,
+                'user_id' => 1,
                 'cover' => 'cover/bacon-burger.jpg'
             ],
             [
@@ -155,7 +155,7 @@ class DishTableSeeder extends Seeder
                 'price' => 4.00 ,
                 'visibility' => true,
                 'category_id' => 2,
-                'user_id' => 4,
+                'user_id' => 2,
                 'cover' => 'cover/classic-burger.jpg'
             ],
 
