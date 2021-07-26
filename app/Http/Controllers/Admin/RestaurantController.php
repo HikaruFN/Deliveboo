@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 /* use App\Type; */
 use App\User;
+use App\Order;
+use App\Dish;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -25,5 +27,16 @@ class RestaurantController extends Controller
             /* 'types' => $restaurant->types */
         ];
         return view('admin.restaurants.index', $data);
+    }
+
+    public function show($id)
+    {
+        $restaurant = User::findOrFail($id);
+        $data = [
+            'restaurant' => $restaurant, 
+        ];
+        
+
+        return view('admin.restaurants.graph', $data);
     }
 }

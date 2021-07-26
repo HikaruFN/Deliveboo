@@ -15,6 +15,7 @@
                 <div class="card-title"> <span>E-mail:</span>  {{$restaurant->email}}</div>
                 <div class="card-title"> <span>Indirizzo:</span>  {{$restaurant->address}}</div>
                 <div class="card-title"> <span>P.IVA:</span>  {{$restaurant->net_number}}</div>
+                <div class="card-title"><a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id] ) }}" >Vai alle statistiche</a></div>
             </div>
             
             <div class="col-12 col-sm-12 col-md-6">
@@ -28,13 +29,7 @@
         </div>
     </div>
 
-    <div class="container">
-        <div>
-            <canvas id="canvas">
-
-            </canvas>
-        </div>
-    </div>
+    
 @endsection
 
 

@@ -30,6 +30,7 @@ Route::prefix('admin')
 
         Route::resource('restaurants', 'RestaurantController');
         Route::resource('dishes', 'DishController');
+        Route::get('/restaurants/graph/{id}', 'RestaurantController@show')->name('graph');
 });
 
 Route::get('/cart', 'PaymentController@index')->name('braintree-index');
@@ -39,3 +40,5 @@ Route::get('/cart/store', 'PaymentController@store')->name('order-store');
 Route::post('/', 'PaymentController@checkout')->name('braintree-checkout');
 
 Route::get('/success', 'EndTransitionController@index')->name('end-transition');
+
+

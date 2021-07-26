@@ -26,4 +26,4 @@ Route::get('/dish','Api\Dishcontroller@allDishes')->name('api.all.dish');
 
 Route::get('/restaurant/{id}','Api\Restaurantcontroller@restaurantForId')->name('api.restaurant.id');
 
-Route::get('/order','Api\OrderController@index')->name('api.order');
+Route::get('/order/{id}','Api\OrderController@index')->name('api.order');

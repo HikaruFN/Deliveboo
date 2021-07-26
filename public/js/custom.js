@@ -874,8 +874,33 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var dataForData = [];
-var api_url = 'http://localhost:8000/api/order';
+
+var _window$location$href = window.location.href.split('/'),
+    _window$location$href2 = _slicedToArray(_window$location$href, 6),
+    a = _window$location$href2[0],
+    b = _window$location$href2[1],
+    c = _window$location$href2[2],
+    d = _window$location$href2[3],
+    e = _window$location$href2[4],
+    id = _window$location$href2[5];
+
+var getid = id;
+console.log(getid);
+var api_url = "http://localhost:8000/api/order/".concat(getid);
+console.log(api_url);
 chartIt();
 getData();
 
@@ -959,14 +984,14 @@ function _getData() {
             data = _context2.sent;
 
             if (dataForData == 0) {
-              data.order.forEach(function (element) {
-                dataForData.push(element.amount);
+              data.dishes.forEach(function (element) {
+                element.orders.forEach(function (item) {
+                  dataForData.push(item.amount);
+                });
               });
             }
 
-            console.log(data);
-
-          case 8:
+          case 7:
           case "end":
             return _context2.stop();
         }

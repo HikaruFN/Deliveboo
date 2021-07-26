@@ -1,6 +1,10 @@
 
 const dataForData = [];
-const api_url = 'http://localhost:8000/api/order';
+const [a, b, c, d, e, id] = window.location.href.split('/');
+const getid = id;
+    console.log(getid)
+const api_url = `http://localhost:8000/api/order/${getid}`;
+console.log(api_url);
 chartIt();
 getData();
 async function chartIt(){
@@ -70,11 +74,12 @@ async function getData(){
    //converte risposta in json
    const data = await response.json();
    if(dataForData == 0){
-    data.order.forEach(element => {
-        dataForData.push(element.amount);  
+    data.dishes.forEach(element => {
+        element.orders.forEach(item => {
+            dataForData.push(item.amount);
+        });
     });
    }
-   console.log(data);
 }
 
 
