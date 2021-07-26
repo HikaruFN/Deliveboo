@@ -8,10 +8,7 @@
     font-size: 13px;
     border-radius: 2px;
     font-weight: 700;
-
-    @media all and (max-width: 425px) {
-        padding: 0;
-    }
+    
     
     &.yellow {
         background-color: $deliveboo_main_orange;
@@ -65,13 +62,13 @@
     
     border-radius: 20px;
     
-    box-shadow: 2px 5px #888888;
+    box-shadow: 2px 3px #bdbdbd;
     // padding: 15px ;
-    opacity: 0.3;
+    
 
     &::placeholder { 
         color: black;
-        opacity: 1; 
+        opacity: 0.3;
     }
 }
 

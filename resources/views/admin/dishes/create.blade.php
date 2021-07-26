@@ -50,19 +50,22 @@
 
 
             {{-- RADIO BUTTON FOR VISIBILITY --}}
-            <div class="form-group alignment">
-                <input type="radio"  id="option1" name="visibility" value="0" @if(old('visibility') == '0') checked @endif> Non Disponibile</label>
-
-                <input type="radio" id="option2" name="visibility" value="1" @if(old('visibility') == '1') checked @endif> Disponibile</label>
-
+            <div class="form-group">
+                <div>
+                    <input type="radio"  id="option1" name="visibility" value="0" @if(old('visibility') == '0') checked @endif>
+                    <label for="option1">Non Disponibile</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="option2" name="visibility" value="1" @if(old('visibility') == '1') checked @endif>
+                    <label for="option2">Disponibile</label>
+                </div>
             </div>
 
             {{--Cover--}}
             <div class="input-group mb-3">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
-                    <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
-                </div>
+                <label class="sub-title" for="cover-image">Scegli immagine di copertina</label>
+                <input type="file" id="cover-image" name="cover-image">
             </div>
             {{--End Cover--}}
 

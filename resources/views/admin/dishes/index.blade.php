@@ -12,10 +12,10 @@
 
                             
                             @if ($dish->cover)
-                                <img class="col-6 col-sm-6" src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
+                                <img class="col-12 col-sm-6" src="{{ asset('storage/' . $dish->cover) }}" alt="{{ $dish->name }}">
                             @endif
 
-                            <div class="col-6 col-sm-6 flex-items">
+                            <div class="col-12 col-sm-6 flex-items">
 
                                 <h5 class="card-title sub-title">{{ $dish->name }}</h5>
                                 <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn-coloured blue">Vai al piatto</a>

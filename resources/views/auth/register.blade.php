@@ -109,8 +109,8 @@
                             <div class="sub-title">Scegli il tipo di cucina</div>
                             @foreach( $types as $type )
                                 <div class="form-check black-text">
-                                    <input class="form-check-input" type="checkbox" name="types[]" value="{{$type->id}}" id="type-{{$type->id}}" {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}>
-                                    <label class="form-check-label " for="type-{{$type->id}}">
+                                    <input class="form-check-input check-inp" type="checkbox" name="types[]" value="{{$type->id}}" id="type-{{$type->id}}" {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="type-{{$type->id}}">
                                         {{ $type->name }}
                                     </label>
                                 </div>
@@ -123,15 +123,13 @@
 
                         {{--Cover--}}
                         <div class="input-group mb-3">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="cover-image" name="cover-image">
-                                <label class="custom-file-label" for="cover-image">Scegli immagine di copertina</label>
-                            </div>
+                            <label class="sub-title" for="cover-image">Scegli immagine di copertina</label>
+                            <input type="file" id="cover-image" name="cover-image">
                         </div>
                         {{--End Cover--}}
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-12 text-center">
                                 <button type="submit" class="btn-coloured blue">
                                     {{ __('Registrati') }}
                                 </button>

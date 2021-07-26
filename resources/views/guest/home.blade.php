@@ -12,23 +12,27 @@
         {{--Jumbotron--}}
         <div class="jumbo">
             <img src="{{ asset('img/burger.jpg') }}" alt="burger">
+
+            
             <div class="jumbo-text">
                 <p>I piatti che ami, <br>
                     a domicilio.
                 </p>
             </div>
-
+    
             {{--Ricerca Per Nome--}}
             <div class="ricerca-ristorante">
                 <label for="search">Sai già cosa cercare?</label>
                 <input v-on:keyup="searchRestaurantFunction()" type="text" v-model="search" name="" id="search" placeholder="Inserisci il nome del tuo ristorante preferito...">
             </div>
             {{--Fine Ricerca Per Nome--}}
+            
+            
         </div>
         
 
         {{--Type List--}}
-        <div class="container" style="text-align: center;">
+        <div class="container margin-top-media" style="text-align: center;">
             {{-- <ul>
                 <button type="button" class="btn btn-primary" v-for="type in types" v-on:click="searchRestaurantForType(type.id)" v-model="typeId">@{{type.name}}</button>
             </ul> --}}
