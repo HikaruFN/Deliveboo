@@ -142,7 +142,7 @@ class DishTableSeeder extends Seeder
                 /* Hamburger */
                 'name' => 'Bacon burger',
                 'description' => 'pane, 300gr 100% carne di manzo, formaggio cheddar bacon croccante, onion rings e insalata',
-                'price' => 4.50 ,
+                'price' => 4.50,
                 'visibility' => true,
                 'category_id' => 1,
                 'user_id' => 1,
@@ -152,7 +152,7 @@ class DishTableSeeder extends Seeder
                 /* Hamburger */
                 'name' => 'Classic burger',
                 'description' => 'pane, 300gr 100% carne di manzo, formaggio cheddar, insalata, pomodorini, cipolla di tropea e salsa bbq',
-                'price' => 4.00 ,
+                'price' => 4.00,
                 'visibility' => true,
                 'category_id' => 2,
                 'user_id' => 2,
