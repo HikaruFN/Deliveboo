@@ -11064,6 +11064,9 @@ hr {
 .black-txt {
   color: #221F1F;
 }
+.black-txt.bold {
+  font-weight: 700;
+}
 
 .no-flex {
   display: block;
@@ -11075,6 +11078,25 @@ hr {
   display: flex;
   justify-content: center;
   padding-top: 30px;
+}
+
+.green-txt {
+  color: #a6e277;
+}
+
+.dir-col {
+  flex-direction: column;
+}
+
+.red-txt {
+  color: #cc3d20;
+}
+.red-txt.bold {
+  font-weight: 700;
+}
+
+.blue-txt {
+  color: #23cad3;
 }
 
 .logo {
