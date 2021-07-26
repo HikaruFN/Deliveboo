@@ -11064,6 +11064,7 @@ hr {
 .black-txt {
   color: #221F1F;
 }
+
 .black-txt.bold {
   font-weight: 700;
 }
@@ -11091,6 +11092,7 @@ hr {
 .red-txt {
   color: #cc3d20;
 }
+
 .red-txt.bold {
   font-weight: 700;
 }
