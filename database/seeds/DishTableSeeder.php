@@ -464,13 +464,73 @@ class DishTableSeeder extends Seeder
                 'cover' => 'cover/beer.jpg'
             ],
             [
+                /*Birra*/
+                'name' => 'Birra chiara',
+                'description' => 'Birra a bassa fermentazione 500Cl',
+                'price' => 4.50 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 2,
+                'cover' => 'cover/beer.jpg'
+            ],
+            [
+                /*Birra*/
+                'name' => 'Birra chiara',
+                'description' => 'Birra a bassa fermentazione 500Cl',
+                'price' => 4.50 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 5,
+                'cover' => 'cover/beer.jpg'
+            ],
+            [
+                /*Birra*/
+                'name' => 'Birra chiara',
+                'description' => 'Birra a bassa fermentazione 500Cl',
+                'price' => 4.50 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 6,
+                'cover' => 'cover/beer.jpg'
+            ],
+            [
                 /*coca-cola*/
                 'name' => 'coca-cola',
                 'description' => 'lattina da 500Cl',
                 'price' => 2.50 ,
                 'visibility' => true,
                 'category_id' => 6,
-                'user_id' => 4,
+                'user_id' => 1,
+                'cover' => 'cover/coca-cola.jpg'
+            ],
+            [
+                /*coca-cola*/
+                'name' => 'coca-cola',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 2,
+                'cover' => 'cover/coca-cola.jpg'
+            ],
+            [
+                /*coca-cola*/
+                'name' => 'coca-cola',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 5,
+                'cover' => 'cover/coca-cola.jpg'
+            ],
+            [
+                /*coca-cola*/
+                'name' => 'coca-cola',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 6,
                 'cover' => 'cover/coca-cola.jpg'
             ],
             [
@@ -484,6 +544,76 @@ class DishTableSeeder extends Seeder
                 'cover' => 'cover/acqua.jpg'
             ],
             [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 2,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 3,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 4,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 5,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 6,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 7,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*pepsi*/
+                'name' => 'pepsi',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 1,
+                'cover' => 'cover/pepsi.jpg'
+            ],
+            [
                 /*pepsi*/
                 'name' => 'pepsi',
                 'description' => 'lattina da 500Cl',
@@ -494,13 +624,63 @@ class DishTableSeeder extends Seeder
                 'cover' => 'cover/pepsi.jpg'
             ],
             [
+                /*pepsi*/
+                'name' => 'pepsi',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 5,
+                'cover' => 'cover/pepsi.jpg'
+            ],
+            [
+                /*pepsi*/
+                'name' => 'pepsi',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 6,
+                'cover' => 'cover/pepsi.jpg'
+            ],
+            [
                 /*fanta*/
                 'name' => 'fanta',
                 'description' => 'lattina da 500Cl 500Cl',
                 'price' => 2.50 ,
                 'visibility' => true,
                 'category_id' => 6,
-                'user_id' => 3,
+                'user_id' => 1,
+                'cover' => 'cover/fanta.jpg'
+            ],
+            [
+                /*fanta*/
+                'name' => 'fanta',
+                'description' => 'lattina da 500Cl 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 2,
+                'cover' => 'cover/fanta.jpg'
+            ],
+            [
+                /*fanta*/
+                'name' => 'fanta',
+                'description' => 'lattina da 500Cl 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 5,
+                'cover' => 'cover/fanta.jpg'
+            ],
+            [
+                /*fanta*/
+                'name' => 'fanta',
+                'description' => 'lattina da 500Cl 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 6,
                 'cover' => 'cover/fanta.jpg'
             ],
         ];
