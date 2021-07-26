@@ -25,3 +25,6 @@ mix.js('resources/js/payment.js', 'public/js')
 
 //Javascript for Success Page
 mix.js('resources/js/success.js', 'public/js')
+
+//Javascript for chart js
+mix.js('resources/js/custom.js', 'public/js')
