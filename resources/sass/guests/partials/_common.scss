@@ -38,6 +38,10 @@ hr {
 
 .black-txt {
     color: $deliveboo_black_text;
+
+    &.bold {
+        font-weight: 700;
+    }
 }
 
 .no-flex {
@@ -52,3 +56,22 @@ hr {
     padding-top: 30px;
 }
 
+.green-txt {
+    color: $deliveboo_green_success;
+}
+
+.dir-col {
+    flex-direction: column;
+}
+
+.red-txt {
+    color: $deliveboo_vedi_tuo_ristorante;
+    
+    &.bold {
+        font-weight: 700;
+    }
+}
+
+.blue-txt {
+    color: $deliveboo_main_blue;
+}
