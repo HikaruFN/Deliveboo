@@ -65,6 +65,36 @@ class DishTableSeeder extends Seeder
                 'user_id' => 2,
                 'cover' => 'cover/spicy-pulled.jpg'
             ],
+            [
+                /* Hamburger */
+                'name' => 'Cheeseburger',
+                'description' => 'pane, 300gr 100% carne di manzo, formaggio cheddar, pomodorini, onion rings, insalata e cetriolini ',
+                'price' => 5.50 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/Cheeseburger.jpg'
+            ],
+            [
+                /* Hamburger */
+                'name' => 'Bacon burger',
+                'description' => 'pane, 300gr 100% carne di manzo, formaggio cheddar bacon croccante, onion rings e insalata',
+                'price' => 4.50 ,
+                'visibility' => true,
+                'category_id' => 1,
+                'user_id' => 7,
+                'cover' => 'cover/bacon-burger.jpg'
+            ],
+            [
+                /* Hamburger */
+                'name' => 'Classic burger',
+                'description' => 'pane, 300gr 100% carne di manzo, formaggio cheddar, insalata, pomodorini, cipolla di tropea e salsa bbq',
+                'price' => 4.00 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 4,
+                'cover' => 'cover/classic-burger.jpg'
+            ],
 
             [
                 'name' => 'Burger boss',
@@ -169,9 +199,49 @@ class DishTableSeeder extends Seeder
                 'description' => 'Birra a bassa fermentazione 500Cl',
                 'price' => 4.50 ,
                 'visibility' => true,
-                'category_id' => 2,
+                'category_id' => 6,
                 'user_id' => 6,
                 'cover' => 'cover/beer.jpg'
+            ],
+            [
+                /*coca-cola*/
+                'name' => 'coca-cola',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 4,
+                'cover' => 'cover/coca-cola.jpg'
+            ],
+            [
+                /*acqua*/
+                'name' => 'acqua ferrarelle',
+                'description' => 'bottiglietta da 500Cl',
+                'price' => 1.00 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 1,
+                'cover' => 'cover/acqua.jpg'
+            ],
+            [
+                /*pepsi*/
+                'name' => 'pepsi',
+                'description' => 'lattina da 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 2,
+                'cover' => 'cover/pepsi.jpg'
+            ],
+            [
+                /*fanta*/
+                'name' => 'fanta',
+                'description' => 'lattina da 500Cl 500Cl',
+                'price' => 2.50 ,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 3,
+                'cover' => 'cover/fanta.jpg'
             ],
         ];
 
