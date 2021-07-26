@@ -35,6 +35,26 @@ class DishTableSeeder extends Seeder
             ],
 
             [
+                'name' => 'Primavera',
+                'description' => 'mozzarella di bufala, pomodorini, rucola',
+                'price' => 7.50,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 6,
+                'cover' => 'cover/pizza-primavera.jpg'
+            ],
+
+            [
+                'name' => 'Capricciosa',
+                'description' => 'Prosciutto cotto, olive nere, funghi',
+                'price' => 7.80,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 6,
+                'cover' => 'cover/pizza-capricciosa.jpg'
+            ],
+
+            [
                 'name' => 'Diavola',
                 'description' => 'Base margherita con salame piccante, ma piccante assai proprioup',
                 'price' => 7 ,
@@ -42,6 +62,16 @@ class DishTableSeeder extends Seeder
                 'category_id' => 2,
                 'user_id' => 6,
                 'cover' => 'cover/pizza-diavola.jpg'
+            ],
+
+            [
+                'name' => 'Mare e Monti',
+                'description' => 'Pomodoro, mozzarella, gamberetti e funghi',
+                'price' => 8,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 6,
+                'cover' => 'cover/pizza-mare-e-monti.jpg'
             ],
 
             [
