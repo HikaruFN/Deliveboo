@@ -46,13 +46,46 @@ class DishTableSeeder extends Seeder
 
             [
                 /* Giapponese */
-                'name' => 'Uramaki Special Tiger Roll',
-                'description' => 'Ebiten e maionese avvolto in filetti di salmone, ikura e salsa teriyaki',
+                'name' => 'Sashimi',
+                'description' => 'Sashimi di salmone',
+                'price' => 4.50 ,
+                'visibility' => true,
+                'category_id' => 1,
+                'user_id' => 3,
+                'cover' => 'cover/sashimi.jpg'
+            ],
+
+            [
+                /* Giapponese */
+                'name' => 'Ramen',
+                'description' => 'Ramen di carne e verdure',
                 'price' => 13 ,
                 'visibility' => true,
                 'category_id' => 2,
                 'user_id' => 3,
-                'cover' => 'cover/tiger-roll.jpg'
+                'cover' => 'cover/ramen.jpg'
+            ],
+
+            [
+                /* Giapponese */
+                'name' => 'Takoyaki',
+                'description' => 'Polpette di polipo',
+                'price' => 3.50,
+                'visibility' => true,
+                'category_id' => 1,
+                'user_id' => 3,
+                'cover' => 'cover/takoyaki.jpg'
+            ],
+
+            [
+                /* Giapponese */
+                'name' => 'Nigiri',
+                'description' => 'Nigiri di tonno',
+                'price' => 6,
+                'visibility' => true,
+                'category_id' => 1,
+                'user_id' => 3,
+                'cover' => 'cover/nigiri.jpg'
             ],
 
             [
@@ -84,6 +117,16 @@ class DishTableSeeder extends Seeder
                 'category_id' => 2,
                 'user_id' => 2,
                 'cover' => 'cover/pony-burger.jpg'
+            ],
+
+            [
+                'name' => 'Spicy Burger',
+                'description' => 'Hamburger 200gr, Salsa piccante speciale',
+                'price' => 6 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 2,
+                'cover' => 'cover/spicy-burger.jpg'
             ],
 
             [
@@ -131,6 +174,50 @@ class DishTableSeeder extends Seeder
             ],
 
             [
+                /*Cinese*/
+                'name' => 'Maiale in agrodolce',
+                'description' => 'Maiale in salsa agrodolce 500Gr',
+                'price' => 7,
+                'visibility' => true,
+                'category_id' => 1,
+                'user_id' => 4,
+                'cover' => 'cover/maiale-in-agrodolce.jpg'
+            ],
+
+            [
+                /*Cinese*/
+                'name' => 'Noodles',
+                'description' => 'Noodles di carne e verdure',
+                'price' => 4,
+                'visibility' => true,
+                'category_id' => 1,
+                'user_id' => 4,
+                'cover' => 'cover/noodles.jpg'
+            ],
+
+            [
+                /*Cinese*/
+                'name' => 'Green Tea',
+                'description' => 'Green Tea del Guandong',
+                'price' => 2.50,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 4,
+                'cover' => 'cover/green-tea.jpg'
+            ],
+
+            [
+                /*Cinese*/
+                'name' => 'Riso alla cantonese',
+                'description' => 'Riso con uova e verdure',
+                'price' => 4,
+                'visibility' => true,
+                'category_id' => 6,
+                'user_id' => 4,
+                'cover' => 'cover/riso-cantonese.jpg'
+            ],
+
+            [
                 /*Italiano*/
                 'name' => 'Bistecca Fiorentina',
                 'description' => 'Bistecca fiorentina da 500Gr',
@@ -143,13 +230,35 @@ class DishTableSeeder extends Seeder
 
             [
                 /*Italiano*/
-                'name' => 'Vino Rosso',
-                'description' => 'Ideale per accompagnare secondi piatti di carne. Ottimo con un arrosto di maiale.',
-                'price' => 20 ,
+                'name' => 'Lasagne',
+                'description' => 'Come la faceva la nonna',
+                'price' => 8 ,
                 'visibility' => true,
-                'category_id' => 6,
+                'category_id' => 2,
                 'user_id' => 5,
-                'cover' => 'cover/vino-rosso.jpg'
+                'cover' => 'cover/lasagne.jpg'
+            ],
+
+            [
+                /*Italiano*/
+                'name' => 'Pasta alla bolognese',
+                'description' => 'Pasta al sugo con macinato di carne.',
+                'price' => 5.50 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 5,
+                'cover' => 'cover/bolognese.jpg'
+            ],
+
+            [
+                /*Italiano*/
+                'name' => 'Past al pesto',
+                'description' => 'Pasta con pesto alla genovese',
+                'price' => 6 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 5,
+                'cover' => 'cover/pesto.jpg'
             ],
 
             [
@@ -159,8 +268,74 @@ class DishTableSeeder extends Seeder
                 'price' => 8 ,
                 'visibility' => true,
                 'category_id' => 2,
-                'user_id' => 5,
+                'user_id' => 1,
                 'cover' => 'cover/panuozzo.jpg'
+            ],
+
+            [
+                /*Panini*/
+                'name' => 'Piadina',
+                'description' => 'Piadina sqaquerone e rucola ( la più fantastica delle mie parti ) cit.',
+                'price' => 8 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/piadina.jpg'
+            ],
+
+            [
+                /*Panini*/
+                'name' => 'Panino con porchetta',
+                'description' => 'Panino farcito con porchetta sarda',
+                'price' => 7 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/porchetta.jpg'
+            ],
+
+            [
+                /*Panini*/
+                'name' => 'Panino formaggio e salame',
+                'description' => 'Panino farcito con formaggio e salame',
+                'price' => 8 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/paninoformaggio.jpg'
+            ],
+
+            [
+                /*Panini*/
+                'name' => 'Sandwich al formaggio',
+                'description' => 'Sandwich con formaggio grigliato',
+                'price' => 5 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/sandwichformaggio.jpg'
+            ],
+
+            [
+                /*Panini*/
+                'name' => 'Panino Montana',
+                'description' => 'Panino farcito con noci e formaggio',
+                'price' => 7 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/panino-noci-e-formaggio.jpg'
+            ],
+
+            [
+                /*Panini*/
+                'name' => 'Bruschetta',
+                'description' => 'Bruschetta Gourmet',
+                'price' => 3 ,
+                'visibility' => true,
+                'category_id' => 2,
+                'user_id' => 1,
+                'cover' => 'cover/bruschetta.jpg'
             ],
 
             [
@@ -170,7 +345,7 @@ class DishTableSeeder extends Seeder
                 'price' => 4.50 ,
                 'visibility' => true,
                 'category_id' => 2,
-                'user_id' => 6,
+                'user_id' => 1,
                 'cover' => 'cover/beer.jpg'
             ],
         ];
