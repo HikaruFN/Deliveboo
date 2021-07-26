@@ -81,44 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/success.js":
-/*!*********************************!*\
-  !*** ./resources/js/success.js ***!
-  \*********************************/
+/***/ "./resources/js/chart.js":
+/*!*******************************!*\
+  !*** ./resources/js/chart.js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var app = new Vue({
-  el: '#root',
-  data: {
-    prodottiSuccess: JSON.parse(localStorage.getItem("prodotti")),
-    total: 0
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.prodottiSuccess.forEach(function (element) {
-      _this.total += element.price * element.quantity;
-    });
-    return this.total;
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\Boolean repo\\DeliveBoo\\deliveboo-team3\\resources\\js\\chart.js'");
 
 /***/ }),
 
-/***/ 4:
-/*!***************************************!*\
-  !*** multi ./resources/js/success.js ***!
-  \***************************************/
+/***/ 5:
+/*!*************************************!*\
+  !*** multi ./resources/js/chart.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Boolean repo\DeliveBoo\deliveboo-team3\resources\js\success.js */"./resources/js/success.js");
+module.exports = __webpack_require__(/*! C:\Boolean repo\DeliveBoo\deliveboo-team3\resources\js\chart.js */"./resources/js/chart.js");
 
 
 /***/ })
