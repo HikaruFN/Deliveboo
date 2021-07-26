@@ -404,13 +404,8 @@ class DishTableSeeder extends Seeder
                 'description' => 'Birra a bassa fermentazione 500Cl',
                 'price' => 4.50 ,
                 'visibility' => true,
-<<<<<<< HEAD
-                'category_id' => 6,
-                'user_id' => 6,
-=======
                 'category_id' => 2,
                 'user_id' => 1,
->>>>>>> 998de98dcbe194c6eed90eb3d14b22ce9535c36b
                 'cover' => 'cover/beer.jpg'
             ],
             [
