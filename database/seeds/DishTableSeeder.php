@@ -109,14 +109,69 @@ class DishTableSeeder extends Seeder
             ],
 
             [
+                /* Dolce */
+                'name' => 'Blueberry Cheesecake',
+                'description' => 'Fetta di cheesecake ai mirtilli',
+                'price' => 4 ,
+                'visibility' => true,
+                'category_id' => 4,
+                'user_id' => 7,
+                'cover' => 'cover/blueberry-cheesecake.jpg'
+            ],
+
+            [
+                /* Dolce */
+                'name' => 'Muffin',
+                'description' => 'Muffin con cuore di cioccolato',
+                'price' => 3 ,
+                'visibility' => true,
+                'category_id' => 4,
+                'user_id' => 7,
+                'cover' => 'cover/muffin.jpg'
+            ],
+
+            [
+                /* Dolce */
+                'name' => 'Sacher',
+                'description' => 'Torta Sacher',
+                'price' => 4 ,
+                'visibility' => true,
+                'category_id' => 4,
+                'user_id' => 7,
+                'cover' => 'cover/sacher.jpg'
+            ],
+
+            [
                 /* Gelato*/
                 'name' => 'Chocolate Cup',
                 'description' => 'Coppa di gelato al cioccolato',
-                'price' => 9 ,
+                'price' => 4 ,
                 'visibility' => true,
                 'category_id' => 4,
                 'user_id' => 8,
                 'cover' => 'cover/icecream.jpg'
+            ],
+
+            [
+                /* Gelato*/
+                'name' => 'Strawberry Icecream',
+                'description' => 'Gelato alla fragola ricoperto di cioccolato bianco o fondente',
+                'price' => 3.50 ,
+                'visibility' => true,
+                'category_id' => 4,
+                'user_id' => 8,
+                'cover' => 'cover/strawberry-icecream.jpg'
+            ],
+
+            [
+                /* Gelato*/
+                'name' => 'Fruit Popsicle',
+                'description' => 'Ghiacciolo alla frutta',
+                'price' => 2 ,
+                'visibility' => true,
+                'category_id' => 4,
+                'user_id' => 8,
+                'cover' => 'cover/fruit-popsicle.jpg'
             ],
 
             [
